@@ -16,4 +16,4 @@ he's still a **noob**.
 
 So, here we are.. the long journey of a noob written in this site, and maybe one day, he will be gone before he can become someone that he wanted to... (ㆆᴗㆆ)
 
-[return to homepage](/index)
+[return to homepage](/musubi/index)
