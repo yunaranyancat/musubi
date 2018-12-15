@@ -6,7 +6,7 @@ categories: jekyll
 permalink: challenges
 ---
 
-[homepage](/index)  
+[homepage](/musubi/index)  
 
 Write-ups
 ## site : [Vulnhub](https://www.vulnhub.com/)
