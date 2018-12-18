@@ -11,7 +11,7 @@ permalink: challenges
 Write-ups
 ## site : [Vulnhub](https://www.vulnhub.com/)
 
-Coming soon..
+[Kioptrix Level 1](/musubi/write-ups/kioptrix_1)
 
 ## site : [hackthebox](https://www.hackthebox.eu/)
 

@@ -7,14 +7,14 @@ layout: default
 
 ### Categories
 - posts
-  - [challenges](./challenges) writeups
+  - [challenges](/musubi/challenges) writeups
   - notes..
 - others
-  - what is [Musubi](./others/whatismusubi)?
+  - what is [Musubi](/musubi/others/whatismusubi)?
 
 ### About
-- about [site](./about/site)
-- about [author](./about/author)
+- about [site](/musubi/about/site)
+- about [author](/musubi/about/author)
 
 
 Follow me on [github](https://github.com/yunaranyancat) or [tweet](https://twitter.com/yunaranyancat) me something interesting.
