@@ -10,7 +10,7 @@ permalink: /about/author
 >what will I become in the next few years?
 
 After being a college student for almost `4` years (~~get~~ ~~me~~ ~~out~~), doing an
-internship as a back-end developer for `3` months and another `3` months as a front-end developer, he finally concluded, that, becoming a software developer is his second option. He then started to invest his time in learning more about infosec, started to sharpen his arsenal, and now..
+internship doing back-end programming for `3` months and another `3` months doing front-end, he finally concluded, that, becoming a software developer is not the best option, yet. He started to invest his time in learning more about infosec, cybersec, then started to sharpen his arsenal, and now..
 
 he's still a **noob**.
 
