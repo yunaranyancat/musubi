@@ -9,8 +9,8 @@ permalink: /about/author
 **Author** is currently a first year student in Master's Degree of Computer Engineering at University of Orléans, France. His passion for technology, grew considerably stronger through ~~tiring~~ college classes and interesting books he bought online. One day, he asked himself,
 >what will I become in the next few years?
 
-After being a college student for almost `4` years (~~get~~ ~~me~~ ~~out~~), doing an
-internship doing back-end programming for `3` months and another `3` months doing front-end, he finally concluded, that, becoming a software developer is not the best option, yet. He started to invest his time in learning more about infosec, cybersec, then started to sharpen his arsenal, and now..
+After being a college student for almost `4` years (~~get~~ ~~me~~ ~~out~~), did
+an internship as a full stack developer for a total of 6 months, he finally concluded, that, becoming a software developer is not the best option, yet. He started to invest his time in learning more about infosec, cybersec, then started to sharpen his arsenal, and now..
 
 he's still a **noob**.
 
