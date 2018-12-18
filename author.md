@@ -16,4 +16,12 @@ he's still a **noob**.
 
 So, here we are.. the long journey of a noob written in this site, and maybe one day, he will be gone before he can become someone that he wanted to... (ㆆᴗㆆ)
 
+<br /><br /><br /><br /><br />
+## Author's hacking portfolios..(ﾉ◕ヮ◕)ﾉ*:・ﾟ✧(ﾉ◕ヮ◕)ﾉ*: ・ﾟ✧
+### [hackthebox](https://www.hackthebox.eu/profile/43327) the place I usually play
+### [root-me](https://www.root-me.org/yunaranyancat) got a lot to learn from this site
+### [rankk](https://www.rankk.org/user/y4t0) pure CTF , makes you bang your head on the wall!
+### [wechall](https://www.wechall.net/profile/y4t0) last place I go when I need to find cool sites
+
+<br /><br /><br /><br /><br />
 [return to homepage](/musubi/index)

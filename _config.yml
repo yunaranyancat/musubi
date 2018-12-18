@@ -17,7 +17,7 @@ title: Musubi
 email: your-email@example.com
 description: >- # this means to ignore newlines until "baseurl:"
   Hey visitor, welcome to my site! (๑>ᴗ<๑)
-baseurl: "musubi" # the subpath of your site, e.g. /blog
+baseurl: "/musubi" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: yunaranyancat
 github_username:  yunaranyancat
