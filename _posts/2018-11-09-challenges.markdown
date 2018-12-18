@@ -9,11 +9,13 @@ permalink: challenges
 [homepage](/musubi/index)  
 
 Write-ups
-## site : [Vulnhub](https://www.vulnhub.com/)
+#### site : [Vulnhub](https://www.vulnhub.com/)
 
 [Kioptrix Level 1](/musubi/write-ups/kioptrix_1)
 
-## site : [hackthebox](https://www.hackthebox.eu/)
+[Kioptrix Level 2](/musubi/write-ups/kioptrix_2)
+
+#### site : [hackthebox](https://www.hackthebox.eu/)
 
 Coming soon..
 
