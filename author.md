@@ -4,8 +4,10 @@ title: "a short story about me"
 permalink: /about/author
 ---
 
-[![yunaranyancat](https://www.hackthebox.eu/badge/image/43327)](https://www.hackthebox.eu/profile/43327)
+![yatochan](https://i.ytimg.com/vi/hePbTmhX-X8/maxresdefault.jpg)
 
+<br>
+<br>
 **Author** is currently a first year student in Master's Degree of Computer Engineering at University of Orléans, France. His passion for technology, grew considerably stronger through ~~tiring~~ college classes and interesting books he bought online. One day, he asked himself,
 >what will I become in the next few years?
 
