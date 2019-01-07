@@ -8,7 +8,7 @@ layout: default
 ### Categories
 - posts
   - [challenges](/musubi/challenges) writeups
-  - notes..
+  - [notes](/musubi/notes)
 - others
   - what is [Musubi](/musubi/others/whatismusubi)?
 
