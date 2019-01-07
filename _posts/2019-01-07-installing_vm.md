@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: post
 title: "How to create your own home pentesting lab"
 categories: jekyll
 permalink : notes/virtualbox-one
