@@ -168,7 +168,7 @@ Clear text :
 `Orestis - Hacking for fun and profit`
 
 
-So, starting from the first letter `O` we can see there is three possible letters for the clear text. This encryption is called `enigma` where we produce every letter with the same key but different output.
+So, starting from the first letter `O` we can see there is three possible letters for the clear text. This encryption is same as `enigma` machine. 
 
 ### Cracking the Enigma
 The enigma can be attacked using known plain text. In this case, we will use one time pad cracking because we know the ciphertext and the plaintext. There is a site that can be used to [unpad](http://rumkin.com/tools/cipher/otp.php) it.
