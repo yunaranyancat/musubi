@@ -168,18 +168,18 @@ Clear text :
 `Orestis - Hacking for fun and profit`
 
 
-So, starting from the first letter `O` we can see there is three possible letters for the clear text. This encryption is same as `enigma` machine. 
+So, starting from the first letter `O` we can see there is three possible letters for the clear text. This encryption is same as `enigma` machine.
 
 ### Cracking the Enigma
 The enigma can be attacked using known plain text. In this case, we will use one time pad cracking because we know the ciphertext and the plaintext. There is a site that can be used to [unpad](http://rumkin.com/tools/cipher/otp.php) it.
 
-So we got a key for the ciphertext which is, `brainfuckmy`.
+So we got a key for the ciphertext which is, `fuckmybrain`.
 
 Using the key, we can get the clear text of other cipher text using keyed Vigenere or also known as [Quagmire III](http://rumkin.com/tools/cipher/vigenere-keyed.php).
 
 ![brainfuck](/musubi/assets/htboscp/linux/brainfuck/brainfuckmybrain.png)
 
-Upon playing with the key, we found out that the real key is `fuckmybrain` and we will get a clear text for all of the ciphertext. We will get a link that leads to ssh key for `Orestis`.
+Upon playing with the key, clear text and ciphertext, we found out that the real key is `fuckmybrain` and we will get a clear text for all of the ciphertext. We will get a link that leads to ssh key for `Orestis`.
 
 ![link](/musubi/assets/htboscp/linux/brainfuck/fuckmybrain.png)
 
