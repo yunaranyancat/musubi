@@ -8,7 +8,7 @@ permalink: /about/author
 
 <br>
 <br>
-**Author** is currently a first year student in Master's Degree of Computer Engineering at University of Orléans, France. His passion for technology, grew considerably stronger through ~~tiring~~ college classes and interesting books he bought online. One day, he asked himself,
+**Author** is currently a fresh graduate in Bachelor's Degree of Computer Engineering at University of Orléans, France. His passion for technology, grew considerably stronger through ~~tiring~~ college classes and interesting books he bought online. One day, he asked himself,
 >what will I become in the next few years?
 
 After being a college student for almost `4` years (~~get~~ ~~me~~ ~~out~~), did

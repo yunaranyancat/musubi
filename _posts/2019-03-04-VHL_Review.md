@@ -58,7 +58,7 @@ Make sure , your documentation has enough information , and the attacks can be r
 
 Once you submit the documentation, you'll need to wait until it has been verified. Then , you will be sent a beautiful **VHL Certification of Completion** like mine below. :P
 
-![certificate](/musubi/assets/VHL/COC.png)
+![certificate](/musubi/assets/VHL/COC.jpg)
 
 ### Additional Information
 
