@@ -11,6 +11,7 @@ layout: default
   - [notes](/musubi/notes)
 - others
   - what is [Musubi](/musubi/others/whatismusubi)?
+  - Virtual Hacking Labs [review](/musubi/others/vhlreview)
 
 ### About
 - about [site](/musubi/about/site)
