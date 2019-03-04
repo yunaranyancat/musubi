@@ -4,7 +4,7 @@ title: "a short story about me"
 permalink: /about/author
 ---
 
-![yatochan](https://i.ytimg.com/vi/hePbTmhX-X8/maxresdefault.jpg)
+![yatochan](/musubi/assets/about/meow.png)
 
 <br>
 <br>
