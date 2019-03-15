@@ -12,7 +12,8 @@ layout: default
 - others
   - what is [Musubi](/musubi/others/whatismusubi)?
   - Virtual Hacking Labs [review](/musubi/others/vhlreview)
-
+  - [chika01](/musubi/others/chika01) writeup
+  
 ### About
 - about [site](/musubi/about/site)
 - about [author](/musubi/about/author)
