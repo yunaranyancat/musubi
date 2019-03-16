@@ -11,7 +11,7 @@ Hello pentesters and hackers from Malaysia,
 
 I would like to invite you guys to join our Discord server.
 
-Click here to join : [https://discord.gg/ZscZqns](https://discord.gg/ZscZqns)
+Click here to join : [https://discord.gg/KPUXr2u](https://discord.gg/KPUXr2u)
 
 ![discord](/musubi/assets/discord/discord.png)
 
