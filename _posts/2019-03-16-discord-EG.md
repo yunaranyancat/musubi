@@ -58,7 +58,7 @@ Rythm
 - Rythm is a music bot, if you want to listen to the music or request a music, join `music listening` voice channel and see available commands by typing `!help` in #bot-spam text channel. Please do not spam music requests or skip currently playing music (if you are alone inside the voice channel, then you can do so). And mute your mic in the channel. >.<
 
 KawaiiBot
-- Type `+help` in #bot-spam channel and you can spam anything inside the channel. But please do not MEGA SPAM. Plzzzzzzz. :3
+- Type `+help` in #bot-spam channel and you can spam anything inside the channel. But please do not **MEGA SPAM**. Plzzzzzzz. :3
 
 
 ### 3. Illegal Content & Topics
@@ -69,11 +69,11 @@ Do not post Torrents or any illegal websites, failure to do so will result in te
 
 ### 4. Please use English / Malay at all times.
 
-If you want to use other language, it is better to do it outside of the channels. This is not a form of discrimination, rather than encouraging people to communicate actively using well known and commong language.
+If you want to use other languages, it is better to do it outside of the channels. This is not a form of discrimination, rather than encouraging people to communicate actively using well known and common language.
 
 ### 5. TOS
 
-Think before you do anything. We will operate under Discord TOS too so please make sure you fully understand and agreed to those terms.
+Think before you do anything. We are obligated to operate under Discord TOS too so please make sure you fully understand and agreed to those terms.
 
 ### 6. Unspoken rules
 
