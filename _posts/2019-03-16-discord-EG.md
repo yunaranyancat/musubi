@@ -54,6 +54,13 @@ Please do not SPAM bots (KawaiiBot / Rythm) outside of #bot-spam-and-welcoming-m
 
 Only post contents in RELEVANT channels.
 
+Rythm
+- Rhytm is a music bot, if you want to listen to the music or request a music, join `music listening` voice channel and see available commands by typing `!help` in #bot-spam text channel. Please do not spam music requests or skip currently playing music (if you are alone inside the voice channel, then you can do so).
+
+KawaiiBot
+- Type `+help` in #bot-spam channel and you can spam anything inside the channel. But please do not MEGA SPAM. Plzzzzzzz. :3
+
+
 ### 3. Illegal Content & Topics
 
 Please refrain from discussing any unlawful actions, this is not the place to tell people about your blackhat actions, it's also not very smart. In addition to this, please do not ask anyone to break the law for you, this is not a blackhat recruitment area, we try to maintain a professional environment & discussion of such topics is not professional. Finally, refrain from posting unlawfully gathered content & links to such content, #resources-sharing is there for legally obtained material to be posted (no this does not mean you can share a book because you bought it)
