@@ -9,24 +9,24 @@ Hello pentesters and hackers from Malaysia,
 
 ## Intro
 
-I would like to invite you guys to join our discord server.
+I would like to invite you guys to join our Discord server.
 
 Click here to join : [https://discord.gg/ZscZqns](https://discord.gg/ZscZqns)
 
 ![discord](/musubi/assets/discord/discord.png)
 
 
-The main reason why I would like to create this post is to list all the rules for those who are currently applying to join our Discord. This is to avoid spam, posts that violate rules and other things that might make things worst.
+The main reason why I would like to create this post is to list all the rules for those who are currently applying to join our Discord server. This is to avoid spam, posts that violate rules and other things that might make things worst.
 
 ## General Rules
 
 ### 1. Follow the rules
 
-Rules are created to maintain harmony between Discord users. Follow the rules and enjoy our Discord.
+Rules are created to maintain harmony between Discord users. Follow the rules and you can enjoy our Discord server.
 
 ### 2. Rudeness & Offensive Language
 
-This Discord is aimed for all range of users. Even students below 18 years old so that they can learn at early stage. Do not use curse language. If you're being caught by the Mods, you'll be kicked out from the server or get your roles removed for a period of time.
+This Discord server is aimed for all range of users. Even students below 18 years old are welcomed so that they can learn at an early stage. Do not use curse/bad languages. If you're being caught by the Mods, you'll be kicked out from the server or get your roles removed for a period of time.
 
 ### 3. Welcoming & Patience
 
@@ -38,13 +38,13 @@ Please refrain yourself from causing a huge drama or arguments. You can simply b
 
 ### 5. Privacy
 
-Please respect others privacy. Asking personal questions should be done between only you and the person in question. Send them a PM if they're available.
+Please respect others privacy. Asking personal questions should be done between only you and the person in question. Send them a PM if they're available. And don't PM them if they set their status as unavailable!
 
 ## Server Rules
 
 ### 1. Mods pinging
 
-Please do not ping Moderators unless you have a very urgent problems. If you would like to report a user, send Mods a PM alongside the screenshot(s) of them breaking the rules.
+Please do not ping Moderators unless you have a very urgent problem. If you would like to report a user(s), send Mods a PM alongside the screenshot(s) of them breaking the rules.
 
 ### 2. Channel relevance
 
@@ -56,7 +56,7 @@ Only post contents in RELEVANT channels.
 
 Please refrain from discussing any unlawful actions, this is not the place to tell people about your blackhat actions, it's also not very smart. In addition to this, please do not ask anyone to break the law for you, this is not a blackhat recruitment area, we try to maintain a professional environment & discussion of such topics is not professional. Finally, refrain from posting unlawfully gathered content & links to such content, #resources-sharing is there for legally obtained material to be posted (no this does not mean you can share a book because you bought it)
 
-Do not post Torrents or any illegal websites, failure to do so will result in temporary ban.
+Do not post Torrents or any illegal websites, failure to do so will result in temporary ban. There might be professionals who are working with the polices here.
 
 ### 4. Please use English / Malay at all times.
 
@@ -69,3 +69,5 @@ Think before you do anything. We will operate under Discord TOS too so please ma
 ### 6. Unspoken rules
 
 If you think it's wrong, then it's wrong. There is no justification.
+
+Thank you. :D
