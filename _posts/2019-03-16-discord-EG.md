@@ -42,6 +42,8 @@ Please respect others privacy. Asking personal questions should be done between 
 
 ## Server Rules
 
+Once you have joined our Discord, please wait some time for Mods to give you a role. If you think that your roles are irrelevant, please do not hesitate to send Mods a PM. And do introduce yourself inside the #welcoming-mat channel.
+
 ### 1. Mods pinging
 
 Please do not ping Moderators unless you have a very urgent problem. If you would like to report a user(s), send Mods a PM alongside the screenshot(s) of them breaking the rules.
