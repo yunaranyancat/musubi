@@ -55,7 +55,7 @@ Please do not SPAM bots (KawaiiBot / Rythm) outside of #bot-spam-and-welcoming-m
 Only post contents in RELEVANT channels.
 
 Rythm
-- Rhytm is a music bot, if you want to listen to the music or request a music, join `music listening` voice channel and see available commands by typing `!help` in #bot-spam text channel. Please do not spam music requests or skip currently playing music (if you are alone inside the voice channel, then you can do so).
+- Rythm is a music bot, if you want to listen to the music or request a music, join `music listening` voice channel and see available commands by typing `!help` in #bot-spam text channel. Please do not spam music requests or skip currently playing music (if you are alone inside the voice channel, then you can do so). And mute your mic in the channel. >.<
 
 KawaiiBot
 - Type `+help` in #bot-spam channel and you can spam anything inside the channel. But please do not MEGA SPAM. Plzzzzzzz. :3
