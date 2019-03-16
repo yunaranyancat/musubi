@@ -34,11 +34,11 @@ Not all of us are pro pentesters, veterans, master hackers or 1337. Please don't
 
 ### 4. Drama & Arguments
 
-Please refrain yourself from causing a huge drama or arguments. You can simply block the user if you don't like them.
+Please refrain yourself from causing a huge drama or arguments. You can simply block the user(s) if you don't like them.
 
 ### 5. Privacy
 
-Please respect others privacy. Asking personal questions should be done between only you and the person in question. Send them a PM if they're available. And don't PM them if they set their status as unavailable!
+Please respect others privacy. Asking personal questions should be done between only you and the person in question. Send them a PM if they're available. And don't PM them if they have set their status as unavailable!
 
 ## Server Rules
 
