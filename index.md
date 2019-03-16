@@ -13,7 +13,8 @@ layout: default
   - what is [Musubi](/musubi/others/whatismusubi)?
   - Virtual Hacking Labs [review](/musubi/others/vhlreview)
   - [chika01](/musubi/others/chika01) writeup
-  
+  - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server
+
 ### About
 - about [site](/musubi/about/site)
 - about [author](/musubi/about/author)
