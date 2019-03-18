@@ -69,11 +69,11 @@ Do not post Torrents or any illegal websites, failure to do so will result in te
 
 ### 4. Please use English / Malay at all times.
 
-If you want to use other languages, it is better to do it outside of the channels. This is not a form of discrimination, rather than encouraging people to communicate actively using well known and common language.
+If you want to use other languages, it is better to do it outside of the channels. This is not a form of discrimination, rather than encouraging people to communicate actively using well known and common languages.
 
 ### 5. TOS
 
-Think before you do anything. We are obligated to operate under Discord TOS too so please make sure you fully understand and agreed to those terms.
+Think before you do anything. We are obligated to operate under Discord TOS too so please make sure that you have fully understood and agreed to those terms.
 
 ### 6. Unspoken rules
 
