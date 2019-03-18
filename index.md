@@ -11,9 +11,12 @@ layout: default
   - [notes](/musubi/notes)
 - others
   - what is [Musubi](/musubi/others/whatismusubi)?
-  - Virtual Hacking Labs [review](/musubi/others/vhlreview)
-  - [chika01](/musubi/others/chika01) writeup
   - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server
+- reviews
+  - Virtual Hacking Labs [review](/musubi/others/vhlreview)
+  - OSWP [review](/musubi/others/oswpreview)
+- ctf
+  - [chika01](/musubi/others/chika01) writeup
 
 ### About
 - about [site](/musubi/about/site)
