@@ -62,7 +62,7 @@ Once you submit the documentation, you'll need to wait until it has been verifie
 
 ### Additional Information
 
-There is no forum yet on VHL, so you won't be able to discuss anything related to labs, or pentesting in general. But, I considered it a challenge given by VHL . It took me almost 7 days to compromise those 20 machines. I didn't touch the `Advanced+` machines yet, until now but I'll try to find time to jump back into VHL.
+There is no forum yet on VHL, so you won't be able to discuss anything related to labs, or pentesting in general. But, I considered it as a challenge given by VHL . It took me almost 7 days to compromise those 20 machines. I didn't touch the `Advanced+` machines yet, until now but I'll try to find time to jump back into VHL.
 
 
 ### OSCP
