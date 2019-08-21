@@ -17,9 +17,7 @@ layout: default
   - OSWP [review](/musubi/others/oswpreview)
 - ctf and boot2root by me
   - [CTF chika01](/musubi/others/chika01) writeup
-  {% comment %}
-  { - [VM nezuko](/musubi/others/vm_nezuko) writeup  }
-  {% endcomment %}
+  - [VM nezuko](/musubi/others/vm_nezuko) writeup  
 
 
 ### About
