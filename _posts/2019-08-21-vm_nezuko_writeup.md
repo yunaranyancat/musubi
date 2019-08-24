@@ -5,7 +5,7 @@ categories: jekyll
 permalink : /others/vm_nezuko
 ---
 
-Hi there. This is my boot2root writeup for a vm called "Nezuko". For those who didn't manage to play with it, download the vm (add link to vm) and come back when you have finished.
+Hi there. This is my boot2root writeup for a vm called "Nezuko". For those who didn't manage to play with it, download the [vm](https://www.vulnhub.com/entry/nezuko-1,352/) and come back when you have finished.
 
 ### About Nezuko VM
 
