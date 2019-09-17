@@ -66,10 +66,10 @@ At first, I have decided to focus only on the buffer overflow part on the last w
 ### Level ??? (OSCP exam) [Time spent : 24 hours++]
 
 Targets :
-2 x 25 points machine (one of them is buffer overflow)
-2 x 20 points machine
-1 x 20 machine
-= 100 points (the passing points is 70)
+- 2 x 25 points machine (one of them is buffer overflow)
+- 2 x 20 points machine
+- 1 x 20 machine
+- = 100 points (the passing points is 70)
 
 The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull besides me just in case my eyes won't open when I wanted it to.. :3
 
