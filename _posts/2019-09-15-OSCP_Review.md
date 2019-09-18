@@ -45,17 +45,17 @@ I know I know, it's the infamous OSCP like HTB machines list created by [TJnull]
 
 ![oscplike](/musubi/assets/oscp/oscplike.jpg)
 
-Okay, this is my tips and tricks on how to gain the most of knowledge for every box that is on the list. (Not just for OSCP)
+Okay, these are my tips and tricks on how to gain the most of knowledge for every box that is on the list. (Not just for OSCP)
 
 First, I will enumerate the machine by myself. What do I mean by that is I will try to find running services and then I enumerate the service that I know at that time and when I'm stuck, or when I run out of ideas, only then would I watch Ippsec videos but I will **ONLY** watch the PART where I was stuck.
 
-After that,  I paused the video then proceed my enumeration and then repeat the methods until I manage to root the machine. This will give you new enumeration and exploitation ideas or techniques which you can try to use them on other boxes later on.
+After that,  I paused the video then proceed my enumeration and then repeat the methods until I manage to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.
 
 After I have rooted a machine, I re-watched Ippsec videos without pausing. This is the moment where I wanted to know how he did it and what's different than what I did and how can I improve my enumeration techniques. The special thing about his videos are he didn't root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).
 
 And the last cycle is optional, re-root the machine without any help. (Practice what you just learned + what you already know)
 
-I can say that I'm pretty good with Linux machines, so I spent more time on Windows boxes. I learned about Windows environment, such as file transfers, system information, services and others that might give you the idea on how to find vulnerabilities in Windows machine.
+I can say that I'm pretty good with Linux machines, so I spent more time on Windows boxes. I learned about Windows environment, such as file transfers, system information, services and others that might give me the idea on how to find vulnerabilities in Windows machine.
 
 ### Level 4 (I'm pretty confident to take OSCP exam) [Time spent : 1 month]
 
