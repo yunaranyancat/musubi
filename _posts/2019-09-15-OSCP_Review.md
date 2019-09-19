@@ -51,7 +51,7 @@ First, I will enumerate the machine by myself. What do I mean by that is I will 
 
 After that,  I paused the video then proceed my enumeration and then repeat the methods until I manage to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.
 
-After I have rooted a machine, I re-watched Ippsec videos without pausing. This is the moment where I wanted to know how he did it and what's different than what I did and how can I improve my enumeration techniques. The special thing about his videos are he didn't root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).
+After I have rooted a machine, I re-watched Ippsec videos without pausing. This is the moment where I wanted to know how he did it and what's different than what I did and how can I improve my enumeration techniques. The special thing about his videos is he didn't root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).
 
 And the last cycle is optional, re-root the machine without any help. (Practice what you just learned + what you already know)
 
@@ -66,7 +66,7 @@ At first, I have decided to focus only on the buffer overflow part on the last w
 ### Level ??? (OSCP exam) [Time spent : 24 hours++]
 
 Targets :
-Few machines with one of them is the buffer overflow thingy.. 
+Few machines with one of them is the buffer overflow thingy..
 
 The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull besides me just in case my eyes won't open when I wanted it to.. :3
 
@@ -136,7 +136,7 @@ b. TJnull HackTheBox OSCP like machines list
 
 **OSCP**
 
-- [nmapautomator]()
+- [nmapautomator](https://github.com/21y4d/nmapAutomator)
 - 0 day security [checklist](http://www.0daysecurity.com/penetration-testing/enumeration.html)
 - [secwiki](https://github.com/SecWiki/windows-kernel-exploits) Windows kernel exploits
 - g0tmi1k linux privilege [escalation](https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/)
