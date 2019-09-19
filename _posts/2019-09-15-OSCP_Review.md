@@ -100,7 +100,7 @@ __Metasploit usage__
 
 Some of you might find that using Metasploit would be rewarding, however that wasn't my case.
 
-12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
+12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points machine and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
 
 ![noob](/musubi/assets/oscp/noob.jpeg)
 
