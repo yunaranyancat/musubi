@@ -72,7 +72,7 @@ The exam started at 11PM (Normally I'm already sound asleep at this time). I pre
 
 So, my strategy was like this :
 
-- Tackle buffer overflow machine first as it is the easiest one
+- Tackle buffer overflow machine first as it is the easiest one, for me. :>
 - While doing Bof, run [nmapautomator](https://github.com/21y4d/nmapAutomator) for the other machines and come back later to run a more thorough manual scans. (nikto, gobuster, nmap scripts scan etc..)
 
 It took me around two hours to complete the buffer overflow part. I did it slow and steady so I that I will know where is the error just in case the exploit didn't work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.
@@ -85,8 +85,8 @@ My standard enumeration + exploitation techniques would be ;
 4. Repeat step 2-3 until you have identified some ports that could be your entry point (some low priv shell or even a root shell ) with different list of possible vulnerabilities.
 5. Rabbit holes : IMHO, rabbit holes only exist if you ;
   - Do not understand how the exploit works (If you know how it works but when you run it then nothing happened, then move on to different services/ports, that service might not be vulnerable even though it's version is vulnerable.. we can assume that it has been patched)
-  - Keep running the exploit again and again without modifying the exploit code hoping that it will work (Insanity is about doing the same thing over and over again and expecting different results.. The key is to understand what and why it's not working. )
-  - Panic and suddenly forgetting every simple enumeration technique that you have learned. (Keep calm and go through your enumeration slowly, one by one. No one will ever know what's waiting ahead, so keep enumerating.. )
+  - Keep running the exploit again and again without modifying the exploit code hoping that it will work (Insanity is about doing the same thing over and over again and expecting different results.. The key is to understand what and why it's not working.)
+  - Panic and suddenly forgetting every simple enumeration technique that you have learned. (Keep calm and go through your enumeration slowly, one by one. No one will ever know what's waiting ahead, so keep enumerating..)
 6. If all of the above didn't work, then check back :
   - Your scan results (Have you scanned all ports? TCP or UDP? )
   - Did you forget something / enumerating each port that is open? If you are paranoid like me , you can use this [list](http://www.0daysecurity.com/penetration-testing/enumeration.html)
@@ -100,7 +100,7 @@ __Metasploit usage__
 
 Some of you might find that using Metasploit would be rewarding, however that wasn't my case.
 
-12 hours passed and I have rooted all of the machines except for one machine, which was the 25 points and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day, 1 hour during the midnight, 1 hour during the early morning and another 1 hour in the evening), I went into ~~rage~~ script kiddie mode.
+12 hours passed and I have rooted all of the machines except for one machine, which was the 25 points and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
 
 ![noob](/musubi/assets/oscp/noob.jpeg)
 
