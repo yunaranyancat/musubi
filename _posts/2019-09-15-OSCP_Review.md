@@ -66,7 +66,7 @@ At first, I have decided to focus only on the buffer overflow part on the last w
 ### Level ??? (OSCP exam) [Time spent : 24 hours++]
 
 Targets :
-Few machines with one for Buffer Overflow.. (70 is the passing score)
+Few machines with one of them is the buffer overflow thingy.. 
 
 The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull besides me just in case my eyes won't open when I wanted it to.. :3
 
