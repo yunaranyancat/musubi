@@ -8,7 +8,7 @@ permalink: /about/author
 
 <br>
 <br>
-**Author** is currently a pentester at one of the Big 4 company. His passion for technology, grew considerably stronger through ~~tiring~~ projects and interesting books he bought online.
+**Author** is currently a pentester at one of the Big 4. His passion for technology, grew considerably stronger through ~~tiring~~ projects and interesting books he bought online.
 
 Check out his twitter [@yunaranyancat](https://twitter.com/yunaranyancat)
 <br /><br />
