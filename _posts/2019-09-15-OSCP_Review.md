@@ -72,7 +72,7 @@ The exam started at 11PM (Normally I'm already sound asleep at this time). I pre
 
 So, my strategy was like this :
 
-- Tackle buffer overflow machine first as it is the easiest one (just follow the course and you will be fine)
+- Tackle buffer overflow machine first as it is the easiest one
 - While doing Bof, run [nmapautomator](https://github.com/21y4d/nmapAutomator) for the other machines and come back later to run a more thorough manual scans. (nikto, gobuster, nmap scripts scan etc..)
 
 It took me around two hours to complete the buffer overflow part. I did it slow and steady so I that I will know where is the error just in case the exploit didn't work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.
