@@ -90,7 +90,7 @@ My standard enumeration + exploitation techniques would be ;
 6. If all of the above didn't work, then check back :
   - Your scan results (Have you scanned all ports? TCP or UDP? )
   - Did you forget something / enumerating each port that is open? If you are paranoid like me , you can use this [list](http://www.0daysecurity.com/penetration-testing/enumeration.html)
-  - Did you forget to modify the script to fit your target environment? (ports? protocols? path? version? command? or even running Operating System?)
+  - Did you forget to modify the exploits to fit your target environment? (ports? protocols? path? version? command? or even running Operating System?)
   - Did you forget to take A REST? A quick nap or even few minutes of break could help you get back in the game.
 7. Profit
 
