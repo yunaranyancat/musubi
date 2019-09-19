@@ -66,7 +66,7 @@ At first, I have decided to focus only on the buffer overflow part on the last w
 ### Level ??? (OSCP exam) [Time spent : 24 hours++]
 
 Targets :
-Few machines with one for Buffer Overflow.. (70 is the passing points)
+Few machines with one for Buffer Overflow.. (70 is the passing score)
 
 The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull besides me just in case my eyes won't open when I wanted it to.. :3
 
@@ -100,7 +100,7 @@ __Metasploit usage__
 
 Some of you might find that using Metasploit would be rewarding, however that wasn't my case.
 
-12 hours passed and I have rooted all of the machines except for one machine, which was the 25 points and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
+12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
 
 ![noob](/musubi/assets/oscp/noob.jpeg)
 
