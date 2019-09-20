@@ -21,9 +21,9 @@ Hello there, I know we are all have been in this place. This is the moment right
 
 This is the moment where we got frustrated whenever we fail to understand anything.. the moment where, whenever we wanted to install some distros or some hacking tools but failed, we just paste the error in the forum or a facebook group and ask the pros, "hi there, can anyone help me?", in hope of someone will help and maybe tell us something like, "why don't you read the error from the terminal and then try to search what the error says online?" ; but instead we got told "try harder", "google is your friend" or even a sad facebook emoji reaction with no replies. It's okay. It's totally fine. It's not that they don't want to help you.
 
-Maybe it is another way of teaching you and make you think and realize that, "Let's imagine that you are currently taking OSCP exam and you don't know what to do.. do you ask directly for someone else help? No, you won't, and you can't."
+Maybe it is another way of teaching you and making you think and realize that, "Let's imagine that you are currently taking OSCP exam and you don't know what to do.. do you ask directly for someone else help? No, you won't, and you can't."
 
-You need to find your way in and out, you need to find an entry point, you need to google every terms that you know and that is when you will understand what do they mean by **google is your friend**.
+You need to find your way in and out, you need to find an entry point, you need to google every term that you know and that is when you will understand what do they mean by **google is your friend**.
 
 ![desperation](/musubi/assets/oscp/desperation.jpeg)
 
