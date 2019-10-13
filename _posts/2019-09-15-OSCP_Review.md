@@ -7,7 +7,7 @@ permalink : /others/oscpreview
 
 Hi guys, what's up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Certified Professional(OSCP) exam.
 
-Since I have some time to kill, I will share the journey and preparations that I took before I decided to take OSCP exam and also I will share my labs and exam experience. This post will be quite different compared to my OSWP [review](https://yunaranyancat.github.io/musubi/others/oswpreview) as I won't put much details on the course (there are lots of OSCP reviews that explain what is OSCP, what are the course pre requisites, who should take it, etc..) but rather I will explain on how I prepared myself before taking OSCP. Ok, enough for introduction, let's delve deep into a script kiddie's journey to become an OSCP holder.
+Since I have some time to kill, I will share the journey and preparations that I took before I decided to take OSCP exam and also I will share my labs and exam experiences. This post will be quite different compared to my OSWP [review](https://yunaranyancat.github.io/musubi/others/oswpreview) as I won't put much details on the course (there are lots of OSCP reviews that explain what is OSCP, what are the course pre requisites, who should take it, etc..) but rather I will explain on how I prepared myself before taking OSCP. Ok, enough for introduction, let's delve deep into a script kiddie's journey to become an OSCP holder.
 
 I will divide different sections where I will call it as levels. These levels will indicate where I was, what were my skill sets at that time and what did I do to go to the next level..
 
@@ -35,7 +35,7 @@ After that, I started playing [HackTheBox](https://www.hackthebox.eu/), which my
 
 This is where I spent most of my time playing HTB, met a lot of new friends, shared and exchanged lots of knowledge, joined lots of groups.. and after a month playing HTB, I managed to obtain a **Guru** rank from **script kiddie** rank (I was really close to **Omniscient** as I managed to root all of the active machines at that time but I was stuck at binary exploitation challenges, because, you know... which script kiddie can do binary exploitation? **(>_<)** ) ..
 
-Other than that, sometimes I spent my time playing with other CTF sites such as root-me, rankkk, and other CTF sites but, HTB is number one in my heart. ☆⌒(ゝ。∂)
+Other than that, sometimes I spent my time playing with other CTF sites such as root-me, rankkk, and etc.. but, HTB is number one in my heart. ☆⌒(ゝ。∂)
 
 Check out my [wechall](https://www.wechall.net/profile/y4t0) profile for more info.
 
@@ -47,11 +47,11 @@ I know I know, it's the infamous OSCP like HTB machines list created by [TJnull]
 
 Okay, these are my tips and tricks on how to gain the most of knowledge for every box that is on the list. (Not just for OSCP)
 
-First, I will enumerate the machine by myself. What do I mean by that is I will try to find running services and then I enumerate the service that I know at that time and when I'm stuck, or when I run out of ideas, only then would I watch Ippsec videos but I will **ONLY** watch the PART where I was stuck.
+First, I will enumerate the machine by myself. What do I mean by that is I will try to find running services and then, I will enumerate the service that I know at that time. When I'm stuck or when I run out of ideas, only then would I watch Ippsec videos but I will **ONLY** watch the PART where I was stuck.
 
-After that,  I paused the video then proceed my enumeration and then repeat the methods until I manage to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.
+After that,  I paused the video then proceed my enumeration and then repeat the methods until I have managed to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.
 
-After I have rooted a machine, I re-watched Ippsec videos without pausing. This is the moment where I wanted to know how he did it and what's different than what I did and how can I improve my enumeration techniques. The special thing about his videos is he didn't root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).
+After I have rooted a machine, I re-watched Ippsec videos about that machine , again, without pausing. This is the moment where I wanted to know how he did it and what's different than what I did and how can I improve my enumeration techniques. The special thing about his videos is he didn't root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).
 
 And the last cycle is optional, re-root the machine without any help. (Practice what you just learned + what you already know)
 
@@ -68,7 +68,7 @@ At first, I have decided to focus only on the buffer overflow part on the last w
 Targets :
 Few machines with one of them is the buffer overflow thingy..
 
-The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull besides me just in case my eyes won't open when I wanted it to.. :3
+The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull beside me just in case my eyes won't open when I wanted it to.. :3
 
 So, my strategy was like this :
 
@@ -81,10 +81,10 @@ My standard enumeration + exploitation techniques would be ;
 
 1. Identify open ports and what are the running services.
 2. Find the version of the running services and compare it to the latest version available online. If the version is quite old, then there's a possibility that it is an entry point into the target.
-3. Read the exploit that are related to the running services and understand how it can be exploited.
+3. Read the exploits that are related to the running services and understand how it can be exploited.
 4. Repeat step 2-3 until you have identified some ports that could be your entry point (some low priv shell or even a root shell ) with different list of possible vulnerabilities.
 5. Rabbit holes : IMHO, rabbit holes only exist if you ;
-  - Do not understand how the exploit works (If you know how it works but when you run it then nothing happened, then move on to different services/ports, that service might not be vulnerable even though it's version is vulnerable.. we can assume that it has been patched)
+  - Do not understand how the exploits work (If you know how they work but when you run them against that particular service then nothing happened, then move on to different services/ports, that service might not be vulnerable even though it's version is vulnerable.. we can assume that it has been patched)
   - Keep running the exploit again and again without modifying the exploit code hoping that it will work (Insanity is about doing the same thing over and over again and expecting different results.. The key is to understand what and why it's not working.)
   - Panic and suddenly forgetting every simple enumeration technique that you have learned. (Keep calm and go through your enumeration slowly, one by one. No one will ever know what's waiting ahead, so keep enumerating..)
 6. If all of the above didn't work, then check back :
