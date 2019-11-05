@@ -128,10 +128,11 @@ Few days later, I got a mail telling that I have passed the OSCP exam. Another g
 
 a. Penetration Testing: A Hands-On Introduction to Hacking (Georgia Weidman)
 
-![gw](/musubi/assets/oscp/gw.jpg)
+![gw](/musubi/assets/oscp/gw.jpg) 
+
+
 
 b. TJnull HackTheBox OSCP like machines list
-
 
 ![oscplike2](/musubi/assets/oscp/oscplike.jpg)
 
