@@ -29,7 +29,7 @@ You need to find your way in and out, you need to find an entry point, you need 
 
 When I was at this level, I bought a book titled **Penetration Testing: A Hands-On Introduction to Hacking** by Georgia Weidman.
 
-After that, I started playing [HackTheBox](https://www.hackthebox.eu/), which my first machine was [Jerry](https://www.youtube.com/watch?v=PJeBIey8gc4) (Jerry has just got retired when I wanted to try it, I think around early December). At that time, I was pretty happy to get a shell eventhough I was just replicating everything what [Ippsec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA) did. (⁄ ⁄>⁄ ▽ ⁄<⁄ ⁄)
+After that, I started playing [HackTheBox](https://www.hackthebox.eu/), which my first machine was [Jerry](https://www.youtube.com/watch?v=PJeBIey8gc4) (Jerry has just got retired when I wanted to try it, I think around early December). At that time, I was pretty happy to get a shell eventhough I was just replicating everything what [Ippsec](https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA) did.
 
 ### Level 2 (I know what is pentest but I still need to make myself comfortable with hacking or boot-to-root CTF style) [Time spent : As long as it should take]
 
@@ -61,21 +61,21 @@ I can say that I'm pretty good with Linux machines, so I spent more time on Wind
 
 I then booked the labs for 30 days, then scheduled the exam a week before my lab time finished (I'm scared that if I waited too long, I may end up procrastinating). Since I was pretty comfortable with my enumeration (to a comfortable level), I didn't play much in the labs. I only used the labs to practice my buffer overflow techniques.
 
-At first, I have decided to focus only on the buffer overflow part on the last week before the exam started, however, when I realized that the buffer overflow part was pretty easy to replicate, it boosted my confidence and that is when I decided to rescheduled my exam to be another week earlier than scheduled, (rescheduled two days before the exam date).
+At first, I have decided to focus only on the buffer overflow part on the last week before the exam started, however, when I realized that the buffer overflow part was pretty easy to replicate, it boosted my confidence and that is when I decided to rescheduled my exam to be another week earlier than scheduled.
 
 ### Level ??? (OSCP exam) [Time spent : 24 hours++]
 
 Targets :
 Few machines with one of them is the buffer overflow thingy..
 
-The exam started at 11PM (Normally I'm already sound asleep at this time). I prepared three cans of Redbull beside me just in case my eyes won't open when I wanted it to.. :3
+The exam started at 11PM (Normally I'm already sound asleep at this time). I have prepared three cans of Redbull beside me just in case my eyes won't open when I wanted it to.. :3
 
 So, my strategy was like this :
 
 - Tackle buffer overflow machine first as it is the easiest one, for me. :>
 - While doing Bof, run [nmapautomator](https://github.com/21y4d/nmapAutomator) for the other machines and come back later to run a more thorough manual scans. (nikto, gobuster, nmap scripts scan etc..)
 
-It took me around two hours to complete the buffer overflow part. I did it slow and steady so I that I will know where is the error just in case the exploit didn't work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.
+It took me around two hours to complete the buffer overflow part. I did it slow and steady so that I will know where are the errors just in case the exploit didn't work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.
 
 My standard enumeration + exploitation techniques would be ;
 
@@ -100,11 +100,11 @@ __Metasploit usage__
 
 Some of you might find that using Metasploit would be rewarding, however that wasn't my case.
 
-12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points machine and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I only slept for 3 hours in total during my exam day ; **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
+12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points machine and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn't work + I'm so tired and sleepy (I have only slept for 3 hours in total during my exam day ; **1 hour** during the midnight, **1 hour** during the early morning and another **1 hour** in the evening), I went into ~~rage~~ script kiddie mode.
 
 ![noob](/musubi/assets/oscp/noob.jpeg)
 
-I upgraded my shell into a Meterpreter session hoping that **local exploit suggester** in Metasploit would work. However, I found nothing. Nothing at all. Not even a tiny bit of clue popped up after I used my supposedly Metasploit "allowance" . Then I realized that I forgot to do something, one of the most important things to do for everyone especially for those who are taking the exam; **I FORGOT TO TAKE A REST**.
+I then upgraded my shell into a Meterpreter session hoping that **local exploit suggester** in Metasploit would work. However, I found nothing. Nothing at all. Not even a tiny bit of clue popped up after I have used my supposedly Metasploit "allowance" . Then I realized that I forgot to do something, one of the most important things to do for everyone especially for those who are taking the exam; **I FORGOT TO TAKE A REST**.
 
 ![meterpreter](/musubi/assets/oscp/meterpreter.jpeg)
 
@@ -128,7 +128,7 @@ Few days later, I got a mail telling that I have passed the OSCP exam. Another g
 
 a. Penetration Testing: A Hands-On Introduction to Hacking (Georgia Weidman)
 
-![gw](/musubi/assets/oscp/gw.jpg) 
+![gw](/musubi/assets/oscp/gw.jpg)
 
 
 
