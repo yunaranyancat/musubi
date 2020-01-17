@@ -48,7 +48,7 @@ Using the credential found, we managed to log in.
 ![5](/musubi/assets/aqua/5.png)
 
 
-The url is vulnerable to LFI as seen below.
+The **url** is vulnerable to **LFI(local file inclusion)** as seen below.
 
 ![6](/musubi/assets/aqua/6.png)
 
@@ -62,9 +62,9 @@ Image below shows the result before and after port knocking.
 
 ![8](/musubi/assets/aqua/8.png)
 
-Using the same credential , we managed to login into the FTP service.
+Using the same credential , we managed to login into the **FTP** service.
 
-The content of **hello.php** is the same as in the index page of Megumin secret diary we saw last time. This means that if we put our php reverse shell payload in this directory, we can get a shell by browsing through the page using LFI vulnerability found earlier.
+The content of **hello.php** is the same as in the index page of **Megumin** secret diary we saw last time. This means that if we put our **php reverse shell** payload in this directory, we can get a shell by browsing through the page using **LFI** vulnerability found earlier.
 
 ![9](/musubi/assets/aqua/9.png)
 
@@ -100,7 +100,7 @@ And as megumin, we can run `/home/aqua/Desktop/backdoor` using sudo privilege.
 
 ![14](/musubi/assets/aqua/14.png)
 
-When rerunning nmap on the target, we found that port 1337 is open.
+When rerunning nmap on the target, we found that port **1337** is open.
 
 ![15](/musubi/assets/aqua/15.png)
 
