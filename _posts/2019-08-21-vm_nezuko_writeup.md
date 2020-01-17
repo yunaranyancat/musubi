@@ -189,3 +189,5 @@ After waiting for couple of minutes for the script to be executed, we managed to
 ### Wrap up
 
 Thank you for taking your time to read the writeup and I hope you enjoyed playing with my first vm. :>
+
+Check out also [vm_aqua](/musubi/others/vm_aqua)
