@@ -16,7 +16,7 @@ layout: default
   - Virtual Hacking Labs [review](/musubi/others/vhlreview)
   - OSWP [review](/musubi/others/oswpreview)
   - OSCP [review](/musubi/others/oscpreview)
-  - OSCP [review](/musubi/others/oscereview)
+  - OSCE [review](/musubi/others/oscereview)
 - ctf and boot2root by me
   - [CTF chika01](/musubi/others/chika01) writeup
   - [VM nezuko](/musubi/others/vm_nezuko) writeup  
