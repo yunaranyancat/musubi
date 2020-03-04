@@ -110,3 +110,9 @@ iii. [https://aminbohio.com/study-guide-tips-offensive-security-certified-expert
 Thank you for reading! See you next time.
 
 ![shaw](/musubi/assets/osce/shaw.gif)
+
+## Credits
+
+Special thanks to mreiaz and his cat, Kassim, Jasveer , and others who have helped me throughout the journey. Without you guys, I won't be able to reach this far... You guys rocks!
+
+![bowmeow](/musubi/assets/osce/bowmeow.gif)
