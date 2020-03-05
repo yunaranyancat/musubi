@@ -19,7 +19,8 @@ layout: default
   - OSCE [review](/musubi/others/oscereview)
 - ctf and boot2root by me
   - [CTF chika01](/musubi/others/chika01) writeup
-  - [VM nezuko](/musubi/others/vm_nezuko) writeup  
+  - [VM nezuko](/musubi/others/vm_nezuko) writeup
+  - [VM aqua](/musubi/others/vm_aqua) writeup  
 
 
 ### About
