@@ -102,7 +102,7 @@ iii. [https://aminbohio.com/study-guide-tips-offensive-security-certified-expert
 **Q2**: Is taking OSCE the only way I can learn binary exploitations/exploit development?  
 **Meow** : No, not at all. There are other courses that offer the same thing such as eLearnSecurity XDS , Corelan trainings, etc.. You don't even need a cert to say that you "know" exploit development. For me, certifications act as my own way of benchmarking my skillset. I know that I will surely forget what I have learned in OSCE, OSCP etc.. if I didn't maintain my technical skills, so it is up to my responsibilities to maintain my qualifications as an OSCE holder. You don't need to do the same way if you don't want to. Knowledge can be gained even without certifications.
 
-**Q3**: Hi, can you tell me what are the exam objectives?  
+**Q3**: Hi, can you tell me what are the exam questions?  
 **Meow** : Meow!
 
 # Fin
