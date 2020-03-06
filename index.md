@@ -12,6 +12,7 @@ layout: default
 - others
   - what is [Musubi](/musubi/others/whatismusubi)?
   - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server
+  - [XSSTest](musubi/others/XSStest)
 - reviews
   - Virtual Hacking Labs [review](/musubi/others/vhlreview)
   - OSWP [review](/musubi/others/oswpreview)
