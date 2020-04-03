@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>chika01 writeup | Musubi</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="chika01 writeup" />
+<meta name="author" content="yunaranyancat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hello guys," />
+<meta property="og:description" content="Hello guys," />
+<link rel="canonical" href="http://localhost:4000/musubi/others/chika01" />
+<meta property="og:url" content="http://localhost:4000/musubi/others/chika01" />
+<meta property="og:site_name" content="Musubi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-03-15T00:00:00+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/musubi/others/chika01","headline":"chika01 writeup","dateModified":"2019-03-15T00:00:00+08:00","datePublished":"2019-03-15T00:00:00+08:00","author":{"@type":"Person","name":"yunaranyancat"},"description":"Hello guys,","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/others/chika01"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- <div class="container">
+        <h1>Musubi</h1>
+        <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2>
+
+        <section id="downloads">
+          
+          <a href="" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div> -->
+
+      <div class="container">
+        <h1>Musubi</h1>
+        <!-- <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2> -->
+        
+      </div>
+      
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>15 March 2019</small>
+<h1>chika01 writeup</h1>
+
+
+<p class="view">by yunaranyancat</p>
+
+
+<p>Hello guys,</p>
+
+<h2 id="intro">Intro</h2>
+
+<p>I have created my first ctf challenge called <a href="https://github.com/yunaranyancat/cryptoalltheway/blob/master/chika01.zip">chika01</a> for my friends to play with. And since it has been like a week or more since I created the challenge, I think it’s time to do the writeup about it. If you have not solved it yet and wanted to give it a try, stop scrolling, download the challenge and get the secret key! ;&gt;</p>
+
+<h2 id="walktrough">Walktrough</h2>
+
+<h3 id="-getting-the-key-for-chikasecretmessagezip-"><u> getting the key for chikasecretmessage.zip </u></h3>
+
+<p>When we unzip the file, we will be shown with 4 files.</p>
+
+<p><img src="/musubi/assets/chika01/intro.png" alt="intro" /></p>
+
+<p>The zip file is currently password protected, so we need to find a way to unlock it.</p>
+
+<p>The first image is <code class="highlighter-rouge">chikarobotdance.png</code>. If we do <code class="highlighter-rouge">strings</code> command or <code class="highlighter-rouge">binwalk</code>, we will find nothing there. Maybe it’s just a bait for making this challenge looks harder?</p>
+
+<p><img src="/musubi/assets/chika01/chikarobotdance.png" alt="chikarobotdance" /></p>
+
+<p>The second image is <code class="highlighter-rouge">praisekawaiichikapls.png</code>. If we look closely, at the lower right of the image, there is a text which seems like showing the password for the zip file, <code class="highlighter-rouge">loveiswar</code>.</p>
+
+<p><img src="/musubi/assets/chika01/praisechikapls.png" alt="praisekawaiichikapls" /></p>
+
+<p>and when we try to unzip it, the password didn’t work. So no praise for chika this time. ;{</p>
+
+<p>And the last one is a text file. If we look closely, there are only 4 words that are repeated multiple times, <code class="highlighter-rouge">dash</code> , <code class="highlighter-rouge">space</code> , <code class="highlighter-rouge">dot</code> and <code class="highlighter-rouge">slash</code> .</p>
+
+<p><img src="/musubi/assets/chika01/randomerror.png" alt="morse" /></p>
+
+<p>It is actually a <code class="highlighter-rouge">morse code</code> that being translated literally from symbols to their own respective words. So, using a simple python code I wrote below, it will help us translate the words back.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">f</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"random_ERROR.txt"</span><span class="p">,</span><span class="s">"r"</span><span class="p">)</span>
+<span class="n">fl</span> <span class="o">=</span> <span class="n">f</span><span class="o">.</span><span class="n">readlines</span><span class="p">()</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s">""</span>
+<span class="k">for</span> <span class="n">x</span> <span class="ow">in</span> <span class="n">fl</span><span class="p">:</span>
+    <span class="n">text</span> <span class="o">+=</span> <span class="n">x</span>
+
+<span class="k">print</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"dash"</span><span class="p">,</span><span class="s">"-"</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"space"</span><span class="p">,</span><span class="s">" "</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"slash"</span><span class="p">,</span><span class="s">"/"</span><span class="p">)</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s">"dot"</span><span class="p">,</span><span class="s">"."</span><span class="p">))</span></code></pre></figure>
+
+<p>and we will have something like this,</p>
+
+<p><code class="highlighter-rouge">- .... . / ... . -.-. .-. . - .- .-. -.-- / --- ..-. / - .... . / ... .... ..- -.-. .... .. .. -. / .- -.-. .- -.. . -- -.-- / ... - ..- -.. . -. - / -.-. --- ..- -. -.-. .. .-.. .-.-.- / ... .... . .----. ... / -... . . -. / ..-. .-. .. . -. -.. ... / .-- .. - .... / ... .... .. -. --- -- .. -.-- .- / ... .. -. -.-. . / -- .. -.. -.. .-.. . / ... -.-. .... --- --- .-.. .-.-.- / ... .... . .----. ... / -.. .. - --.. -.-- / .- -. -.. / .-.. .. -.- . ... / - --- / --. --- ... ... .. .--. --..-- / .- -. -.. / --- ..-. - . -. / - .... .-. --- .-- ... / .- / .-- .-. . -. -.-. .... / .. -. / ... .... .. -. --- -- .. -.-- .- / .- -. -.. / ... .... .. .-. --- --. .- -. . .----. ... / .--. .-.. .- -. ... / -.. ..- . / - --- / .... . .-. / ..- -. .--. .-. . -.. .. -.-. - .- -... .. .-.. .. - -.-- .-.-.- / . ...- . -. / ... --- --..-- / ... .... . .----. ... / --.- ..- .. - . / .- / -... .. - / -- --- .-. . / .-- . .-.. .-.. -....- .- -.. .--- ..- ... - . -.. / - .... .- -. / .... . .-. / ..-. . .-.. .-.. --- .-- / ... - ..- -.. . -. - / -.-. --- ..- -. -.-. .. .-.. / -- . -- -... . .-. ... / .- -. -.. / ... --- -- . - .. -- . ... / - .- -.- . ... / .. - / ..- .--. --- -. / .... . .-. ... . .-.. ..-. / - --- / - . .- -.-. .... / - .... . -- / .... --- .-- / - --- / --- ...- . .-. -.-. --- -- . / - .... . .. .-. / ... .... --- .-. - -.-. --- -- .. -. --. ... .-.-.- / - .... . / .--. .- ... ... .-- --- .-. -.. / .. ... / .-..-. .-.. --- ...- . .. ... .. -. -.. . . -.. .- .-- .- .-. .-..-. .-.-.- / - --- / .- ...- --- .. -.. / - .-. -.-- / .- -. -.. / . .-. .-. --- .-. --..-- / - .... . / .--. .- ... ... .-- --- .-. -.. / .. ... / .. -. / -.-. .- .--. .. - .- .-.. / .-.. . - - . .-. .-.-.- / - .... . / - . -..- - / -... . ..-. --- .-. . / .. ... / .--- ..- ... - / - --- / . -. -.-. --- ..- .-. .- --. . / .--. . --- .--. .-.. . / - --- / .- ..- - --- -- .- - . / - .... . / -.-. --- -. ...- . .-. ... .. --- -. / --- ..-. / - .... . / -.-. --- -.. . / .. -. ... - . .- -.. / --- ..-. / -.. --- .. -. --. / .. - / -- .- -. ..- .- .-.. .-.. -.-- .-.-.- / .. - .----. ... / . .- ... -.-- --..-- / .-. . .- .-.. .-.. -.-- .-.-.-</code></p>
+
+<p>Using this <a href="https://morsecode.scphillips.com/translator.html">site</a> for example, we will get this text.</p>
+
+<p><code class="highlighter-rouge">THE SECRETARY OF THE SHUCHIIN ACADEMY STUDENT COUNCIL. SHE'S BEEN FRIENDS WITH SHINOMIYA SINCE MIDDLE SCHOOL. SHE'S DITZY AND LIKES TO GOSSIP, AND OFTEN THROWS A WRENCH IN SHINOMIYA AND SHIROGANE'S PLANS DUE TO HER UNPREDICTABILITY. EVEN SO, SHE'S QUITE A BIT MORE WELL-ADJUSTED THAN HER FELLOW STUDENT COUNCIL MEMBERS AND SOMETIMES TAKES IT UPON HERSELF TO TEACH THEM HOW TO OVERCOME THEIR SHORTCOMINGS. THE PASSWORD IS "LOVEISINDEEDAWAR". TO AVOID TRY AND ERROR, THE PASSWORD IS IN CAPITAL LETTER. THE TEXT BEFORE IS JUST TO ENCOURAGE PEOPLE TO AUTOMATE THE CONVERSION OF THE CODE INSTEAD OF DOING IT MANUALLY. IT'S EASY, REALLY.</code></p>
+
+<p>We can now unzip the file.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">unzip chikasecretmessage.zip
+when prompted with password, insert <span class="sb">`</span>LOVEISINDEEDAWAR<span class="sb">`</span>.</code></pre></figure>
+
+<h3 id="-extracting-secret-file-from-image-"><u> extracting secret file from image </u></h3>
+
+<p>The first one is another image named <code class="highlighter-rouge">chikafujiwara.jpg</code>,</p>
+
+<p><img src="/musubi/assets/chika01/sadchika.png" alt="sadchika" /></p>
+
+<p>A quick <code class="highlighter-rouge">binwalk</code> command will show us that there is a file hidden inside the image. So, we can then extract it using <code class="highlighter-rouge">binwalk</code> or <code class="highlighter-rouge">zip</code></p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">unzip chikafujiwara.jpg</code></pre></figure>
+
+<p><img src="/musubi/assets/chika01/binwalk.png" alt="binwalk" /></p>
+
+<h3 id="-reading-between-the-lines-"><u> reading between the lines </u></h3>
+
+<p><img src="/musubi/assets/chika01/unlocked.png" alt="unlock" /></p>
+
+<p>and then we get a new gpg encrypted file named <code class="highlighter-rouge">key.txt.gpg</code>. So, since we didn’t have any password for the encrypted file, we can then try to get something useful from <code class="highlighter-rouge">whatsapp.log</code>.</p>
+
+<p><img src="/musubi/assets/chika01/conv.png" alt="conversation" /></p>
+
+<p>The log files showed us what it seems like a conversation of <code class="highlighter-rouge">chika</code> with another person named <code class="highlighter-rouge">yunara</code>.</p>
+
+<p>At first glance of the conversation header, the <code class="highlighter-rouge">fingerprint</code> data looks like it is a base64 encoding.</p>
+
+<p><img src="/musubi/assets/chika01/base64.png" alt="basedecode" /></p>
+
+<p>Using site like <a href="https://www.base64decode.org/">https://www.base64decode.org/</a> , we can see the clear text message. The decoded message is</p>
+
+<p><code class="highlighter-rouge"> the password is in the conversation </code>.</p>
+
+<p>So, it seems like we are in the right path. Let’s analyze what’s in the message.</p>
+
+<p><img src="/musubi/assets/chika01/message.png" alt="message" /></p>
+
+<p>Since there is no possible password that can be guessed from the conversation, we can then try to visit the twitter <a href="https://twitter.com/yunaranyancat/status/1103367092710064129">link</a> that is given,</p>
+
+<p><img src="/musubi/assets/chika01/tweet.png" alt="tweet" /></p>
+
+<p>If we look closely, it seems like the tweet is using some kind of steganography. There is a github page which can hide secret messages in our tweet which is <a href="https://github.com/holloway/steg-of-the-dump">https://github.com/holloway/steg-of-the-dump</a>. So, when we run the code,we need to paste the tweet in decode text field, then we can see that there is indeed a hidden message.</p>
+
+<p><img src="/musubi/assets/chika01/holloway.png" alt="holloway" /></p>
+
+<p>We can unlock the encrypted file using the following command.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">gpg key.txt.gpg
+when prompted with password, insert <span class="sb">`</span>mi-0w<span class="sb">`</span></code></pre></figure>
+
+<h3 id="-get-the-right-secret-key-"><u> get the right secret key </u></h3>
+
+<p>Once we open the text file, it seems like we have managed to get the secret key, which is <code class="highlighter-rouge">YunaSanLoveChikaSan</code>. Well, it’s not. :)</p>
+
+<p><img src="/musubi/assets/chika01/blocked.png" alt="blocked" /></p>
+
+<p>Actually, that is what blocking us from getting the real secret key. The symbols surrounding the fake keys are parts of an esoteric programming language which is called <code class="highlighter-rouge">JSFuck</code> . We can then remove all of the secret keys, and paste the symbols in any decoder site for example, <a href="http://codertab.com/JsUnFuck">http://codertab.com/JsUnFuck</a> to get the clear text message.</p>
+
+<p><img src="/musubi/assets/chika01/jsunfuck.png" alt="jsunfuck" />
+and voila! We finally got the secret key which is <code class="highlighter-rouge">yato</code>.</p>
+
+<h2 id="thank-you">Thank you</h2>
+
+<p>I would like to thank all of you whom have tried my challenges and for those who are interested in reading this writeup. I also would like to congratulate <code class="highlighter-rouge">mucomplex</code> for being the first person who managed to solve this mini challenge.</p>
+
+<p>I’m thinking about making another challenge(s) in the future, so, for those who are interested, hit me up on <a href="https://twitter.com/yunaranyancat">Twitter</a> so I can send a personal invitation to my next challenge(s), or if you have any idea or want to collaborate, my dm is always open.</p>
+
+
+<!-- 
+  <small>tags: <em></em></small>
+ -->
+
+<p><a href="/musubi/index"> return to homepage</a> </p>
+
+      </section>
+    </div>
+
+    <!--  -->
+  </body>
+
+</html>
+<script>
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  /**
+  * @property {number} typeSpeed type speed in milliseconds
+  */
+  typeSpeed: 80,
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 10,
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+
+});
+</script>

