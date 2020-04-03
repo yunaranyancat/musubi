@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>HTB{Brainfuck} | Musubi</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="HTB{Brainfuck}" />
+<meta name="author" content="yunaranyancat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Box introduction" />
+<meta property="og:description" content="Box introduction" />
+<link rel="canonical" href="http://localhost:4000/musubi/notes/htb4oscp/linux/brainfuck" />
+<meta property="og:url" content="http://localhost:4000/musubi/notes/htb4oscp/linux/brainfuck" />
+<meta property="og:site_name" content="Musubi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-31T00:00:00+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/musubi/notes/htb4oscp/linux/brainfuck","headline":"HTB{Brainfuck}","dateModified":"2019-01-31T00:00:00+08:00","datePublished":"2019-01-31T00:00:00+08:00","author":{"@type":"Person","name":"yunaranyancat"},"description":"Box introduction","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/notes/htb4oscp/linux/brainfuck"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- <div class="container">
+        <h1>Musubi</h1>
+        <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2>
+
+        <section id="downloads">
+          
+          <a href="" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div> -->
+
+      <div class="container">
+        <h1>Musubi</h1>
+        <!-- <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2> -->
+        
+      </div>
+      
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>31 January 2019</small>
+<h1>HTB{Brainfuck}</h1>
+
+
+<p class="view">by yunaranyancat</p>
+
+
+<h2 id="box-introduction">Box introduction</h2>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/brainfuck.png" alt="bfinfo" /></p>
+
+<h2 id="requirements">Requirements</h2>
+<blockquote>
+  <p>Basic Linux command</p>
+</blockquote>
+
+<blockquote>
+  <p>Basic Python</p>
+</blockquote>
+
+<blockquote>
+  <p>WordPress Framework</p>
+</blockquote>
+
+<blockquote>
+  <p>Basic Cryptography</p>
+</blockquote>
+
+<h2 id="enumeration">Enumeration</h2>
+
+<p>First, by running nmap scan, we will find the version of the services on the common ports that are open.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/nmap.png" alt="brainfuck" /></p>
+
+<p>So, there are 5 open ports which are;</p>
+
+<p><code class="highlighter-rouge">Ports:Service</code></p>
+
+<p><code class="highlighter-rouge"> 22:ftp </code></p>
+
+<p><code class="highlighter-rouge"> 25:ssh </code></p>
+
+<p><code class="highlighter-rouge"> 110:smb</code></p>
+
+<p><code class="highlighter-rouge"> 143:smb</code></p>
+
+<p><code class="highlighter-rouge"> 443:ssl/http</code></p>
+
+<p>It seems that the web port of the target is open, and we will focus on web based attacks first if possible.</p>
+
+<h3 id="enumerating-httpsssl">Enumerating HTTPS/SSL</h3>
+<p>When we browse to the web page at <code class="highlighter-rouge">https://10.10.10.17</code> , we have been prompted by a certificate error.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/certificate_error.png" alt="brainfuck" /></p>
+
+<p>In the error information, we found another domain names which are <code class="highlighter-rouge">www.brainfuck.htb</code> and <code class="highlighter-rouge">sup3rs3cr3t.brainfuck.htb</code>.
+So, we can add these domain names to our <code class="highlighter-rouge">\etc\hosts</code> file, simply add</p>
+
+<p><code class="highlighter-rouge">10.10.10.17 www.brainfuck.htb  sup3rs3cr3t.brainfuck.htb</code>.</p>
+
+<p>Then, accept the certificate. After that, we can browse through these sites.</p>
+
+<h3 id="enumerating-wordpress-wwwbrainfuckhtb">Enumerating WordPress (www.brainfuck.htb)</h3>
+
+<p>We are then prompted to a WordPress webpage. A quick glance already give us possible credentials.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/wp.png" alt="brainfuck" /></p>
+
+<p><code class="highlighter-rouge">orestis@brainfuck.htb</code></p>
+
+<p>We first will use <code class="highlighter-rouge">wpscan</code> on the site to find any known vulnerabilities. Type,</p>
+
+<p><code class="highlighter-rouge"> wpscan --url https://brainfuck.htb/ --disable-tls-checks </code> .</p>
+
+<p>After, we found out there are lots of vulnerabilities in the site. So, where should we start? Okay, here’s one trick that can be used(not guaranteed 100%). We will choose the vulnerabilities that only have been documented by <code class="highlighter-rouge">exploitdb</code> . Using this way, we also can read exploits from <code class="highlighter-rouge">searchsploit</code> and just maybe, we might get the exploit working.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/wp_support_plus.png" alt="wpsupportplus" /></p>
+
+<p>So, we found there is a WP Support Plus vulnerabilities that has <code class="highlighter-rouge">exploitdb</code> documentation. So, we can type <code class="highlighter-rouge">searchsploit WP Support Plus</code> and read the exploits/reports.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/wpsearchsploit.png" alt="wpsearchsploit" /></p>
+
+<p>Okay, we got three exploits. But, we will discard the first one as it’s version is older than what we currently dealing with.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/wpversion.png" alt="wpversion" /></p>
+
+<h3 id="exploitation">Exploitation</h3>
+
+<p>Let’s read the first exploits. ( <code class="highlighter-rouge">cat /usr/share/exploitdb/exploits/php/webapps/41006.txt</code> )</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/41006.png" alt="41006" /></p>
+
+<p>It seems that we can exploit the usage of <code class="highlighter-rouge">wp_set_auth_cookie()</code> and login as anyone. We also got the Proof Of Concept. Let’s try this one. But first, we need to get users information. So, we will run <code class="highlighter-rouge">wpscan --url https://brainfuck.htb/ --disable-tls-checks --enumerate u</code> .</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/users.png" alt="users" /></p>
+
+<p>Using the information above, we can guess that <code class="highlighter-rouge">orestis</code> might be an <code class="highlighter-rouge">admin</code> .</p>
+
+<p>We then copy the POC then put it in an empty html file. Edit the url and add other information and we will have something like this.</p>
+
+<figure class="highlight"><pre><code class="language-html" data-lang="html"><span class="nt">&lt;form</span> <span class="na">method=</span><span class="s">"post"</span> <span class="na">action=</span><span class="s">"https://www.brainfuck.htb/wp-admin/admin-ajax.php"</span><span class="nt">&gt;</span>
+	Username: <span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"text"</span> <span class="na">name=</span><span class="s">"username"</span> <span class="na">value=</span><span class="s">"admin"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"email"</span> <span class="na">value=</span><span class="s">"orestis@brainfuck.htb"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"hidden"</span> <span class="na">name=</span><span class="s">"action"</span> <span class="na">value=</span><span class="s">"loginGuestFacebook"</span><span class="nt">&gt;</span>
+	<span class="nt">&lt;input</span> <span class="na">type=</span><span class="s">"submit"</span> <span class="na">value=</span><span class="s">"Login"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;/form&gt;</span></code></pre></figure>
+
+<p>So, we are currently trying to get <code class="highlighter-rouge">admin</code> access on the WordPress page. Load up our simple python server by executing</p>
+
+<p><code class="highlighter-rouge"> python -m SimpleHTTPServer </code></p>
+
+<p>Go to <code class="highlighter-rouge">localhost:8000/[yourfilename].html</code> we will be prompted with this page.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/poc.png" alt="poc" /></p>
+
+<p>Click login and wait until the page finishes loading. Go back to our WP page and click the refresh button.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/admin.png" alt="admin" /></p>
+
+<p>Boom! We are logged in as <code class="highlighter-rouge">admin</code>. At first glance, we can try to create a reverse php shell that will connect back to our netcat listener. We can go to <code class="highlighter-rouge">theme-editor.php</code> and we can add our shellcode there. But the problem here is we don’t have a writable permission to edit the php files. So we will use other way to get in.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/notwritable.png" alt="notwritable" /></p>
+
+<p>Now, the first post that we saw in the WP front page earlier will give us a hint about SMTP. So, we can go to <code class="highlighter-rouge">Settings -&gt; Easy WP SMTP Settings</code>.
+We found that there is a password for <code class="highlighter-rouge">orestis</code> . We can simply reveal the hidden pass by inspecting the page.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/inspect.png" alt="inspect" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/value.png" alt="value" /></p>
+
+<p>Now, we have an SMTP credential</p>
+
+<p><code class="highlighter-rouge">orestis@brainfuck.htb:kHGuERB29DNiNE</code></p>
+
+<p>Based on our nmap scan earlier, we know that SMTP port is open. So, we can use <code class="highlighter-rouge">evolution</code> in Kali to log in the SMTP service as <code class="highlighter-rouge">orestis</code>.
+In <code class="highlighter-rouge">evolution</code>, go to <code class="highlighter-rouge">File-&gt;New-&gt;Mail Account</code>. And follow these steps in the images below to completely set up the mail.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/mail1.png" alt="mail1" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail2.png" alt="mail2" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail3.png" alt="mail3" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail4.png" alt="mail4" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail5.png" alt="mail5" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail6.png" alt="mail6" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail7.png" alt="mail7" />
+<img src="/musubi/assets/htboscp/linux/brainfuck/mail8.png" alt="mail8" /></p>
+
+<p>Then we will find out that there are two messages in the inbox. The second one will show us another <code class="highlighter-rouge">orestis</code> credential.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/mailfromroot.png" alt="mailfromroot" /></p>
+
+<p><code class="highlighter-rouge">orestis:kIEnnfEKJ#9UmdO</code></p>
+
+<p>And as we know there is a “secret forum” at <code class="highlighter-rouge">sup3rs3cr3t.brainfuck.htb</code> , we will use that credential to log in and try to find something there.</p>
+
+<h3 id="enumerating-secret-forum-sup3rs3cr3tbrainfuckhtb">Enumerating Secret Forum (sup3rs3cr3t.brainfuck.htb)</h3>
+
+<p>Once we logged in, we found three forum threads, <code class="highlighter-rouge">Key, SSH Access , Development</code>. Going through all three of them, we only know that the forum <code class="highlighter-rouge">Key</code> is encrypted by some sort of encryption.</p>
+
+<h3 id="decrypting-ciphertext">Decrypting ciphertext</h3>
+
+<p>By analysing the ciphertext, we got some useful information.</p>
+
+<p>Ciphertext :</p>
+
+<p><code class="highlighter-rouge">Pieagnm - Jkoijeg nbw zwx mle grwsnn</code></p>
+
+<p><code class="highlighter-rouge">Wejmvse - Fbtkqal zqb rso rnl cwihsf</code></p>
+
+<p><code class="highlighter-rouge">Qbqquzs - Pnhekxs dpi fca fhf zdmgzt</code></p>
+
+<p>Clear text :</p>
+
+<p><code class="highlighter-rouge">Orestis - Hacking for fun and profit</code></p>
+
+<p>So, starting from the first letter <code class="highlighter-rouge">O</code> we can see there is three possible letters for the clear text. This encryption is same as <code class="highlighter-rouge">enigma</code> machine.</p>
+
+<h3 id="cracking-the-enigma">Cracking the Enigma</h3>
+<p>The enigma can be attacked using known plain text. In this case, we will use one time pad cracking because we know the ciphertext and the plaintext. There is a site that can be used to <a href="http://rumkin.com/tools/cipher/otp.php">unpad</a> it.</p>
+
+<p>So we got a key for the ciphertext which is, <code class="highlighter-rouge">fuckmybrain</code>.</p>
+
+<p>Using the key, we can get the clear text of other cipher text using keyed Vigenere or also known as <a href="http://rumkin.com/tools/cipher/vigenere-keyed.php">Quagmire III</a>.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/brainfuckmybrain.png" alt="brainfuck" /></p>
+
+<p>Upon playing with the key, clear text and ciphertext, we found out that the real key is <code class="highlighter-rouge">fuckmybrain</code> and we will get a clear text for all of the ciphertext. We will get a link that leads to ssh key for <code class="highlighter-rouge">Orestis</code>.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/fuckmybrain.png" alt="link" /></p>
+
+<h3 id="enumerating-ssh">Enumerating SSH</h3>
+
+<p>As we can see, the ssh key for orestis is encrypted.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">root@kali:/tmp/brainfuck# <span class="nb">cat </span>id_rsa
+
+<span class="nt">-----BEGIN</span> RSA PRIVATE KEY-----
+Proc-Type: 4,ENCRYPTED
+DEK-Info: AES-128-CBC,6904FEF19397786F75BE2D7762AE7382
+
+mneag/YCY8AB+OLdrgtyKqnrdTHwmpWGTNW9pfhHsNz8CfGdAxgchUaHeoTj/rh/
+B2nS4+9CYBK8IR3Vt5Fo7PoWBCjAAwWYlx+cK0w1DXqa3A+BLlsSI0Kws9jea6Gi
+W1ma/V7WoJJ+V4JNI7ufThQyOEUO76PlYNRM9UEF8MANQmJK37Md9Ezu53wJpUqZ
+7dKcg6AM/o9VhOlpiX7SINT9dRKaKevOjopRbyEFMliP01H7ZlahWPdRRmfCXSmQ
+zxH9I2lGIQTtRRA3rFktLpNedNPuZQCSswUec7eVVt2mc2Zv9PM9lCTJuRSzzVum
+oz3XEnhaGmP1jmMoVBWiD+2RrnL6wnz9kssV+tgCV0mD97WS+1ydWEPeCph06Mem
+dLR2L1uvBGJev8i9hP3thp1owvM8HgidyfMC2vOBvXbcAA3bDKvR4jsz2obf5AF+
+Fvt6pmMuix8hbipP112Us54yTv/hyC+M5g1hWUuj5y4xovgr0LLfI2pGe+Fv5lXT
+mcznc1ZqDY5lrlmWzTvsW7h7rm9LKgEiHn9gGgqiOlRKn5FUl+DlfaAMHWiYUKYs
+LSMVvDI6w88gZb102KD2k4NV0P6OdXICJAMEa1mSOk/LS/mLO4e0N3wEX+NtgVbq
+ul9guSlobasIX5DkAcY+ER3j+/YefpyEnYs+/tfTT1oM+BR3TVSlJcOrvNmrIy59
+krKVtulxAejVQzxImWOUDYC947TXu9BAsh0MLoKtpIRL3Hcbu+vi9L5nn5LkhO/V
+gdMyOyATor7Amu2xb93OO55XKkB1liw2rlWg6sBpXM1WUgoMQW50Keo6O0jzeGfA
+VwmM72XbaugmhKW25q/46/yL4VMKuDyHL5Hc+Ov5v3bQ908p+Urf04dpvj9SjBzn
+schqozogcC1UfJcCm6cl+967GFBa3rD5YDp3x2xyIV9SQdwGvH0ZIcp0dKKkMVZt
+UX8hTqv1ROR4Ck8G1zM6Wc4QqH6DUqGi3tr7nYwy7wx1JJ6WRhpyWdL+su8f96Kn
+F7gwZLtVP87d8R3uAERZnxFO9MuOZU2+PEnDXdSCSMv3qX9FvPYY3OPKbsxiAy+M
+wZezLNip80XmcVJwGUYsdn+iB/UPMddX12J30YUbtw/R34TQiRFUhWLTFrmOaLab
+Iql5L+0JEbeZ9O56DaXFqP3gXhMx8xBKUQax2exoTreoxCI57axBQBqThEg/HTCy
+IQPmHW36mxtc+IlMDExdLHWD7mnNuIdShiAR6bXYYSM3E725fzLE1MFu45VkHDiF
+mxy9EVQ+v49kg4yFwUNPPbsOppKc7gJWpS1Y/i+rDKg8ZNV3TIb5TAqIqQRgZqpP
+CvfPRpmLURQnvly89XX97JGJRSGJhbACqUMZnfwFpxZ8aPsVwsoXRyuub43a7GtF
+9DiyCbhGuF2zYcmKjR5EOOT7HsgqQIcAOMIW55q2FJpqH1+PU8eIfFzkhUY0qoGS
+EBFkZuCPyujYOTyvQZewyd+ax73HOI7ZHoy8CxDkjSbIXyALyAa7Ip3agdtOPnmi
+6hD+jxvbpxFg8igdtZlh9PsfIgkNZK8RqnPymAPCyvRm8c7vZFH4SwQgD5FXTwGQ
+<span class="nt">-----END</span> RSA PRIVATE KEY-----</code></pre></figure>
+
+<p>So we need to crack it using <code class="highlighter-rouge">john</code>. We will use <code class="highlighter-rouge">sshng2john</code> from this <a href="https://raw.githubusercontent.com/truongkma/ctf-tools/master/John/run/sshng2john.py">site</a> first to convert it into <code class="highlighter-rouge">john</code> format, then we can crack it using <code class="highlighter-rouge">john</code> using the following commands.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/sshng2john.png" alt="sshng2john" /></p>
+
+<p>and run <code class="highlighter-rouge">john</code> ,</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/poulakia.png" alt="crackedjohn" /></p>
+
+<p>boom! We got the passphrase for the ssh key.</p>
+
+<p><code class="highlighter-rouge">passphrase:3poulakia!</code></p>
+
+<p>We can then log in to orestis ssh using <code class="highlighter-rouge">ssh -i id_rsa orestis@10.10.10.17</code> .</p>
+
+<p>But first, change the permission for <code class="highlighter-rouge">id_rsa</code> file or you’ll get an error.</p>
+
+<p><code class="highlighter-rouge">chmod 600 id_rsa </code>.</p>
+
+<p>Then you can log in and use the cracked passphrase that we got earlier.</p>
+
+<p><img src="/musubi/assets/htboscp/linux/brainfuck/sshsession.png" alt="sshsession" /></p>
+
+<h2 id="post-exploitation">Post exploitation</h2>
+
+<p>We found out that there are interesting files in <code class="highlighter-rouge">orestis</code> home directory.</p>
+
+<p><code class="highlighter-rouge">debug.txt</code> : random numbers (what does the numbers for each line represent)</p>
+
+<p><code class="highlighter-rouge">encryption.sage</code> : encryption script (p? q? e? p*q? (p-1)<code class="highlighter-rouge">*</code>(q-1))</p>
+
+<p><code class="highlighter-rouge">output.txt</code> : the output result (root.txt)</p>
+
+<p>This type of encryption is called RSA encryption. You can find more information on <a href="https://en.wikipedia.org/wiki/RSA_(cryptosystem)">wiki</a> , particularly at the <code class="highlighter-rouge">Key generation</code> part.</p>
+
+<p>So, it is possible to attack the RSA encryption when we know the <code class="highlighter-rouge">p</code>, <code class="highlighter-rouge">q</code> , <code class="highlighter-rouge">e</code> and the <code class="highlighter-rouge">ciphertext</code>. Doing a quick search on Google will lead us to this <a href="https://crypto.stackexchange.com/questions/19444/rsa-given-q-p-and-e">forum</a> where there is a decryption code given.</p>
+
+<p>So, we will use it, and try if it’s working. Well, if it’s not working, guess we will have to crack it manually. :3</p>
+
+<p>We will have something like this in our decryption script which we will call <code class="highlighter-rouge">decrypt.py</code> .</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">egcd</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">):</span>
+  <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span><span class="mi">0</span>
+  <span class="k">while</span> <span class="n">a</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+      <span class="n">q</span><span class="p">,</span> <span class="n">r</span> <span class="o">=</span> <span class="n">b</span><span class="o">//</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="o">%</span><span class="n">a</span>
+      <span class="n">m</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">x</span><span class="o">-</span><span class="n">u</span><span class="o">*</span><span class="n">q</span><span class="p">,</span> <span class="n">y</span><span class="o">-</span><span class="n">v</span><span class="o">*</span><span class="n">q</span>
+      <span class="n">b</span><span class="p">,</span><span class="n">a</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span><span class="n">y</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span> <span class="o">=</span> <span class="n">a</span><span class="p">,</span><span class="n">r</span><span class="p">,</span> <span class="n">u</span><span class="p">,</span><span class="n">v</span><span class="p">,</span> <span class="n">m</span><span class="p">,</span><span class="n">n</span>
+      <span class="n">gcd</span> <span class="o">=</span> <span class="n">b</span>
+  <span class="k">return</span> <span class="n">gcd</span><span class="p">,</span> <span class="n">x</span><span class="p">,</span> <span class="n">y</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+
+  <span class="n">p</span> <span class="o">=</span> <span class="mi">7493025776465062819629921475535241674460826792785520881387158343265274170009282504884941039852933109163193651830303308312565580445669284847225535166520307</span>
+  <span class="n">q</span> <span class="o">=</span> <span class="mi">7020854527787566735458858381555452648322845008266612906844847937070333480373963284146649074252278753696897245898433245929775591091774274652021374143174079</span>
+  <span class="n">e</span> <span class="o">=</span> <span class="mi">30802007917952508422792869021689193927485016332713622527025219105154254472344627284947779726280995431947454292782426313255523137610532323813714483639434257536830062768286377920010841850346837238015571464755074669373110411870331706974573498912126641409821855678581804467608824177508976254759319210955977053997</span>
+  <span class="n">ct</span> <span class="o">=</span> <span class="mi">44641914821074071930297814589851746700593470770417111804648920018396305246956127337150936081144106405284134845851392541080862652386840869768622438038690803472550278042463029816028777378141217023336710545449512973950591755053735796799773369044083673911035030605581144977552865771395578778515514288930832915182</span>
+
+  <span class="c1"># compute n
+</span>  <span class="n">n</span> <span class="o">=</span> <span class="n">p</span> <span class="o">*</span> <span class="n">q</span>
+
+  <span class="c1"># Compute phi(n)
+</span>  <span class="n">phi</span> <span class="o">=</span> <span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span> <span class="o">*</span> <span class="p">(</span><span class="n">q</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
+
+  <span class="c1"># Compute modular inverse of e
+</span>  <span class="n">gcd</span><span class="p">,</span> <span class="n">a</span><span class="p">,</span> <span class="n">b</span> <span class="o">=</span> <span class="n">egcd</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">phi</span><span class="p">)</span>
+  <span class="n">d</span> <span class="o">=</span> <span class="n">a</span>
+
+  <span class="k">print</span><span class="p">(</span> <span class="s">"n:  "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">d</span><span class="p">)</span> <span class="p">);</span>
+
+  <span class="c1"># Decrypt ciphertext
+</span>  <span class="n">pt</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">ct</span><span class="p">,</span> <span class="n">d</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+  <span class="k">print</span><span class="p">(</span> <span class="s">"pt: "</span> <span class="o">+</span> <span class="nb">str</span><span class="p">(</span><span class="n">pt</span><span class="p">)</span> <span class="p">)</span>
+
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">"__main__"</span><span class="p">:</span>
+  <span class="n">main</span><span class="p">()</span></code></pre></figure>
+
+<p>So we will get this output :</p>
+
+<figure class="highlight"><pre><code class="language-text" data-lang="text">n:  8730619434505424202695243393110875299824837916005183495711605871599704226978295096241357277709197601637267370957300267235576794588910779384003565449171336685547398771618018696647404657266705536859125227436228202269747809884438885837599321762997276849457397006548009824608365446626232570922018165610149151977
+pt: 24604052029401386049980296953784287079059245867880966944246662849341507003750</code></pre></figure>
+
+<p>We got a plain text but it is in integers. So we need to convert it into readable ascii. By passing it to hex and convert the hex to string, we will create a simple python script to automate it.</p>
+
+<figure class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">root</span><span class="o">@</span><span class="n">kali</span><span class="p">:</span><span class="o">/</span><span class="n">tmp</span><span class="o">/</span><span class="n">brainfuck</span><span class="c1"># cat gettext.py
+</span>
+<span class="n">pt</span> <span class="o">=</span> <span class="mi">24604052029401386049980296953784287079059245867880966944246662849341507003750</span>
+<span class="k">print</span><span class="p">(</span><span class="nb">str</span><span class="p">(</span><span class="nb">hex</span><span class="p">(</span><span class="n">pt</span><span class="p">)[</span><span class="mi">2</span><span class="p">:</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s">'hex'</span><span class="p">))</span></code></pre></figure>
+
+<p>And when we run the script, we will get a plain text which is the hash for root.</p>
+
+<h2 id="knowledge-gained">Knowledge gained</h2>
+<blockquote>
+  <p>Exploiting WP using vulnerable plugins</p>
+</blockquote>
+
+<blockquote>
+  <p>Cracking the Enigma using known plaintext attack</p>
+</blockquote>
+
+<blockquote>
+  <p>Decrypt RSA given p q e and ciphertext</p>
+</blockquote>
+
+<p>And, thank you for today. Hope you learned a lot from this writeup. Until next time. :D</p>
+
+
+<!-- 
+  <small>tags: <em></em></small>
+ -->
+
+<p><a href="/musubi/index"> return to homepage</a> </p>
+
+      </section>
+    </div>
+
+    <!--  -->
+  </body>
+
+</html>
+<script>
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  /**
+  * @property {number} typeSpeed type speed in milliseconds
+  */
+  typeSpeed: 80,
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 10,
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+
+});
+</script>

