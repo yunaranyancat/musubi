@@ -32,4 +32,4 @@ redirect_from : /404
 
 Follow me on [github](https://github.com/yunaranyancat) or [tweet](https://twitter.com/yunaranyancat) me something interesting.
 
-If you like my contents and want to know how you can support me, you can buy me a coffee! Just click the coffee button on the lower right side of the page. Thank you again for your support!
+If you like my content and want to know how you can support me, you can buy me a coffee! Just click the coffee button on the lower right side of the page. Thank you again for your support!
