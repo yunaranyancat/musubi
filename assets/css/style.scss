@@ -5,7 +5,7 @@
 
 body {
   //font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
-  font-size: 22px;
+    font-size: 22px;
 }
 
 #main_content h4 {
@@ -27,4 +27,9 @@ body {
 #main_content ul {
     color: #DC143C;
     font-size: 20;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
 }

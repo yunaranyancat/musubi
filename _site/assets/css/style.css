@@ -265,3 +265,7 @@ body {
 #main_content ul {
   color: #DC143C;
   font-size: 20; }
+
+footer {
+  display: flex;
+  justify-content: center; }
