@@ -49,7 +49,7 @@ If the stack boundary is set to 2, there is no stack optimisation
 
 Overflow a program by inputting a string longer than 30 characters
 
-Debug using gdb and find out where saved EBP and EIP is overwritten in the stack (disable stack protection)
+Debug using gdb and find out where saved EBP and EIP are overwritten in the stack (disable stack protection)
 
 Instead of overwrite with junk, try with real address
 
