@@ -33,7 +33,7 @@ I received my course content on Wednesday, 6 March. Actually I was expecting to 
 
 ![fail](/musubi/assets/oswp/failpurchase.png)
 
-You will be given a BackTrack ISO, PDF and videos. Since it is recommended to use the given ISO, so I opted out with that ISO. Although at first, I encountered some problems setting up my wifi card to work with it. Maybe it was because I was using VirtualBox instead of VMWare. If you are using the same setup as me and you encounter some problems, feel free to send me a message.
+You will be given a BackTrack ISO, PDF and videos. Since it is recommended to use the given ISO, so I opted out with that ISO. Although at first, I encountered some problems setting up my wifi card to work with it. Maybe it was because I was using VirtualBox instead of VMWare.
 
 ### Why I choose this course
 
