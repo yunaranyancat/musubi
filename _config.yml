@@ -39,6 +39,8 @@ defaults:
       type: "posts"
     values:
       author: yunaranyancat
+plugins:
+  - jekyll-redirect-from
 
 
 
