@@ -41,6 +41,7 @@ Functions and stack - push arguments, call function , then RET stored in EIP
 Understand how EBP work, program prologue
 
 Understand basic of 32 bit stack overflow, without stack protection
+
 Disable ASLR just to be safe
 
 Stack boundary and optimisation
