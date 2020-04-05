@@ -30,3 +30,7 @@ layout: default
 
 
 Follow me on [github](https://github.com/yunaranyancat) or [tweet](https://twitter.com/yunaranyancat) me something interesting.
+
+If you like my contents and want to know how you can support me, you can buy me a coffee! Just click the coffee button on the lower right side of the page. Thank you again for your support!
+
+<script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="yunaranyancat" data-description="Thank you so much for your support! (◕‿◕)" data-message="Thank you for visiting! ＼(≧▽≦)／" data-color="#FF5F5F" data-position="right" data-x_margin="18" data-y_margin="18"></script>
