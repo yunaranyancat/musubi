@@ -25,6 +25,7 @@ redirect_from : /404
   - [VM aqua](/musubi/others/vm_aqua) writeup
 - different paths of a hacker
   - Path to become a [shellcoder](/musubi/paths/shellcoder)
+  - Path to become a [web application hacker](/musubi/paths/webapphacker)
 - others
   - what is [Musubi](/musubi/others/whatismusubi)?
   - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server
