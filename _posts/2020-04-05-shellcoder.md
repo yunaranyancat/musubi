@@ -5,7 +5,7 @@ categories: jekyll
 permalink : /paths/shellcoder
 ---
 
-Hey , I'm writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder Handbook 2nd Edition. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup, however, once I have mastered the art of shellcoding, I will share some posts. Let's go..
+Hey , I'm writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder Handbook 2nd Edition and other shellcoding related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup, however, once I have mastered the art of shellcoding, I will share some posts. Let's go..
 
 ### 5 April 2020
 
