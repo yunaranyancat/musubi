@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2020-04-05T10:01:50+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html">XSStest</title><link href="http://localhost:4000/musubi/others/XSStest" rel="alternate" type="text/html" title="XSStest" /><published>2020-03-06T00:00:00+08:00</published><updated>2020-03-06T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/XSS</id><content type="html" xml:base="http://localhost:4000/musubi/others/XSStest">&lt;body onclick=&quot;meow()&quot;&gt;Meow &lt;/body&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2020-04-05T10:25:56+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html">Path to become a shellcoder</title><link href="http://localhost:4000/musubi/paths/shellcoder" rel="alternate" type="text/html" title="Path to become a shellcoder" /><published>2020-04-05T00:00:00+08:00</published><updated>2020-04-05T00:00:00+08:00</updated><id>http://localhost:4000/musubi/paths/shellcoder</id><content type="html" xml:base="http://localhost:4000/musubi/paths/shellcoder">&lt;p&gt;Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder Handbook 2nd Edition. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup, however, once I have mastered the art of shellcoding, I will share some posts. Let’s go..&lt;/p&gt;
+
+&lt;h3 id=&quot;5-april-2020&quot;&gt;5 April 2020&lt;/h3&gt;
+
+&lt;p&gt;Went through the first few pages of Chapter 2.&lt;/p&gt;
+
+&lt;p&gt;Seems like I need to install some OS so I can follow along.&lt;/p&gt;
+
+&lt;p&gt;Tried to install Debian 3.1r4 but seems like I suck at installing old OS.&lt;/p&gt;
+
+&lt;p&gt;Guess I’ll install Ubuntu.&lt;/p&gt;
+
+&lt;p&gt;Downloaded old ubuntu releases, 4.10, 6.10, 8.10&lt;/p&gt;
+
+&lt;p&gt;Finally I have chosen 8.10 and 6.10. What’s interesting is gcc already come pre installed, especially the desktop version of the iso.&lt;/p&gt;
+
+&lt;p&gt;Try running first few examples, got stuck as there are no core dumped after segmentation fault.&lt;/p&gt;
+
+&lt;p&gt;Fixed it by running “ulimit -c unlimited”&lt;/p&gt;
+
+&lt;p&gt;Done for today&lt;/p&gt;
+
+&lt;h4 id=&quot;snippets-&quot;&gt;snippets :&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;gcc -o program1 program1.c -fno-stack-protector&lt;/li&gt;
+  &lt;li&gt;ulimit -c unlimited&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;6-april-2020&quot;&gt;6 April 2020&lt;/h3&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder Handbook 2nd Edition. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup, however, once I have mastered the art of shellcoding, I will share some posts. Let’s go..</summary></entry><entry><title type="html">XSStest</title><link href="http://localhost:4000/musubi/others/XSStest" rel="alternate" type="text/html" title="XSStest" /><published>2020-03-06T00:00:00+08:00</published><updated>2020-03-06T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/XSS</id><content type="html" xml:base="http://localhost:4000/musubi/others/XSStest">&lt;body onclick=&quot;meow()&quot;&gt;Meow &lt;/body&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 &lt;footer onclick=&quot;meowmeow()&quot;&gt;Meowmeow&lt;/footer&gt;
@@ -1247,69 +1276,4 @@ and voila! We finally got the secret key which is &lt;code class=&quot;highlight
 
 &lt;p&gt;I would like to thank all of you whom have tried my challenges and for those who are interested in reading this writeup. I also would like to congratulate &lt;code class=&quot;highlighter-rouge&quot;&gt;mucomplex&lt;/code&gt; for being the first person who managed to solve this mini challenge.&lt;/p&gt;
 
-&lt;p&gt;I’m thinking about making another challenge(s) in the future, so, for those who are interested, hit me up on &lt;a href=&quot;https://twitter.com/yunaranyancat&quot;&gt;Twitter&lt;/a&gt; so I can send a personal invitation to my next challenge(s), or if you have any idea or want to collaborate, my dm is always open.&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hello guys,</summary></entry><entry><title type="html">Virtual Hacking Labs Review</title><link href="http://localhost:4000/musubi/others/vhlreview" rel="alternate" type="text/html" title="Virtual Hacking Labs Review" /><published>2019-03-04T00:00:00+08:00</published><updated>2019-03-04T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/VHL_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/vhlreview">&lt;p&gt;Heyy, today, I will be reviewing Virtual Hacking Labs, &lt;a href=&quot;https://www.virtualhackinglabs.com/&quot;&gt;VHL&lt;/a&gt;.&lt;/p&gt;
-
-&lt;p&gt;This post is mainly about my journey from starting VHL until I have managed to compromise 20 machines in the labs which is one the requirements to be elligible to apply for the Certificate of Completion.&lt;/p&gt;
-
-&lt;h3 id=&quot;about-vhl&quot;&gt;About VHL&lt;/h3&gt;
-
-&lt;p&gt;Okay, first, I will explain briefly what is VHL. VHL or Virtual Hacking Labs is a penetration testing platform for cybersecurity enthusiasts, which works almost the same as &lt;strong&gt;HackTheBox&lt;/strong&gt;.&lt;/p&gt;
-
-&lt;p&gt;You will be given three options for the pricing. If you want to get VHL certified, you need to buy at least 31 days of the lab access, which costs around 93€, which what I bought.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/VHL/second-pricing.png&quot; alt=&quot;second&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It is a self-paced course so you can learn anytime when you are free. If you buy the &lt;strong&gt;31 days&lt;/strong&gt; or &lt;strong&gt;93 days&lt;/strong&gt; , you will also get a PDF version of the course so you can read it while offline.&lt;/p&gt;
-
-&lt;h3 id=&quot;requirements&quot;&gt;Requirements&lt;/h3&gt;
-
-&lt;p&gt;You don’t need that much prior experiences in pentesting. But, having good knowledge in &lt;strong&gt;Linux&lt;/strong&gt; distros or &lt;strong&gt;Metasploit&lt;/strong&gt; framework can help you in progressing throughout the lab.&lt;/p&gt;
-
-&lt;h3 id=&quot;getting-started&quot;&gt;Getting Started&lt;/h3&gt;
-
-&lt;p&gt;Once you bought the course, you will be presented with a student panel, which contains the course, lab dashboard and other related things.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/VHL/student_panel.png&quot; alt=&quot;panel&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;vulnerable-machines&quot;&gt;Vulnerable Machines&lt;/h3&gt;
-
-&lt;p&gt;There are three different difficulty levels.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Beginner&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;These boxes are aimed to those who just started or want to dive in the world of pentesting. You can follow what’s in the PDF/hints to get into user and get root. Some of the boxes might have direct root exploit, so that no privilege escalation is needed.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;These boxes have little hints and you might need to do a bit of research outside the labs to compromise the machines.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced+&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;These boxes are aimed to challenge students to think out of the box, and to not rely much at hints (these boxes have too little to zero hints) and train your &lt;strong&gt;Google-Fu&lt;/strong&gt; skills. And I think that’s great because you’ll know if you have reached your limit so you can improve where you’re weak at.&lt;/p&gt;
-
-&lt;p&gt;For starters, I would recommend doing the boxes based on the ascending order of the difficulty so you won’t get lost.&lt;/p&gt;
-
-&lt;h3 id=&quot;certificate-of-completion&quot;&gt;Certificate Of Completion&lt;/h3&gt;
-
-&lt;p&gt;One of the requirements for students to be elligible to apply for the &lt;strong&gt;Certificate of Completion&lt;/strong&gt; is to compromise at least 20 machines and to do a thorough documentation for every machine compromised.&lt;/p&gt;
-
-&lt;p&gt;There is a text file which contains a secret string in every machine, so it can be used as a proof that the machine has been compromised with &lt;strong&gt;root&lt;/strong&gt; or &lt;strong&gt;SYSTEM&lt;/strong&gt; privileges.&lt;/p&gt;
-
-&lt;p&gt;Make sure , your documentation has enough information , and the attacks can be replicated by following your narratives.&lt;/p&gt;
-
-&lt;p&gt;Once you submit the documentation, you’ll need to wait until it has been verified. Then , you will be sent a beautiful &lt;strong&gt;VHL Certification of Completion&lt;/strong&gt; like mine below. :P&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/VHL/COC.jpg&quot; alt=&quot;certificate&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;additional-information&quot;&gt;Additional Information&lt;/h3&gt;
-
-&lt;p&gt;There is no forum yet on VHL, so you won’t be able to discuss anything related to labs, or pentesting in general. But, I considered it as a challenge given by VHL . It took me almost 7 days to compromise those 20 machines. I didn’t touch the &lt;code class=&quot;highlighter-rouge&quot;&gt;Advanced+&lt;/code&gt; machines yet, until now but I’ll try to find time to jump back into VHL.&lt;/p&gt;
-
-&lt;h3 id=&quot;oscp&quot;&gt;OSCP&lt;/h3&gt;
-
-&lt;p&gt;Based on the reviews I got from one of the OSCP communities , VHL is a good place to learn if your lab time has finished, or maybe you want to find a place to start preparing for OSCP.&lt;/p&gt;
-
-&lt;h3 id=&quot;bye-&quot;&gt;Bye !&lt;/h3&gt;
-&lt;p&gt;If you are still wondering whether you should take VHL course or not, check out the &lt;a href=&quot;https://www.virtualhackinglabs.com/reviews/&quot;&gt;reviews&lt;/a&gt; from the website itself, or you can use the one week pass to see whether you’ll like it or not.&lt;/p&gt;
-
-&lt;p&gt;That’s all for today. Thank you!&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Heyy, today, I will be reviewing Virtual Hacking Labs, VHL.</summary></entry></feed>
+&lt;p&gt;I’m thinking about making another challenge(s) in the future, so, for those who are interested, hit me up on &lt;a href=&quot;https://twitter.com/yunaranyancat&quot;&gt;Twitter&lt;/a&gt; so I can send a personal invitation to my next challenge(s), or if you have any idea or want to collaborate, my dm is always open.&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hello guys,</summary></entry></feed>

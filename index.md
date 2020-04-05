@@ -21,7 +21,9 @@ layout: default
 - ctf and boot2root by me
   - [CTF chika01](/musubi/others/chika01) writeup
   - [VM nezuko](/musubi/others/vm_nezuko) writeup
-  - [VM aqua](/musubi/others/vm_aqua) writeup  
+  - [VM aqua](/musubi/others/vm_aqua) writeup
+- different paths of a hacker
+  - [Path to become a shellcoder](/musubi/paths/shellcoder)
 
 
 ### About
