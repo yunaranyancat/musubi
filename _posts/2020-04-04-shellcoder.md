@@ -64,3 +64,20 @@ Program overflowed correctly (printing two times as the EIP call back the return
 
 - cc -mpreferred-stack-boundary=2 --ggdb program4.c -fno-stack-protector -o overflow
 - sudo sysctl kernel.randomize_va_space=0
+
+
+### 7 April 2020
+
+Simple bypass serial key activation
+
+Execve shellcoder
+
+Simple code execution in stack
+
+Introduction to ret2libc
+
+Performing ret2libc attack
+
+Basically, for this attack, we need address of system, exit and address of "/bin/sh"
+
+Finding address of "/bin/sh" using memfetch.c and mffind.pl
