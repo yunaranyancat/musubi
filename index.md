@@ -19,6 +19,7 @@ redirect_from : /404
   - [OSWP](/musubi/others/oswpreview) review
   - [OSCP](/musubi/others/oscpreview) review
   - [OSCE](/musubi/others/oscereview) review
+  - [OSWE](/musubi/others/oswereview) review
 - ctf and boot2root by me
   - [CTF chika01](/musubi/others/chika01) writeup
   - [VM nezuko](/musubi/others/vm_nezuko) writeup

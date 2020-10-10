@@ -1,6 +1,108 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2020-04-05T11:56:44+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html">Path to become a shellcoder</title><link href="http://localhost:4000/musubi/paths/shellcoder" rel="alternate" type="text/html" title="Path to become a shellcoder" /><published>2020-04-05T00:00:00+08:00</published><updated>2020-04-05T00:00:00+08:00</updated><id>http://localhost:4000/musubi/paths/shellcoder</id><content type="html" xml:base="http://localhost:4000/musubi/paths/shellcoder">&lt;p&gt;Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder Handbook 2nd Edition and other shellcoding related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup, however, once I have mastered the art of shellcoding, I will share some posts. Let’s go..&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="3.8.6">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2020-10-10T14:10:14+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html"></title><link href="http://localhost:4000/musubi/others/oswereview" rel="alternate" type="text/html" title="" /><published>2020-10-10T00:00:00+08:00</published><updated>2020-10-10T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSWE_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/oswereview">&lt;p&gt;Good day everyone! It has been a long time since I updated my site. I was pretty busy with work and stuff so I think I’ve been idling for a quite amount of months now. But here I am, writing a post to share to you guys some very helpful tips and tricks for &lt;strong&gt;AWAE&lt;/strong&gt;. I’ll also share some good AWAE reviews that I find very helpful.&lt;/p&gt;
+
+&lt;p&gt;Just for a side story, I got a technical interview for Vulnerable Machine Engineer at Offensive Security just two days before my exam and sadly, I didn’t nail it (but don’t worry, I know you guys will, keep the applications coming in), feelsbadman. Nah it’s okay, I’ll try again in the future.&lt;/p&gt;
+
+&lt;p&gt;P/S : For those who are interested to try my vulnerable machines, they are available at Vulnhub, &lt;a href=&quot;https://www.vulnhub.com/entry/nezuko-1,352/&quot;&gt;Nezuko&lt;/a&gt; and &lt;a href=&quot;https://www.vulnhub.com/entry/aqua-1,419/&quot;&gt;Aqua&lt;/a&gt;. I keep telling my friends that there will be a third machine incoming, but I still can’t find a suitable time to do it, cause, you know, busy with life and work.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswe/holidays.jpeg&quot; alt=&quot;holiday&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Hmm, how about a whitebox approach for my next box? &amp;gt;w&amp;lt;&lt;/p&gt;
+
+&lt;h1 id=&quot;startx&quot;&gt;startx&lt;/h1&gt;
+
+&lt;p&gt;So first, what is &lt;a href=&quot;https://www.offensive-security.com/awae-oswe/&quot;&gt;AWAE&lt;/a&gt; all about?&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Advanced Web Application Exploitation&lt;/strong&gt; or in short, &lt;strong&gt;AWAE&lt;/strong&gt; is a course that is more focused on the whitebox approach of penetration testing. The “how the vulnerability works”  as in the code level of the application.&lt;/p&gt;
+
+&lt;p&gt;For me, this is very interesting, because you will get a good understanding on “why this part of application flow is vulnerable” and you’ll eventually be able to see how to exploit that particular code / functions in an efficient way.&lt;/p&gt;
+
+&lt;p&gt;Other than that, since you got all the codes to yourself , hehe , you need to take it to the next level where you need to chain multiple vulnerabilities to create an exploit that is particularly important / CVE-worthy, I guess?.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswe/allgetcve.jpg&quot; alt=&quot;allgetcve&quot; /&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;pre-oswe&quot;&gt;Pre OSWE&lt;/h1&gt;
+
+&lt;p&gt;Before taking the course, you need to decide whether this is the right course for you or not. For me, working as a full time penetration tester, I know this is a good addition to my current skill set. I also have done source code reviews before so I wanted to know Offsec’s approach on a whitebox environment and try to improve my code review ability.&lt;/p&gt;
+
+&lt;p&gt;However, this course is more focused on &lt;strong&gt;web application&lt;/strong&gt; part of the &lt;strong&gt;code review&lt;/strong&gt;, so bear in mind, web code review is only a small part of the overall source code review. You will need to familiarize yourself with programming languages such as PHP, JAVA, .NET, .. etc. You can check their &lt;a href=&quot;https://www.offensive-security.com/documentation/awae-syllabus.pdf&quot;&gt;syllabus&lt;/a&gt; if you don’t know which languages you should familiarize with for the course.&lt;/p&gt;
+
+&lt;p&gt;In addition, I would suggest on creating a simple web app using these languages so you’ll get to know what are the common libraries used, functions, implementation, how to debug, how to perform &lt;a href=&quot;https://en.wikipedia.org/wiki/Create,_read,_update_and_delete&quot;&gt;CRUD&lt;/a&gt; on the application, and basically, becoming a “junior” web app programmer. Hahaha.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswe/junior.jpg&quot; alt=&quot;junior&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;To know how the code works, they will give you an advantage on where to find the vulnerable parts. - cited from &lt;strong&gt;Top 10 Yunaranyancat Quotes (2020)&lt;/strong&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;oswe&quot;&gt;OSWE&lt;/h1&gt;
+
+&lt;p&gt;These are the methods on how I proceeded with the course;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;Watch the videos and try to replicate what the instructor did in the provided lab. Don’t waste your time if you have only 30 days of lab time.
+&lt;strong&gt;Watch, Pause, Replicate, Resume.&lt;/strong&gt;
+Keep in mind, you can replay the videos and reread the PDF multiple time, but the lab time is limited. However, if you have a lot of money, which is not in my case, you can purchase additional lab time. (free advertising there, I see)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;For each chapter completed, pause the videos, open the PDF provided to see if you are missing something. As far as I know, the PDF course is more exhaustive than the videos. The videos are only for you to reach your objectives while the PDF is to explain to you how the objectives are being achieved , step by step. However, if you ever feel that for some part of the course, the explanation is still not enough, well, that is what Google for!
+&lt;img src=&quot;/musubi/assets/oswe/crime.jpg&quot; alt=&quot;crime&quot; /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Once you have completed the PDF, videos, labs and the extra miles exercises, what you need now, is a good methodology to do web application code review efficiently.&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h3 id=&quot;tips-and-tricks&quot;&gt;Tips and tricks&lt;/h3&gt;
+
+&lt;p&gt;Here are some tips and tricks that might be useful for you guys;&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Understand how web application works. For example, the routing of the web, the input validation, CRUD process, function definitions. As one of my friends said, most of the vulnerabilities come from insufficient input sanitization!&lt;/li&gt;
+  &lt;li&gt;Try to familiarize yourself with common vulnerable functions, such as &lt;strong&gt;exec()&lt;/strong&gt;, &lt;strong&gt;system()&lt;/strong&gt;, &lt;strong&gt;eval()&lt;/strong&gt;, serialization and deserialization functions, weak regex, insufficient input sanitization, until the moment when you see a code, you are pretty confident to decide whether it’s vulnerable or not, after that, it’s up to you to test it with different payloads or try to bypass any restriction.&lt;/li&gt;
+  &lt;li&gt;Since it’s a whitebox approach, you’ll have an access to the debugging environment. So, for example, if you want to check if your SQL injection payload is working correctly or not, you can run the statement in the SQL environment of the target. Or, if you want to see what function is being called when you send or receive a request, you can set up the breakpoints using debugger on the running code.&lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sometimes, it’s hard for some people to find the right portion of the code, so the key here is, try to understand what are the objectives that you are trying to achieve, and see which part of the code that is related to the objectives, well unless you say, everything is related, I don’t know what to say.
+&lt;img src=&quot;/musubi/assets/oswe/pepe.png&quot; alt=&quot;pepe&quot; /&gt; &lt;br /&gt;
+What I mean by &lt;strong&gt;“something that is related”&lt;/strong&gt;, it’s like, &lt;strong&gt;“when you do this, this part of the code will be executed.”&lt;/strong&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;Don’t forget to take a break. Sometimes, looking too long at the code will only give you stress and limit your thinking capabilities (like what I experienced). So, the best way is to take a short break anytime you need it.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h1 id=&quot;post-oswe&quot;&gt;Post OSWE&lt;/h1&gt;
+
+&lt;p&gt;I might take a look on incoming Offensive Security courses, but I will read the reviews first to see whether they’re interesting/worth it or not.&lt;/p&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://www.offensive-security.com/offsec/retiring-ctp-intro-new-courses/&quot;&gt;Check them out!&lt;/a&gt;&lt;/p&gt;
+
+&lt;h3 id=&quot;some-good-awae-reviewstipstricks&quot;&gt;Some good AWAE reviews/tips/tricks&lt;/h3&gt;
+
+&lt;p&gt;These are some OSWE reviews that I found very helpful:&lt;/p&gt;
+
+&lt;p&gt;i. &lt;a href=&quot;https://forum.hackthebox.eu/discussion/2646/oswe-exam-review-2020-notes-gifts-inside&quot;&gt;https://forum.hackthebox.eu/discussion/2646/oswe-exam-review-2020-notes-gifts-inside&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;ii. &lt;a href=&quot;https://github.com/wetw0rk/AWAE-PREP&quot;&gt;https://github.com/wetw0rk/AWAE-PREP&lt;/a&gt;&lt;/p&gt;
+
+&lt;p&gt;iii. &lt;a href=&quot;https://github.com/timip/OSWE&quot;&gt;https://github.com/timip/OSWE&lt;/a&gt;&lt;/p&gt;
+
+&lt;h1 id=&quot;end&quot;&gt;End&lt;/h1&gt;
+
+&lt;p&gt;Thank you for taking your time reading this post! ,and sorry for the memes too if it’s annoying. Ciao.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswe/paimon.gif&quot; alt=&quot;paimon&quot; /&gt;&lt;/p&gt;
+
+&lt;h2 id=&quot;credits&quot;&gt;Credits&lt;/h2&gt;
+
+&lt;p&gt;Special thanks to those who have helped me throughout the journey. Without you guys, I won’t be able to reach this far… You guys rocks! And also to my lovely fiancée, thanks for being with me through thick and thin! I love you! uWu&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/musubi/assets/oswe/lolihug.gif&quot; alt=&quot;lolihug&quot; /&gt;&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Good day everyone! It has been a long time since I updated my site. I was pretty busy with work and stuff so I think I’ve been idling for a quite amount of months now. But here I am, writing a post to share to you guys some very helpful tips and tricks for AWAE. I’ll also share some good AWAE reviews that I find very helpful.</summary></entry><entry><title type="html">Path to become a web application hacker</title><link href="http://localhost:4000/musubi/paths/webapphacker" rel="alternate" type="text/html" title="Path to become a web application hacker" /><published>2020-04-05T00:00:00+08:00</published><updated>2020-04-05T00:00:00+08:00</updated><id>http://localhost:4000/musubi/paths/webapphacker</id><content type="html" xml:base="http://localhost:4000/musubi/paths/webapphacker">&lt;p&gt;Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Web Application Hacker’s Handbook 2nd Edition, then proceed to Web Security Academy which is the “successor” of the book and other web application hacking related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup. Let’s go..&lt;/p&gt;
 
 &lt;h3 id=&quot;5-april-2020&quot;&gt;5 April 2020&lt;/h3&gt;
+
+&lt;p&gt;Understand what is a web application and different purposes/functions&lt;/p&gt;
+
+&lt;p&gt;Server must assume that all incoming inputs are malicious&lt;/p&gt;
+
+&lt;p&gt;Never trust user input&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Web Application Hacker’s Handbook 2nd Edition, then proceed to Web Security Academy which is the “successor” of the book and other web application hacking related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup. Let’s go..</summary></entry><entry><title type="html">Path to become a shellcoder</title><link href="http://localhost:4000/musubi/paths/shellcoder" rel="alternate" type="text/html" title="Path to become a shellcoder" /><published>2020-04-04T00:00:00+08:00</published><updated>2020-04-04T00:00:00+08:00</updated><id>http://localhost:4000/musubi/paths/shellcoder</id><content type="html" xml:base="http://localhost:4000/musubi/paths/shellcoder">&lt;p&gt;Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder’s Handbook 2nd Edition and other shellcoding related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup. Let’s go..&lt;/p&gt;
+
+&lt;h3 id=&quot;4-april-2020&quot;&gt;4 April 2020&lt;/h3&gt;
 
 &lt;p&gt;Went through the first few pages of Chapter 2.&lt;/p&gt;
 
@@ -27,7 +129,56 @@
   &lt;li&gt;ulimit -c unlimited&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h3 id=&quot;6-april-2020&quot;&gt;6 April 2020&lt;/h3&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder Handbook 2nd Edition and other shellcoding related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup, however, once I have mastered the art of shellcoding, I will share some posts. Let’s go..</summary></entry><entry><title type="html">XSStest</title><link href="http://localhost:4000/musubi/others/XSStest" rel="alternate" type="text/html" title="XSStest" /><published>2020-03-06T00:00:00+08:00</published><updated>2020-03-06T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/XSS</id><content type="html" xml:base="http://localhost:4000/musubi/others/XSStest">&lt;body onclick=&quot;meow()&quot;&gt;Meow &lt;/body&gt;
+&lt;h3 id=&quot;5-april-2020&quot;&gt;5 April 2020&lt;/h3&gt;
+
+&lt;p&gt;Understand how stack work, some basic assembly operations (PUSH, POP, CALL, RET, MOV)&lt;/p&gt;
+
+&lt;p&gt;Functions and stack - push arguments, call function , then RET stored in EIP&lt;/p&gt;
+
+&lt;p&gt;Understand how EBP work, program prologue&lt;/p&gt;
+
+&lt;p&gt;Understand basic of 32 bit stack overflow, without stack protection&lt;/p&gt;
+
+&lt;p&gt;Disable ASLR just to be safe&lt;/p&gt;
+
+&lt;p&gt;Stack boundary and optimisation&lt;/p&gt;
+
+&lt;p&gt;If the stack boundary is set to 2, there is no stack optimisation&lt;/p&gt;
+
+&lt;p&gt;Overflow a program by inputting a string longer than 30 characters&lt;/p&gt;
+
+&lt;p&gt;Debug using gdb and find out where saved EBP and EIP are overwritten in the stack (disable stack protection)&lt;/p&gt;
+
+&lt;p&gt;Instead of overwrite with junk, try with real address&lt;/p&gt;
+
+&lt;p&gt;Used address of the function return_input&lt;/p&gt;
+
+&lt;p&gt;Find the right position of EIP&lt;/p&gt;
+
+&lt;p&gt;Program overflowed correctly (printing two times as the EIP call back the return_input function)&lt;/p&gt;
+
+&lt;h4 id=&quot;snippets&quot;&gt;snippets&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;cc -mpreferred-stack-boundary=2 –ggdb program4.c -fno-stack-protector -o overflow&lt;/li&gt;
+  &lt;li&gt;sudo sysctl kernel.randomize_va_space=0&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h3 id=&quot;7-april-2020&quot;&gt;7 April 2020&lt;/h3&gt;
+
+&lt;p&gt;Simple bypass serial key activation&lt;/p&gt;
+
+&lt;p&gt;Execve shellcoder&lt;/p&gt;
+
+&lt;p&gt;Simple code execution in stack&lt;/p&gt;
+
+&lt;p&gt;Introduction to ret2libc&lt;/p&gt;
+
+&lt;p&gt;Performing ret2libc attack&lt;/p&gt;
+
+&lt;p&gt;Basically, for this attack, we need address of system, exit and address of “/bin/sh”&lt;/p&gt;
+
+&lt;p&gt;Finding address of “/bin/sh” using memfetch.c and mffind.pl&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder’s Handbook 2nd Edition and other shellcoding related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup. Let’s go..</summary></entry><entry><title type="html">XSStest</title><link href="http://localhost:4000/musubi/others/XSStest" rel="alternate" type="text/html" title="XSStest" /><published>2020-03-06T00:00:00+08:00</published><updated>2020-03-06T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/XSS</id><content type="html" xml:base="http://localhost:4000/musubi/others/XSStest">&lt;body onclick=&quot;meow()&quot;&gt;Meow &lt;/body&gt;
 &lt;p&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 &lt;footer onclick=&quot;meowmeow()&quot;&gt;Meowmeow&lt;/footer&gt;
@@ -1085,195 +1236,4 @@ curl &lt;span class=&quot;nt&quot;&gt;-ks&lt;/span&gt; &lt;span class=&quot;nv&q
 
 &lt;p&gt;&lt;img src=&quot;/musubi/assets/oswp/email.png&quot; alt=&quot;email&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;Thank you for reading the post and if you have any further question related to OSWP (no spoiler ofc), feel free to send me a message. See you next time. :)&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Heyyy guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Wireless Professional exam. So I’m thinking about writing my OSWP journey from start until end.</summary></entry><entry><title type="html">Elite Ghost Discord Server</title><link href="http://localhost:4000/musubi/others/EG_Discord_MY" rel="alternate" type="text/html" title="Elite Ghost Discord Server" /><published>2019-03-16T00:00:00+08:00</published><updated>2019-03-16T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/discord-EG</id><content type="html" xml:base="http://localhost:4000/musubi/others/EG_Discord_MY">&lt;p&gt;Hello pentesters and hackers from Malaysia,&lt;/p&gt;
-
-&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
-
-&lt;p&gt;I would like to invite you guys to join our Discord server.&lt;/p&gt;
-
-&lt;p&gt;Click here to join : &lt;a href=&quot;https://discord.gg/KPUXr2u&quot;&gt;https://discord.gg/KPUXr2u&lt;/a&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/discord/discord.png&quot; alt=&quot;discord&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The main reason why I would like to create this post is to list all the rules for those who are currently applying to join our Discord server. This is to avoid spam, posts that violate rules and other things that might make things worst.&lt;/p&gt;
-
-&lt;h2 id=&quot;general-rules&quot;&gt;General Rules&lt;/h2&gt;
-
-&lt;h3 id=&quot;1-follow-the-rules&quot;&gt;1. Follow the rules&lt;/h3&gt;
-
-&lt;p&gt;Rules are created to maintain harmony between Discord users. Follow the rules and you can enjoy our Discord server.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-rudeness--offensive-language&quot;&gt;2. Rudeness &amp;amp; Offensive Language&lt;/h3&gt;
-
-&lt;p&gt;This Discord server is aimed for all range of users. Even students below 18 years old are welcomed so that they can learn at an early stage. Do not use curse/bad languages. If you’re being caught by the Mods, you’ll be kicked out from the server or get your roles removed for a period of time.&lt;/p&gt;
-
-&lt;h3 id=&quot;3-welcoming--patience&quot;&gt;3. Welcoming &amp;amp; Patience&lt;/h3&gt;
-
-&lt;p&gt;Not all of us are pro pentesters, veterans, master hackers or 1337. Please don’t make users feel unwelcomed or unappreciated.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-drama--arguments&quot;&gt;4. Drama &amp;amp; Arguments&lt;/h3&gt;
-
-&lt;p&gt;Please refrain yourself from causing a huge drama or arguments. You can simply block the user(s) if you don’t like them.&lt;/p&gt;
-
-&lt;h3 id=&quot;5-privacy&quot;&gt;5. Privacy&lt;/h3&gt;
-
-&lt;p&gt;Please respect others privacy. Asking personal questions should be done between only you and the person in question. Send them a PM if they’re available. And don’t PM them if they have set their status as unavailable!&lt;/p&gt;
-
-&lt;h2 id=&quot;server-rules&quot;&gt;Server Rules&lt;/h2&gt;
-
-&lt;p&gt;Once you have joined our Discord, please wait some time for Mods to give you a role. If you think that your roles are irrelevant, please do not hesitate to send Mods a PM. And do introduce yourself inside the #welcoming-mat channel.&lt;/p&gt;
-
-&lt;h3 id=&quot;1-mods-pinging&quot;&gt;1. Mods pinging&lt;/h3&gt;
-
-&lt;p&gt;Please do not ping Moderators unless you have a very urgent problem. If you would like to report a user(s), send Mods a PM alongside the screenshot(s) of them breaking the rules.&lt;/p&gt;
-
-&lt;h3 id=&quot;2-channel-relevance&quot;&gt;2. Channel relevance&lt;/h3&gt;
-
-&lt;p&gt;Please do not SPAM bots (KawaiiBot / Rythm) outside of #bot-spam-and-welcoming-mat text channel. Repeated spamming outside the appropriate channel will result in a temporary ban.&lt;/p&gt;
-
-&lt;p&gt;Only post contents in RELEVANT channels.&lt;/p&gt;
-
-&lt;p&gt;Rythm&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Rythm is a music bot, if you want to listen to the music or request a music, join &lt;code class=&quot;highlighter-rouge&quot;&gt;music listening&lt;/code&gt; voice channel and see available commands by typing &lt;code class=&quot;highlighter-rouge&quot;&gt;!help&lt;/code&gt; in #bot-spam text channel. Please do not spam music requests or skip currently playing music (if you are alone inside the voice channel, then you can do so). And mute your mic in the channel. &amp;gt;.&amp;lt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;KawaiiBot&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;Type &lt;code class=&quot;highlighter-rouge&quot;&gt;+help&lt;/code&gt; in #bot-spam channel and you can spam anything inside the channel. But please do not &lt;strong&gt;MEGA SPAM&lt;/strong&gt;. Plzzzzzzz. :3&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h3 id=&quot;3-illegal-content--topics&quot;&gt;3. Illegal Content &amp;amp; Topics&lt;/h3&gt;
-
-&lt;p&gt;Please refrain from discussing any unlawful actions, this is not the place to tell people about your blackhat actions, it’s also not very smart. In addition to this, please do not ask anyone to break the law for you, this is not a blackhat recruitment area, we try to maintain a professional environment &amp;amp; discussion of such topics is not professional. Finally, refrain from posting unlawfully gathered content &amp;amp; links to such content, #resources-sharing is there for legally obtained material to be posted (no this does not mean you can share a book because you bought it)&lt;/p&gt;
-
-&lt;p&gt;Do not post Torrents or any illegal websites, failure to do so will result in temporary ban. There might be professionals who are working with the polices here.&lt;/p&gt;
-
-&lt;h3 id=&quot;4-please-use-english--malay-at-all-times&quot;&gt;4. Please use English / Malay at all times.&lt;/h3&gt;
-
-&lt;p&gt;If you want to use other languages, it is better to do it outside of the channels. This is not a form of discrimination, rather than encouraging people to communicate actively using well known and common languages.&lt;/p&gt;
-
-&lt;h3 id=&quot;5-tos&quot;&gt;5. TOS&lt;/h3&gt;
-
-&lt;p&gt;Think before you do anything. We are obligated to operate under Discord TOS too so please make sure that you have fully understood and agreed to those terms.&lt;/p&gt;
-
-&lt;h3 id=&quot;6-unspoken-rules&quot;&gt;6. Unspoken rules&lt;/h3&gt;
-
-&lt;p&gt;If you think it’s wrong, then it’s wrong. There is no justification.&lt;/p&gt;
-
-&lt;p&gt;Thank you. :D&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hello pentesters and hackers from Malaysia,</summary></entry><entry><title type="html">chika01 writeup</title><link href="http://localhost:4000/musubi/others/chika01" rel="alternate" type="text/html" title="chika01 writeup" /><published>2019-03-15T00:00:00+08:00</published><updated>2019-03-15T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/ctf-chika01</id><content type="html" xml:base="http://localhost:4000/musubi/others/chika01">&lt;p&gt;Hello guys,&lt;/p&gt;
-
-&lt;h2 id=&quot;intro&quot;&gt;Intro&lt;/h2&gt;
-
-&lt;p&gt;I have created my first ctf challenge called &lt;a href=&quot;https://github.com/yunaranyancat/cryptoalltheway/blob/master/chika01.zip&quot;&gt;chika01&lt;/a&gt; for my friends to play with. And since it has been like a week or more since I created the challenge, I think it’s time to do the writeup about it. If you have not solved it yet and wanted to give it a try, stop scrolling, download the challenge and get the secret key! ;&amp;gt;&lt;/p&gt;
-
-&lt;h2 id=&quot;walktrough&quot;&gt;Walktrough&lt;/h2&gt;
-
-&lt;h3 id=&quot;-getting-the-key-for-chikasecretmessagezip-&quot;&gt;&lt;u&gt; getting the key for chikasecretmessage.zip &lt;/u&gt;&lt;/h3&gt;
-
-&lt;p&gt;When we unzip the file, we will be shown with 4 files.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/intro.png&quot; alt=&quot;intro&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The zip file is currently password protected, so we need to find a way to unlock it.&lt;/p&gt;
-
-&lt;p&gt;The first image is &lt;code class=&quot;highlighter-rouge&quot;&gt;chikarobotdance.png&lt;/code&gt;. If we do &lt;code class=&quot;highlighter-rouge&quot;&gt;strings&lt;/code&gt; command or &lt;code class=&quot;highlighter-rouge&quot;&gt;binwalk&lt;/code&gt;, we will find nothing there. Maybe it’s just a bait for making this challenge looks harder?&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/chikarobotdance.png&quot; alt=&quot;chikarobotdance&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The second image is &lt;code class=&quot;highlighter-rouge&quot;&gt;praisekawaiichikapls.png&lt;/code&gt;. If we look closely, at the lower right of the image, there is a text which seems like showing the password for the zip file, &lt;code class=&quot;highlighter-rouge&quot;&gt;loveiswar&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/praisechikapls.png&quot; alt=&quot;praisekawaiichikapls&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;and when we try to unzip it, the password didn’t work. So no praise for chika this time. ;{&lt;/p&gt;
-
-&lt;p&gt;And the last one is a text file. If we look closely, there are only 4 words that are repeated multiple times, &lt;code class=&quot;highlighter-rouge&quot;&gt;dash&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;space&lt;/code&gt; , &lt;code class=&quot;highlighter-rouge&quot;&gt;dot&lt;/code&gt; and &lt;code class=&quot;highlighter-rouge&quot;&gt;slash&lt;/code&gt; .&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/randomerror.png&quot; alt=&quot;morse&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;It is actually a &lt;code class=&quot;highlighter-rouge&quot;&gt;morse code&lt;/code&gt; that being translated literally from symbols to their own respective words. So, using a simple python code I wrote below, it will help us translate the words back.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-python&quot; data-lang=&quot;python&quot;&gt;&lt;span class=&quot;n&quot;&gt;f&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;open&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;random_ERROR.txt&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;r&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;fl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;f&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;readlines&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;fl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
-    &lt;span class=&quot;n&quot;&gt;text&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;
-
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;-&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;space&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot; &quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;slash&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;replace&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;dot&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;.&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;and we will have something like this,&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;- .... . / ... . -.-. .-. . - .- .-. -.-- / --- ..-. / - .... . / ... .... ..- -.-. .... .. .. -. / .- -.-. .- -.. . -- -.-- / ... - ..- -.. . -. - / -.-. --- ..- -. -.-. .. .-.. .-.-.- / ... .... . .----. ... / -... . . -. / ..-. .-. .. . -. -.. ... / .-- .. - .... / ... .... .. -. --- -- .. -.-- .- / ... .. -. -.-. . / -- .. -.. -.. .-.. . / ... -.-. .... --- --- .-.. .-.-.- / ... .... . .----. ... / -.. .. - --.. -.-- / .- -. -.. / .-.. .. -.- . ... / - --- / --. --- ... ... .. .--. --..-- / .- -. -.. / --- ..-. - . -. / - .... .-. --- .-- ... / .- / .-- .-. . -. -.-. .... / .. -. / ... .... .. -. --- -- .. -.-- .- / .- -. -.. / ... .... .. .-. --- --. .- -. . .----. ... / .--. .-.. .- -. ... / -.. ..- . / - --- / .... . .-. / ..- -. .--. .-. . -.. .. -.-. - .- -... .. .-.. .. - -.-- .-.-.- / . ...- . -. / ... --- --..-- / ... .... . .----. ... / --.- ..- .. - . / .- / -... .. - / -- --- .-. . / .-- . .-.. .-.. -....- .- -.. .--- ..- ... - . -.. / - .... .- -. / .... . .-. / ..-. . .-.. .-.. --- .-- / ... - ..- -.. . -. - / -.-. --- ..- -. -.-. .. .-.. / -- . -- -... . .-. ... / .- -. -.. / ... --- -- . - .. -- . ... / - .- -.- . ... / .. - / ..- .--. --- -. / .... . .-. ... . .-.. ..-. / - --- / - . .- -.-. .... / - .... . -- / .... --- .-- / - --- / --- ...- . .-. -.-. --- -- . / - .... . .. .-. / ... .... --- .-. - -.-. --- -- .. -. --. ... .-.-.- / - .... . / .--. .- ... ... .-- --- .-. -.. / .. ... / .-..-. .-.. --- ...- . .. ... .. -. -.. . . -.. .- .-- .- .-. .-..-. .-.-.- / - --- / .- ...- --- .. -.. / - .-. -.-- / .- -. -.. / . .-. .-. --- .-. --..-- / - .... . / .--. .- ... ... .-- --- .-. -.. / .. ... / .. -. / -.-. .- .--. .. - .- .-.. / .-.. . - - . .-. .-.-.- / - .... . / - . -..- - / -... . ..-. --- .-. . / .. ... / .--- ..- ... - / - --- / . -. -.-. --- ..- .-. .- --. . / .--. . --- .--. .-.. . / - --- / .- ..- - --- -- .- - . / - .... . / -.-. --- -. ...- . .-. ... .. --- -. / --- ..-. / - .... . / -.-. --- -.. . / .. -. ... - . .- -.. / --- ..-. / -.. --- .. -. --. / .. - / -- .- -. ..- .- .-.. .-.. -.-- .-.-.- / .. - .----. ... / . .- ... -.-- --..-- / .-. . .- .-.. .-.. -.-- .-.-.-&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;Using this &lt;a href=&quot;https://morsecode.scphillips.com/translator.html&quot;&gt;site&lt;/a&gt; for example, we will get this text.&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;THE SECRETARY OF THE SHUCHIIN ACADEMY STUDENT COUNCIL. SHE'S BEEN FRIENDS WITH SHINOMIYA SINCE MIDDLE SCHOOL. SHE'S DITZY AND LIKES TO GOSSIP, AND OFTEN THROWS A WRENCH IN SHINOMIYA AND SHIROGANE'S PLANS DUE TO HER UNPREDICTABILITY. EVEN SO, SHE'S QUITE A BIT MORE WELL-ADJUSTED THAN HER FELLOW STUDENT COUNCIL MEMBERS AND SOMETIMES TAKES IT UPON HERSELF TO TEACH THEM HOW TO OVERCOME THEIR SHORTCOMINGS. THE PASSWORD IS &quot;LOVEISINDEEDAWAR&quot;. TO AVOID TRY AND ERROR, THE PASSWORD IS IN CAPITAL LETTER. THE TEXT BEFORE IS JUST TO ENCOURAGE PEOPLE TO AUTOMATE THE CONVERSION OF THE CODE INSTEAD OF DOING IT MANUALLY. IT'S EASY, REALLY.&lt;/code&gt;&lt;/p&gt;
-
-&lt;p&gt;We can now unzip the file.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;unzip chikasecretmessage.zip
-when prompted with password, insert &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;LOVEISINDEEDAWAR&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;.&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;-extracting-secret-file-from-image-&quot;&gt;&lt;u&gt; extracting secret file from image &lt;/u&gt;&lt;/h3&gt;
-
-&lt;p&gt;The first one is another image named &lt;code class=&quot;highlighter-rouge&quot;&gt;chikafujiwara.jpg&lt;/code&gt;,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/sadchika.png&quot; alt=&quot;sadchika&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;A quick &lt;code class=&quot;highlighter-rouge&quot;&gt;binwalk&lt;/code&gt; command will show us that there is a file hidden inside the image. So, we can then extract it using &lt;code class=&quot;highlighter-rouge&quot;&gt;binwalk&lt;/code&gt; or &lt;code class=&quot;highlighter-rouge&quot;&gt;zip&lt;/code&gt;&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;unzip chikafujiwara.jpg&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/binwalk.png&quot; alt=&quot;binwalk&quot; /&gt;&lt;/p&gt;
-
-&lt;h3 id=&quot;-reading-between-the-lines-&quot;&gt;&lt;u&gt; reading between the lines &lt;/u&gt;&lt;/h3&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/unlocked.png&quot; alt=&quot;unlock&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;and then we get a new gpg encrypted file named &lt;code class=&quot;highlighter-rouge&quot;&gt;key.txt.gpg&lt;/code&gt;. So, since we didn’t have any password for the encrypted file, we can then try to get something useful from &lt;code class=&quot;highlighter-rouge&quot;&gt;whatsapp.log&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/conv.png&quot; alt=&quot;conversation&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;The log files showed us what it seems like a conversation of &lt;code class=&quot;highlighter-rouge&quot;&gt;chika&lt;/code&gt; with another person named &lt;code class=&quot;highlighter-rouge&quot;&gt;yunara&lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;At first glance of the conversation header, the &lt;code class=&quot;highlighter-rouge&quot;&gt;fingerprint&lt;/code&gt; data looks like it is a base64 encoding.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/base64.png&quot; alt=&quot;basedecode&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Using site like &lt;a href=&quot;https://www.base64decode.org/&quot;&gt;https://www.base64decode.org/&lt;/a&gt; , we can see the clear text message. The decoded message is&lt;/p&gt;
-
-&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt; the password is in the conversation &lt;/code&gt;.&lt;/p&gt;
-
-&lt;p&gt;So, it seems like we are in the right path. Let’s analyze what’s in the message.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/message.png&quot; alt=&quot;message&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Since there is no possible password that can be guessed from the conversation, we can then try to visit the twitter &lt;a href=&quot;https://twitter.com/yunaranyancat/status/1103367092710064129&quot;&gt;link&lt;/a&gt; that is given,&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/tweet.png&quot; alt=&quot;tweet&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;If we look closely, it seems like the tweet is using some kind of steganography. There is a github page which can hide secret messages in our tweet which is &lt;a href=&quot;https://github.com/holloway/steg-of-the-dump&quot;&gt;https://github.com/holloway/steg-of-the-dump&lt;/a&gt;. So, when we run the code,we need to paste the tweet in decode text field, then we can see that there is indeed a hidden message.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/holloway.png&quot; alt=&quot;holloway&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;We can unlock the encrypted file using the following command.&lt;/p&gt;
-
-&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-bash&quot; data-lang=&quot;bash&quot;&gt;gpg key.txt.gpg
-when prompted with password, insert &lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;mi-0w&lt;span class=&quot;sb&quot;&gt;`&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
-
-&lt;h3 id=&quot;-get-the-right-secret-key-&quot;&gt;&lt;u&gt; get the right secret key &lt;/u&gt;&lt;/h3&gt;
-
-&lt;p&gt;Once we open the text file, it seems like we have managed to get the secret key, which is &lt;code class=&quot;highlighter-rouge&quot;&gt;YunaSanLoveChikaSan&lt;/code&gt;. Well, it’s not. :)&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/blocked.png&quot; alt=&quot;blocked&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;Actually, that is what blocking us from getting the real secret key. The symbols surrounding the fake keys are parts of an esoteric programming language which is called &lt;code class=&quot;highlighter-rouge&quot;&gt;JSFuck&lt;/code&gt; . We can then remove all of the secret keys, and paste the symbols in any decoder site for example, &lt;a href=&quot;http://codertab.com/JsUnFuck&quot;&gt;http://codertab.com/JsUnFuck&lt;/a&gt; to get the clear text message.&lt;/p&gt;
-
-&lt;p&gt;&lt;img src=&quot;/musubi/assets/chika01/jsunfuck.png&quot; alt=&quot;jsunfuck&quot; /&gt;
-and voila! We finally got the secret key which is &lt;code class=&quot;highlighter-rouge&quot;&gt;yato&lt;/code&gt;.&lt;/p&gt;
-
-&lt;h2 id=&quot;thank-you&quot;&gt;Thank you&lt;/h2&gt;
-
-&lt;p&gt;I would like to thank all of you whom have tried my challenges and for those who are interested in reading this writeup. I also would like to congratulate &lt;code class=&quot;highlighter-rouge&quot;&gt;mucomplex&lt;/code&gt; for being the first person who managed to solve this mini challenge.&lt;/p&gt;
-
-&lt;p&gt;I’m thinking about making another challenge(s) in the future, so, for those who are interested, hit me up on &lt;a href=&quot;https://twitter.com/yunaranyancat&quot;&gt;Twitter&lt;/a&gt; so I can send a personal invitation to my next challenge(s), or if you have any idea or want to collaborate, my dm is always open.&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Hello guys,</summary></entry></feed>
+&lt;p&gt;Thank you for reading the post and if you have any further question related to OSWP (no spoiler ofc), feel free to send me a message. See you next time. :)&lt;/p&gt;</content><author><name>yunaranyancat</name></author><summary type="html">Heyyy guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Wireless Professional exam. So I’m thinking about writing my OSWP journey from start until end.</summary></entry></feed>
