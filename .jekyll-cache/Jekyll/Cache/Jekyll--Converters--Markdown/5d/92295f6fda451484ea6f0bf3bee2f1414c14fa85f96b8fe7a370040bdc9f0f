@@ -1,0 +1,35 @@
+I"�<p>Hey guys, I’m back!</p>
+
+<p><img src="/musubi/assets/osep/kongming.gif" alt="kongming" /></p>
+
+<p>(and I’ll be gone and will be back again.. it will be an endless circle.)</p>
+
+<p>I will be sharing my <a href="https://www.offensive-security.com/pen300-osep/">OSEP</a> review and some tips that I have used which helped me in the course and also how to maximise knowledge gained so you can apply it in your future pentest engagement!</p>
+
+<p>Let’s go!</p>
+
+<h1 id="pre-course-enrollment">Pre course enrollment</h1>
+
+<p>Before taking the course, you need to make sure that this course is right for you.</p>
+
+<p>Before I decided to enroll in this course, I already have basic knowledge about Active Directoy infrastructures, configurations, objects, forests, domains, trusts, communications and most importantly what is AD for and why organizations use it especially in a larger scale ones.</p>
+
+<p>For me personally, the <a href="https://www.offensive-security.com/documentation/PEN300-Syllabus.pdf">syllabus</a> provided by Offensive Security suits well as in a red teaming operation.</p>
+
+<h1 id="during-course-enrollment">During course enrollment</h1>
+
+<p>There are three main “concepts” that will be taught in the course:</p>
+
+<ol>
+  <li>
+    <p>How to gain initial foothold (Through phishing, web exploitation etc..)</p>
+  </li>
+  <li>
+    <p>How to attack AD internal network (Misconfigurations abuse, common AD/system vulnerabilities, lateral movement, etc..)</p>
+  </li>
+  <li>
+    <p>While doing 1 and 2 , you also will learn how to bypass standard antivirus and application whitelistings so that your payload/C2 is working as intended.</p>
+  </li>
+</ol>
+
+:ET

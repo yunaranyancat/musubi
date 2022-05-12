@@ -1,0 +1,22 @@
+I"D<p>Hey guys, I’m back!</p>
+
+<p><img src="/musubi/assets/osep/kongming.gif" alt="kongming" /></p>
+
+<p>(and I’ll be gone and will be back again.. it will be an endless circle.)</p>
+
+<p>I will be sharing my <a href="https://www.offensive-security.com/pen300-osep/">OSEP</a> review and some tips that I have used which helped me in the course and also how to maximise knowledge gained not just from the course <a href="https://www.offensive-security.com/documentation/PEN300-Syllabus.pdf">content</a> so you can apply it in your future pentest engagement!</p>
+
+<p>Let’s go!</p>
+
+<h1 id="pre-course-enrollment">Pre course enrollment</h1>
+
+<p>Before taking the course, you need to make sure that this course is right for you.</p>
+
+<p>Before I decided to enroll in this course, I already have basic knowledge about Active Directoy infrastructures, configurations, objects, forests, domains, trusts, communications and most importantly what is AD for and why organizations use it especially in a larger scale ones.</p>
+
+<p>For me personally, the syllabus shared on Offensive Security website suits well as a foundation for a red teaming.</p>
+
+<p>This course is focused on attacking machines which are connected to Active Directory.</p>
+
+<p>However, a solid foundation on how to gain initial foothold also will be taught. Phishing, SQL injection,</p>
+:ET

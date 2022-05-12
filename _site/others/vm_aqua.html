@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>VM Aqua Boot2Root Writeup - Speedrun Edition | Musubi</title>
-<meta name="generator" content="Jekyll v3.8.6" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="VM Aqua Boot2Root Writeup - Speedrun Edition" />
 <meta name="author" content="yunaranyancat" />
 <meta property="og:locale" content="en_US" />
@@ -20,8 +20,10 @@
 <meta property="og:site_name" content="Musubi" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2020-01-17T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="VM Aqua Boot2Root Writeup - Speedrun Edition" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","author":{"@type":"Person","name":"yunaranyancat"},"url":"http://localhost:4000/musubi/others/vm_aqua","headline":"VM Aqua Boot2Root Writeup - Speedrun Edition","dateModified":"2020-01-17T00:00:00+08:00","datePublished":"2020-01-17T00:00:00+08:00","description":"Yo! This is my boot2root writeup for Aqua vm. For those who didn’t manage to play with it yet, download the vm and come back when you have finished or when you are stuck.","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/others/vm_aqua"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"yunaranyancat"},"dateModified":"2020-01-17T00:00:00+08:00","datePublished":"2020-01-17T00:00:00+08:00","description":"Yo! This is my boot2root writeup for Aqua vm. For those who didn’t manage to play with it yet, download the vm and come back when you have finished or when you are stuck.","headline":"VM Aqua Boot2Root Writeup - Speedrun Edition","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/others/vm_aqua"},"url":"http://localhost:4000/musubi/others/vm_aqua"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -68,7 +70,7 @@
 
 <h2 id="enumeration">Enumeration</h2>
 
-<p>In this case, the <strong>IP</strong> for the target machine is <code class="highlighter-rouge">10.0.2.6</code>.</p>
+<p>In this case, the <strong>IP</strong> for the target machine is <code class="language-plaintext highlighter-rouge">10.0.2.6</code>.</p>
 
 <p>These are the following open ports.</p>
 
@@ -83,7 +85,7 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p><img src="/musubi/assets/aqua/3.png" alt="3" /></p>
 
-<p><code class="highlighter-rouge">megumin:watashiwamegumin</code></p>
+<p><code class="language-plaintext highlighter-rouge">megumin:watashiwamegumin</code></p>
 
 <p>When running <strong>nikto</strong> on the target we found <strong>login.php</strong>.</p>
 
@@ -103,7 +105,7 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <h2 id="exploitation">Exploitation</h2>
 
-<p>Upon further enumeration, we found that the port 21 can be opened by using port knocking. It was filtered when nmap result showed up. The knockd config file can be found at <code class="highlighter-rouge">/etc/knockd.conf</code> in the target machine.</p>
+<p>Upon further enumeration, we found that the port 21 can be opened by using port knocking. It was filtered when nmap result showed up. The knockd config file can be found at <code class="language-plaintext highlighter-rouge">/etc/knockd.conf</code> in the target machine.</p>
 
 <p><img src="/musubi/assets/aqua/7.png" alt="7" /></p>
 
@@ -123,17 +125,17 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p><img src="/musubi/assets/aqua/10.png" alt="10" /></p>
 
-<p>The file <code class="highlighter-rouge">notes</code> revealed the absolute path of the current directory.</p>
+<p>The file <code class="language-plaintext highlighter-rouge">notes</code> revealed the absolute path of the current directory.</p>
 
 <p><img src="/musubi/assets/aqua/11.png" alt="11" /></p>
 
-<p>This means that, by going to <code class="highlighter-rouge">http://10.0.2.6/home.php?showcase=../deployment/production/ourreverseshell.php</code> , our payload will be executed.</p>
+<p>This means that, by going to <code class="language-plaintext highlighter-rouge">http://10.0.2.6/home.php?showcase=../deployment/production/ourreverseshell.php</code> , our payload will be executed.</p>
 
 <p><img src="/musubi/assets/aqua/12.png" alt="12" /></p>
 
 <h2 id="privilege-escalation-i">Privilege escalation I</h2>
 
-<p>Upon reading <code class="highlighter-rouge">/etc/sudoers</code> file, we found out that these users can run commands using <strong>sudo</strong> privileges without password.</p>
+<p>Upon reading <code class="language-plaintext highlighter-rouge">/etc/sudoers</code> file, we found out that these users can run commands using <strong>sudo</strong> privileges without password.</p>
 
 <p><strong>Aqua : /root/quotes, /root/esp, /usr/bin/gdb</strong></p>
 
@@ -145,7 +147,7 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <h2 id="privilege-escalation-ii">Privilege escalation II</h2>
 
-<p>And as megumin, we can run <code class="highlighter-rouge">/home/aqua/Desktop/backdoor</code> using sudo privilege.</p>
+<p>And as megumin, we can run <code class="language-plaintext highlighter-rouge">/home/aqua/Desktop/backdoor</code> using sudo privilege.</p>
 
 <p><img src="/musubi/assets/aqua/14.png" alt="14" /></p>
 
@@ -165,7 +167,7 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>We can get a root shell using gdb by following command.</p>
 
-<p><code class="highlighter-rouge">sudo gdb -nx -ex '!sh' -ex quit</code></p>
+<p><code class="language-plaintext highlighter-rouge">sudo gdb -nx -ex '!sh' -ex quit</code></p>
 
 <p><img src="/musubi/assets/aqua/18.png" alt="18" /></p>
 
@@ -173,15 +175,15 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>For your information, this is my intended path of getting to root shell. But as I want to give a great experience to everyone including those who didn’t know about buffer overflow on Linux, so I have decided to make an easier method to get into root.</p>
 
-<p>By running <code class="highlighter-rouge">sudo /root/quotes</code>, we know that the binary will print out our name and generate a random quote for us.</p>
+<p>By running <code class="language-plaintext highlighter-rouge">sudo /root/quotes</code>, we know that the binary will print out our name and generate a random quote for us.</p>
 
 <p><img src="/musubi/assets/aqua/21.png" alt="21" /></p>
 
-<p>In aqua home directory, we can get the source code for <code class="highlighter-rouge">/root/quotes</code> and <code class="highlighter-rouge">/root/esp</code> binaries which is located at this <a href="https://github.com/yunaranyancat/personal_projects/tree/master/project_9">link</a>.</p>
+<p>In aqua home directory, we can get the source code for <code class="language-plaintext highlighter-rouge">/root/quotes</code> and <code class="language-plaintext highlighter-rouge">/root/esp</code> binaries which is located at this <a href="https://github.com/yunaranyancat/personal_projects/tree/master/project_9">link</a>.</p>
 
 <p><img src="/musubi/assets/aqua/19.png" alt="19" /></p>
 
-<p>We also know that <code class="highlighter-rouge">/root/esp</code> shows the address of the <strong>ESP</strong> of the machine and that the <strong>ASLR</strong> is not enabled.</p>
+<p>We also know that <code class="language-plaintext highlighter-rouge">/root/esp</code> shows the address of the <strong>ESP</strong> of the machine and that the <strong>ASLR</strong> is not enabled.</p>
 
 <p><img src="/musubi/assets/aqua/20.png" alt="20" /></p>
 
@@ -203,15 +205,15 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>By default, <strong>ASLR</strong> is enabled. To disable <strong>ASLR</strong>, run the following command.</p>
 
-<p><code class="highlighter-rouge">echo 0 | sudo tee /proc/sys/kernel/randomize_va_space</code></p>
+<p><code class="language-plaintext highlighter-rouge">echo 0 | sudo tee /proc/sys/kernel/randomize_va_space</code></p>
 
 <p><img src="/musubi/assets/aqua/25.png" alt="25" /></p>
 
 <p>Then compile the binaries using following options.</p>
 
-<p>esp.c : <code class="highlighter-rouge">gcc -fno-stack-protector -z execstack -no-pie esp.c -o esp</code></p>
+<p>esp.c : <code class="language-plaintext highlighter-rouge">gcc -fno-stack-protector -z execstack -no-pie esp.c -o esp</code></p>
 
-<p>quotes.c ; <code class="highlighter-rouge">gcc -fno-stack-protector -z execstack -no-pie quotes.c -o quotes</code></p>
+<p>quotes.c ; <code class="language-plaintext highlighter-rouge">gcc -fno-stack-protector -z execstack -no-pie quotes.c -o quotes</code></p>
 
 <p><img src="/musubi/assets/aqua/26.png" alt="26" /></p>
 
@@ -221,27 +223,27 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>You can use anything you want for the exploit development but in this writeup, I will be using <a href="https://github.com/longld/peda">peda</a>.</p>
 
-<p>Open the binary in gdb by running <code class="highlighter-rouge">sudo gdb -q /root/quotes</code> .</p>
+<p>Open the binary in gdb by running <code class="language-plaintext highlighter-rouge">sudo gdb -q /root/quotes</code> .</p>
 
 <p><img src="/musubi/assets/aqua/28.png" alt="28" /></p>
 
-<p>Disassemble the main program using <code class="highlighter-rouge">disas main</code> .</p>
+<p>Disassemble the main program using <code class="language-plaintext highlighter-rouge">disas main</code> .</p>
 
 <p><img src="/musubi/assets/aqua/29.1.png" alt="29.1" /></p>
 
 <p><img src="/musubi/assets/aqua/29.2.png" alt="29.2" /></p>
 
-<p>Disassemble the getname function using <code class="highlighter-rouge">disas getname</code> and we can see that the method <strong>strcpy</strong> is being called.</p>
+<p>Disassemble the getname function using <code class="language-plaintext highlighter-rouge">disas getname</code> and we can see that the method <strong>strcpy</strong> is being called.</p>
 
 <p><img src="/musubi/assets/aqua/30.png" alt="30" /></p>
 
-<p>Let’s try to overflow the program by running <code class="highlighter-rouge">r $(python -c 'import sys;sys.stdout.write("A"*100)')</code> which will print out 100 A’s and will be parsed to the program as our <strong>name</strong> variable.</p>
+<p>Let’s try to overflow the program by running <code class="language-plaintext highlighter-rouge">r $(python -c 'import sys;sys.stdout.write("A"*100)')</code> which will print out 100 A’s and will be parsed to the program as our <strong>name</strong> variable.</p>
 
 <p><img src="/musubi/assets/aqua/31.png" alt="31" /></p>
 
 <p>It seems like we managed to overwrite the <strong>EIP</strong>. To find the <strong>offset</strong> of the <strong>EIP</strong>, we need to use a pattern of unique strings. Since peda has this functionality, we can use them.</p>
 
-<p>Create a pattern of 100 characters by running <code class="highlighter-rouge">pattern_create 100 pat</code> . This will store the pattern in a file called <strong>pat</strong>.</p>
+<p>Create a pattern of 100 characters by running <code class="language-plaintext highlighter-rouge">pattern_create 100 pat</code> . This will store the pattern in a file called <strong>pat</strong>.</p>
 
 <p><img src="/musubi/assets/aqua/32.png" alt="32" /></p>
 
@@ -261,7 +263,7 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>Now, to verify if we have the right offset. We need to change our buffer.</p>
 
-<p><code class="highlighter-rouge">gdb-peda$ r $(python -c 'import sys;sys.Stdout.write(("A"*44) + ("B"*4) + ("\x90"*32) + ("C"*23))')</code></p>
+<p><code class="language-plaintext highlighter-rouge">gdb-peda$ r $(python -c 'import sys;sys.Stdout.write(("A"*44) + ("B"*4) + ("\x90"*32) + ("C"*23))')</code></p>
 
 <p><img src="/musubi/assets/aqua/35.png" alt="35" /></p>
 
@@ -285,11 +287,11 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>Now, we can replace our Cs after the padding with the real shellcode. This is the <a href="http://shell-storm.org/shellcode/files/shellcode-827.php">shellcode</a> that we will be using. You also can use another shellcode which may spawn a reverse shell or anything else.</p>
 
-<p>Rerun the program with modified payload and put a breakpoint at the end of the <code class="highlighter-rouge">getname</code> method.</p>
+<p>Rerun the program with modified payload and put a breakpoint at the end of the <code class="language-plaintext highlighter-rouge">getname</code> method.</p>
 
 <p><img src="/musubi/assets/aqua/38.png" alt="38" /></p>
 
-<p>Once we hit our breakpoint, run <code class="highlighter-rouge">c</code> to continue the execution.</p>
+<p>Once we hit our breakpoint, run <code class="language-plaintext highlighter-rouge">c</code> to continue the execution.</p>
 
 <p><img src="/musubi/assets/aqua/39.png" alt="39" /></p>
 
@@ -343,7 +345,7 @@ button, we are redirected to another page which shows a potential credential.</p
   </body>
 
   <footer>
-    <small>&copy; 2020 yunaranyancat </small>
+    <small>&copy; 2022 yunaranyancat </small>
   </footer>
 
 </html>
@@ -369,4 +371,6 @@ var typed = new Typed('#typed', {
 });
 </script>
 
+<!-- 
 <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="yunaranyancat" data-description="Thank you so much for your support! (◕‿◕)" data-message="Thank you for visiting! ＼(≧▽≦)／" data-color="#FF5F5F" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+-->

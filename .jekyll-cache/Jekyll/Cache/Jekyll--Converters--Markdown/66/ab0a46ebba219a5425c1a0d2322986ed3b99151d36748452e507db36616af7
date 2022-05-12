@@ -1,0 +1,149 @@
+I"�6<p>Hi guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Certified Professional(OSCP) exam.</p>
+
+<p>Since I have some time to kill, I will share the journey and preparations that I took before I decided to take OSCP exam and also I will share my labs and exam experiences. This post will be quite different compared to my OSWP <a href="https://yunaranyancat.github.io/musubi/others/oswpreview">review</a> as I won’t put much details on the course (there are lots of OSCP reviews that explain what is OSCP, what are the course pre requisites, who should take it, etc..) but rather I will explain on how I prepared myself before taking OSCP. Ok, enough for introduction, let’s delve deep into a script kiddie’s journey to become an OSCP holder.</p>
+
+<p>I will divide different sections where I will call it as levels. These levels will indicate where I was, what were my skill sets at that time and what did I do to go to the next level..</p>
+
+<p>Bear with me, it’s not a short journey..</p>
+
+<p><img src="/musubi/assets/oscp/hacker.jpeg" alt="hacker_a_day" /></p>
+
+<h3 id="level-1-i-know-linux-but-i-dont-know-anything--know-a-little-bit-about-penetration-testing-time-spent--12-months">Level 1 (I know Linux but I don’t know anything / know a little bit about penetration testing) [Time spent : 1~2 months]</h3>
+
+<p>Hello there, I know we are all have been in this place. This is the moment right after we have decided to dive deep into the world of penetration testing, or I would say, ethical hacking.</p>
+
+<p>This is the moment where we got frustrated whenever we fail to understand anything.. the moment where, whenever we wanted to install some distros or some hacking tools but failed, we just paste the error in the forum or a facebook group and ask the pros, “hi there, can anyone help me?”, in hope of someone will help and maybe tell us something like, “why don’t you read the error from the terminal and then try to search what the error says online?” ; but instead we got told “try harder”, “google is your friend” or even a sad facebook emoji reaction with no replies. It’s okay. It’s totally fine. It’s not that they don’t want to help you.</p>
+
+<p>Maybe it is another way of teaching you and making you think and realize that, “Let’s imagine that you are currently taking OSCP exam and you don’t know what to do.. do you ask directly for someone else help? No, you won’t, and you can’t.”</p>
+
+<p>You need to find your way in and out, you need to find an entry point, you need to google every term that you know and that is when you will understand what do they mean by <strong>google is your friend</strong>.</p>
+
+<p><img src="/musubi/assets/oscp/desperation.jpeg" alt="desperation" /></p>
+
+<p>When I was at this level, I bought a book titled <strong>Penetration Testing: A Hands-On Introduction to Hacking</strong> by Georgia Weidman.</p>
+
+<p>After that, I started playing <a href="https://www.hackthebox.eu/">HackTheBox</a>, which my first machine was <a href="https://www.youtube.com/watch?v=PJeBIey8gc4">Jerry</a> (Jerry has just got retired when I wanted to try it, I think around early December). At that time, I was pretty happy to get a shell eventhough I was just replicating everything what <a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA">Ippsec</a> did.</p>
+
+<h3 id="level-2-i-know-what-is-pentest-but-i-still-need-to-make-myself-comfortable-with-hacking-or-boot-to-root-ctf-style-time-spent--as-long-as-it-should-take">Level 2 (I know what is pentest but I still need to make myself comfortable with hacking or boot-to-root CTF style) [Time spent : As long as it should take]</h3>
+
+<p>This is where I spent most of my time playing HTB, met a lot of new friends, shared and exchanged lots of knowledge, joined lots of groups.. and after a month playing HTB, I managed to obtain a <strong>Guru</strong> rank from <strong>script kiddie</strong> rank (I was really close to <strong>Omniscient</strong> as I managed to root all of the active machines at that time but I was stuck at binary exploitation challenges, because, you know… which script kiddie can do binary exploitation? <strong>(&gt;_&lt;)</strong> ) ..</p>
+
+<p>Other than that, sometimes I spent my time playing with other CTF sites such as root-me, rankkk, and etc.. but, HTB is number one in my heart. ☆⌒(ゝ。∂)</p>
+
+<p>Check out my <a href="https://www.wechall.net/profile/y4t0">wechall</a> profile for more info.</p>
+
+<h3 id="level-3-i-think-i-know-how-to-root-a-machine-but-now-i-need-to-focus-more-on-oscp-style-machines-time-spent--1-month">Level 3 (I think I know how to root a machine but now I need to focus more on OSCP style machines) [Time spent : 1 month]</h3>
+
+<p>I know I know, it’s the infamous OSCP like HTB machines list created by <a href="https://twitter.com/TJ_Null">TJnull</a>.. Hehehe.. So, at this point, I started to do one by one based on that list.</p>
+
+<p><img src="/musubi/assets/oscp/oscplike.jpg" alt="oscplike" /></p>
+
+<p>Okay, these are my tips and tricks on how to gain the most of knowledge for every box that is on the list. (Not just for OSCP)</p>
+
+<p>First, I will enumerate the machine by myself. What do I mean by that is I will try to find running services and then, I will enumerate the service that I know at that time. When I’m stuck or when I run out of ideas, only then would I watch Ippsec videos but I will <strong>ONLY</strong> watch the PART where I was stuck.</p>
+
+<p>After that,  I paused the video then proceed my enumeration and then repeat the methods until I have managed to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.</p>
+
+<p>After I have rooted a machine, I re-watched Ippsec videos about that machine , again, without pausing. This is the moment where I wanted to know how he did it and what’s different than what I did and how can I improve my enumeration techniques. The special thing about his videos is he didn’t root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).</p>
+
+<p>And the last cycle is optional, re-root the machine without any help. (Practice what you just learned + what you already know)</p>
+
+<p>I can say that I’m pretty good with Linux machines, so I spent more time on Windows boxes. I learned about Windows environment, such as file transfers, system information, services and others that might give me the idea on how to find vulnerabilities in Windows machine.</p>
+
+<h3 id="level-4-im-pretty-confident-to-take-oscp-exam-time-spent--1-month">Level 4 (I’m pretty confident to take OSCP exam) [Time spent : 1 month]</h3>
+
+<p>I then booked the labs for 30 days, then scheduled the exam a week before my lab time finished (I’m scared that if I waited too long, I may end up procrastinating). Since I was pretty comfortable with my enumeration (to a comfortable level), I didn’t play much in the labs. I only used the labs to practice my buffer overflow techniques.</p>
+
+<p>At first, I have decided to focus only on the buffer overflow part on the last week before the exam started, however, when I realized that the buffer overflow part was pretty easy to replicate, it boosted my confidence and that is when I decided to rescheduled my exam to be another week earlier than scheduled.</p>
+
+<h3 id="level--oscp-exam-time-spent--24-hours">Level ??? (OSCP exam) [Time spent : 24 hours++]</h3>
+
+<p>Targets :
+Few machines with one of them is the buffer overflow thingy..</p>
+
+<p>The exam started at 11PM (Normally I’m already sound asleep at this time). I have prepared three cans of Redbull beside me just in case my eyes won’t open when I wanted it to.. :3</p>
+
+<p>So, my strategy was like this :</p>
+
+<ul>
+  <li>Tackle buffer overflow machine first as it is the easiest one, for me. :&gt;</li>
+  <li>While doing Bof, run <a href="https://github.com/21y4d/nmapAutomator">nmapautomator</a> for the other machines and come back later to run a more thorough manual scans. (nikto, gobuster, nmap scripts scan etc..)</li>
+</ul>
+
+<p>It took me around two hours to complete the buffer overflow part. I did it slow and steady so that I will know where are the errors just in case the exploit didn’t work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.</p>
+
+<p>My standard enumeration + exploitation techniques would be ;</p>
+
+<ol>
+  <li>Identify open ports and what are the running services.</li>
+  <li>Find the version of the running services and compare it to the latest version available online. If the version is quite old, then there’s a possibility that it is an entry point into the target.</li>
+  <li>Read the exploits that are related to the running services and understand how it can be exploited.</li>
+  <li>Repeat step 2-3 until you have identified some ports that could be your entry point (some low priv shell or even a root shell ) with different list of possible vulnerabilities.</li>
+  <li>Rabbit holes : IMHO, rabbit holes only exist if you ;
+    <ul>
+      <li>Do not understand how the exploits work (If you know how they work but when you run them against that particular service then nothing happened, then move on to different services/ports, that service might not be vulnerable even though it’s version is vulnerable.. we can assume that it has been patched)</li>
+      <li>Keep running the exploit again and again without modifying the exploit code hoping that it will work (Insanity is about doing the same thing over and over again and expecting different results.. The key is to understand what and why it’s not working.)</li>
+      <li>Panic and suddenly forgetting every simple enumeration technique that you have learned. (Keep calm and go through your enumeration slowly, one by one. No one will ever know what’s waiting ahead, so keep enumerating..)</li>
+    </ul>
+  </li>
+  <li>If all of the above didn’t work, then check back :
+    <ul>
+      <li>Your scan results (Have you scanned all ports? TCP or UDP? )</li>
+      <li>Did you forget something / enumerating each port that is open? If you are paranoid like me , you can use this <a href="http://www.0daysecurity.com/penetration-testing/enumeration.html">list</a></li>
+      <li>Did you forget to modify the exploits to fit your target environment? (ports? protocols? path? version? command? or even running Operating System?)</li>
+      <li>Did you forget to take A REST? A quick nap or even few minutes of break could help you get back in the game.</li>
+    </ul>
+  </li>
+  <li>Profit</li>
+</ol>
+
+<p>Extra note :</p>
+
+<p><strong>Metasploit usage</strong></p>
+
+<p>Some of you might find that using Metasploit would be rewarding, however that wasn’t my case.</p>
+
+<p>12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points machine and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn’t work + I’m so tired and sleepy (I have only slept for 3 hours in total during my exam day ; <strong>1 hour</strong> during the midnight, <strong>1 hour</strong> during the early morning and another <strong>1 hour</strong> in the evening), I went into <del>rage</del> script kiddie mode.</p>
+
+<p><img src="/musubi/assets/oscp/noob.jpeg" alt="noob" /></p>
+
+<p>I then upgraded my shell into a Meterpreter session hoping that <strong>local exploit suggester</strong> in Metasploit would work. However, I found nothing. Nothing at all. Not even a tiny bit of clue popped up after I have used my supposedly Metasploit “allowance” . Then I realized that I forgot to do something, one of the most important things to do for everyone especially for those who are taking the exam; <strong>I FORGOT TO TAKE A REST</strong>.</p>
+
+<p><img src="/musubi/assets/oscp/meterpreter.jpeg" alt="meterpreter" /></p>
+
+<p>Then, I went out for lunch with my friends and then I started to calm down. After that, I enumerated the machine slowly and carefully using my low priv shell, and then, I found an entry point. It was just right in front of my eyes. I didn’t know how could I have missed it. Then, after few modifications to the exploit code, I managed to get a root shell! Wohooo.. 100 points my boi..</p>
+
+<p><img src="/musubi/assets/oscp/chikadance.gif" alt="chika" /></p>
+
+<h3 id="report">Report</h3>
+
+<p>Hah! You thought that the suffering has ended don’t ya? Yeah, it actually has ended. Now, for most of us, it’s a calmer moment. I used this report <a href="https://github.com/whoisflynn/OSCP-Exam-Report-Template">template</a> then submitted my report on the next day early morning.</p>
+
+<h3 id="fin">Fin</h3>
+
+<p>Few days later, I got a mail telling that I have passed the OSCP exam. Another good news, I slept very well that night.</p>
+
+<p><img src="/musubi/assets/oscp/sleep.gif" alt="chika" /></p>
+
+<h2 id="tldri-hate-weebs">TL;DR;I hate weebs;</h2>
+
+<p><strong>Pre-OSCP</strong></p>
+
+<p>a. Penetration Testing: A Hands-On Introduction to Hacking (Georgia Weidman)</p>
+
+<p><img src="/musubi/assets/oscp/gw.jpg" alt="gw" /></p>
+
+<p>b. TJnull HackTheBox OSCP like machines list</p>
+
+<p><img src="/musubi/assets/oscp/oscplike.jpg" alt="oscplike2" /></p>
+
+<p><strong>OSCP</strong></p>
+
+<ul>
+  <li><a href="https://github.com/21y4d/nmapAutomator">nmapautomator</a></li>
+  <li>0 day security <a href="http://www.0daysecurity.com/penetration-testing/enumeration.html">checklist</a></li>
+  <li><a href="https://github.com/SecWiki/windows-kernel-exploits">secwiki</a> Windows kernel exploits</li>
+  <li>g0tmi1k linux privilege <a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/">escalation</a></li>
+  <li>sushant747 windows privilege <a href="https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html">escalation</a></li>
+</ul>
+:ET

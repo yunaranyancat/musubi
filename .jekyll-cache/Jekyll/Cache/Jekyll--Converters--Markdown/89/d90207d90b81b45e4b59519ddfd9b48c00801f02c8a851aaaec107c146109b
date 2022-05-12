@@ -1,0 +1,49 @@
+I"0<h3 id="about">About</h3>
+<ul>
+  <li>about <a href="/musubi/about/site">site</a></li>
+  <li>about <a href="/musubi/about/author">author</a></li>
+</ul>
+
+<h3 id="categories">Categories</h3>
+<ul>
+  <li>posts
+    <ul>
+      <li><a href="/musubi/challenges">challenges</a> writeups</li>
+      <li><a href="/musubi/notes">notes</a></li>
+    </ul>
+  </li>
+  <li>reviews
+    <ul>
+      <li><a href="/musubi/others/vhlreview">Virtual Hacking Labs</a> review</li>
+      <li><a href="/musubi/others/oswpreview">OSWP</a> review</li>
+      <li><a href="/musubi/others/oscpreview">OSCP</a> review</li>
+      <li><a href="/musubi/others/oscereview">OSCE</a> review</li>
+      <li><a href="/musubi/others/oswereview">OSWE</a> review</li>
+    </ul>
+  </li>
+  <li>ctf and boot2root by me
+    <ul>
+      <li><a href="/musubi/others/chika01">CTF chika01</a> writeup</li>
+      <li><a href="/musubi/others/vm_nezuko">VM nezuko</a> writeup</li>
+      <li><a href="/musubi/others/vm_aqua">VM aqua</a> writeup</li>
+    </ul>
+  </li>
+  <li>different paths of a hacker
+    <ul>
+      <li>Path to become a <a href="/musubi/paths/shellcoder">shellcoder</a></li>
+      <li>Path to become a <a href="/musubi/paths/webapphacker">web application hacker</a></li>
+    </ul>
+  </li>
+  <li>others
+    <ul>
+      <li>what is <a href="/musubi/others/whatismusubi">Musubi</a>?
+<!--  - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server -->
+<!--  - [XSSTest](/musubi/others/XSStest) --></li>
+    </ul>
+  </li>
+</ul>
+
+<p>Follow me on <a href="https://github.com/yunaranyancat">github</a> or <a href="https://twitter.com/yunaranyancat">tweet</a> me something interesting.</p>
+
+<p>If you like my content and want to know how you can support me, you can buy me a coffee! Just click the coffee button on the lower right side of the page. Thank you again for your support!</p>
+:ET

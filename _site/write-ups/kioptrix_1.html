@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="/musubi/assets/css/style.css?v=">
     <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.9"></script>
 
-<!-- Begin Jekyll SEO tag v2.6.1 -->
+<!-- Begin Jekyll SEO tag v2.8.0 -->
 <title>Write-up for Kioptrix 1 | Musubi</title>
-<meta name="generator" content="Jekyll v3.8.6" />
+<meta name="generator" content="Jekyll v4.2.2" />
 <meta property="og:title" content="Write-up for Kioptrix 1" />
 <meta name="author" content="yunaranyancat" />
 <meta property="og:locale" content="en_US" />
@@ -20,8 +20,10 @@
 <meta property="og:site_name" content="Musubi" />
 <meta property="og:type" content="article" />
 <meta property="article:published_time" content="2018-12-18T00:00:00+08:00" />
+<meta name="twitter:card" content="summary" />
+<meta property="twitter:title" content="Write-up for Kioptrix 1" />
 <script type="application/ld+json">
-{"@type":"BlogPosting","author":{"@type":"Person","name":"yunaranyancat"},"url":"http://localhost:4000/musubi/write-ups/kioptrix_1","headline":"Write-up for Kioptrix 1","dateModified":"2018-12-18T00:00:00+08:00","datePublished":"2018-12-18T00:00:00+08:00","description":"Kioptrix Level 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/write-ups/kioptrix_1"},"@context":"https://schema.org"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"yunaranyancat"},"dateModified":"2018-12-18T00:00:00+08:00","datePublished":"2018-12-18T00:00:00+08:00","description":"Kioptrix Level 1","headline":"Write-up for Kioptrix 1","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/musubi/write-ups/kioptrix_1"},"url":"http://localhost:4000/musubi/write-ups/kioptrix_1"}</script>
 <!-- End Jekyll SEO tag -->
 
   </head>
@@ -77,14 +79,14 @@
 
 <p><img src="/musubi/assets/kioptrix_1/netdiscover.png" alt="netdiscover" /></p>
 
-<p>to find the IP of the target, and in this case, the ip is <code class="highlighter-rouge">192.168.1.104</code> .</p>
+<p>to find the IP of the target, and in this case, the ip is <code class="language-plaintext highlighter-rouge">192.168.1.104</code> .</p>
 
 <p>After that, I would run the nmap scan to find available services alongside their version.</p>
 <blockquote>
   <p>nmap -sS -sV -A -v 192.168.1.104</p>
 </blockquote>
 
-<p>After few minutes, the scan finished. Based on the image below, we can see open ports such as tcp <code class="highlighter-rouge">22</code> and http <code class="highlighter-rouge">80</code>.</p>
+<p>After few minutes, the scan finished. Based on the image below, we can see open ports such as tcp <code class="language-plaintext highlighter-rouge">22</code> and http <code class="language-plaintext highlighter-rouge">80</code>.</p>
 
 <p><img src="/musubi/assets/kioptrix_1/nmap_result_target_apache.png" alt="nmap" /></p>
 
@@ -107,7 +109,7 @@ searchsploit mod_ssl 2.8</p>
 
 <p>So… what now? hmm.. ok..</p>
 
-<p>Actually, the error occured because I forgot to add <code class="highlighter-rouge">-lcrypto</code> option. So, I run the compiler again with;</p>
+<p>Actually, the error occured because I forgot to add <code class="language-plaintext highlighter-rouge">-lcrypto</code> option. So, I run the compiler again with;</p>
 <blockquote>
   <p>gcc 764.c -o 764 -lcrypto</p>
 </blockquote>
@@ -140,15 +142,15 @@ Usage: ./764 target box [port] [-c N]<br />
 …</p>
 </blockquote>
 
-<p>So, right now, I need to include the target and the box (and if you like, you can specify the port and the count too). Since we already knew that the box is a RedHat Linux and is running <code class="highlighter-rouge">apache-1.3.20</code>, we are left with two options;</p>
+<p>So, right now, I need to include the target and the box (and if you like, you can specify the port and the count too). Since we already knew that the box is a RedHat Linux and is running <code class="language-plaintext highlighter-rouge">apache-1.3.20</code>, we are left with two options;</p>
 
 <p><img src="/musubi/assets/kioptrix_1/try_both.png" alt="try_both" /></p>
 
-<p>First, I tried running the exploit using <code class="highlighter-rouge">0x6a</code> ,</p>
+<p>First, I tried running the exploit using <code class="language-plaintext highlighter-rouge">0x6a</code> ,</p>
 
 <p><img src="/musubi/assets/kioptrix_1/try_second.png" alt="try_second" /></p>
 
-<p>but it didn’t work. After that, I ran it using <code class="highlighter-rouge">0x6b</code>, and voila! I got a shell..</p>
+<p>but it didn’t work. After that, I ran it using <code class="language-plaintext highlighter-rouge">0x6b</code>, and voila! I got a shell..</p>
 
 <p><img src="/musubi/assets/kioptrix_1/got_root.png" alt="gotroot" /></p>
 
@@ -172,7 +174,7 @@ Usage: ./764 target box [port] [-c N]<br />
   </body>
 
   <footer>
-    <small>&copy; 2020 yunaranyancat </small>
+    <small>&copy; 2022 yunaranyancat </small>
   </footer>
 
 </html>
@@ -198,4 +200,6 @@ var typed = new Typed('#typed', {
 });
 </script>
 
+<!-- 
 <script data-name="BMC-Widget" src="https://cdnjs.buymeacoffee.com/1.0.0/widget.prod.min.js" data-id="yunaranyancat" data-description="Thank you so much for your support! (◕‿◕)" data-message="Thank you for visiting! ＼(≧▽≦)／" data-color="#FF5F5F" data-position="right" data-x_margin="18" data-y_margin="18"></script>
+-->

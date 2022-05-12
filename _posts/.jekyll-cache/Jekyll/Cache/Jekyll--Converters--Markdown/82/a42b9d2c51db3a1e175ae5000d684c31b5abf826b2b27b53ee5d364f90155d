@@ -1,0 +1,81 @@
+I"q
+<p>Hey , I’m writing this journal that will be updated periodically at the end of the day as I progress through the Shellcoder’s Handbook 2nd Edition and other shellcoding related things. I will write anything that I found useful however, do note that this is more of a journal/diary rather than a complete technical writeup. Let’s go..</p>
+
+<h3 id="4-april-2020">4 April 2020</h3>
+
+<p>Went through the first few pages of Chapter 2.</p>
+
+<p>Seems like I need to install some OS so I can follow along.</p>
+
+<p>Tried to install Debian 3.1r4 but seems like I suck at installing old OS.</p>
+
+<p>Guess I’ll install Ubuntu.</p>
+
+<p>Downloaded old ubuntu releases, 4.10, 6.10, 8.10</p>
+
+<p>Finally I have chosen 8.10 and 6.10. What’s interesting is gcc already come pre installed, especially the desktop version of the iso.</p>
+
+<p>Try running first few examples, got stuck as there are no core dumped after segmentation fault.</p>
+
+<p>Fixed it by running “ulimit -c unlimited”</p>
+
+<p>Done for today</p>
+
+<h4 id="snippets-">snippets :</h4>
+
+<ul>
+  <li>gcc -o program1 program1.c -fno-stack-protector</li>
+  <li>ulimit -c unlimited</li>
+</ul>
+
+<h3 id="5-april-2020">5 April 2020</h3>
+
+<p>Understand how stack work, some basic assembly operations (PUSH, POP, CALL, RET, MOV)</p>
+
+<p>Functions and stack - push arguments, call function , then RET stored in EIP</p>
+
+<p>Understand how EBP work, program prologue</p>
+
+<p>Understand basic of 32 bit stack overflow, without stack protection</p>
+
+<p>Disable ASLR just to be safe</p>
+
+<p>Stack boundary and optimisation</p>
+
+<p>If the stack boundary is set to 2, there is no stack optimisation</p>
+
+<p>Overflow a program by inputting a string longer than 30 characters</p>
+
+<p>Debug using gdb and find out where saved EBP and EIP are overwritten in the stack (disable stack protection)</p>
+
+<p>Instead of overwrite with junk, try with real address</p>
+
+<p>Used address of the function return_input</p>
+
+<p>Find the right position of EIP</p>
+
+<p>Program overflowed correctly (printing two times as the EIP call back the return_input function)</p>
+
+<h4 id="snippets">snippets</h4>
+
+<ul>
+  <li>cc -mpreferred-stack-boundary=2 –ggdb program4.c -fno-stack-protector -o overflow</li>
+  <li>sudo sysctl kernel.randomize_va_space=0</li>
+</ul>
+
+<h3 id="7-april-2020">7 April 2020</h3>
+
+<p>Simple bypass serial key activation</p>
+
+<p>Execve shellcoder</p>
+
+<p>Simple code execution in stack</p>
+
+<p>Introduction to ret2libc</p>
+
+<p>Performing ret2libc attack</p>
+
+<p>Basically, for this attack, we need address of system, exit and address of “/bin/sh”</p>
+
+<p>Finding address of “/bin/sh” using memfetch.c and mffind.pl</p>
+:ET

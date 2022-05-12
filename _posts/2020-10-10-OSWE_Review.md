@@ -83,7 +83,7 @@ iii. [https://github.com/timip/OSWE](https://github.com/timip/OSWE)
 
 # End
 
-Thank you for taking your time reading this post! ,and sorry for the memes too if it's annoying. Ciao.
+Thank you for taking your time reading this post!,and sorry for the memes too if it's annoying. Ciao.
 
 ![paimon](/musubi/assets/oswe/paimon.gif)
 

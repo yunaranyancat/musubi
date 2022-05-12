@@ -1,0 +1,67 @@
+I"6<p>Heyy, today, I will be reviewing Virtual Hacking Labs, <a href="https://www.virtualhackinglabs.com/">VHL</a>.</p>
+
+<p>This post is mainly about my journey from starting VHL until I have managed to compromise 20 machines in the labs which is one the requirements to be elligible to apply for the Certificate of Completion.</p>
+
+<h3 id="about-vhl">About VHL</h3>
+
+<p>Okay, first, I will explain briefly what is VHL. VHL or Virtual Hacking Labs is a penetration testing platform for cybersecurity enthusiasts, which works almost the same as <strong>HackTheBox</strong>.</p>
+
+<p>You will be given three options for the pricing. If you want to get VHL certified, you need to buy at least 31 days of the lab access, which costs around 93€, which what I bought.</p>
+
+<p><img src="/musubi/assets/VHL/second-pricing.png" alt="second" /></p>
+
+<p>It is a self-paced course so you can learn anytime when you are free. If you buy the <strong>31 days</strong> or <strong>93 days</strong> , you will also get a PDF version of the course so you can read it while offline.</p>
+
+<h3 id="requirements">Requirements</h3>
+
+<p>You don’t need that much prior experiences in pentesting. But, having good knowledge in <strong>Linux</strong> distros or <strong>Metasploit</strong> framework can help you in progressing throughout the lab.</p>
+
+<h3 id="getting-started">Getting Started</h3>
+
+<p>Once you bought the course, you will be presented with a student panel, which contains the course, lab dashboard and other related things.</p>
+
+<p><img src="/musubi/assets/VHL/student_panel.png" alt="panel" /></p>
+
+<h3 id="vulnerable-machines">Vulnerable Machines</h3>
+
+<p>There are three different difficulty levels.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Beginner</code></p>
+
+<p>These boxes are aimed to those who just started or want to dive in the world of pentesting. You can follow what’s in the PDF/hints to get into user and get root. Some of the boxes might have direct root exploit, so that no privilege escalation is needed.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Advanced</code></p>
+
+<p>These boxes have little hints and you might need to do a bit of research outside the labs to compromise the machines.</p>
+
+<p><code class="language-plaintext highlighter-rouge">Advanced+</code></p>
+
+<p>These boxes are aimed to challenge students to think out of the box, and to not rely much at hints (these boxes have too little to zero hints) and train your <strong>Google-Fu</strong> skills. And I think that’s great because you’ll know if you have reached your limit so you can improve where you’re weak at.</p>
+
+<p>For starters, I would recommend doing the boxes based on the ascending order of the difficulty so you won’t get lost.</p>
+
+<h3 id="certificate-of-completion">Certificate Of Completion</h3>
+
+<p>One of the requirements for students to be elligible to apply for the <strong>Certificate of Completion</strong> is to compromise at least 20 machines and to do a thorough documentation for every machine compromised.</p>
+
+<p>There is a text file which contains a secret string in every machine, so it can be used as a proof that the machine has been compromised with <strong>root</strong> or <strong>SYSTEM</strong> privileges.</p>
+
+<p>Make sure , your documentation has enough information , and the attacks can be replicated by following your narratives.</p>
+
+<p>Once you submit the documentation, you’ll need to wait until it has been verified. Then , you will be sent a beautiful <strong>VHL Certification of Completion</strong> like mine below. :P</p>
+
+<p><img src="/musubi/assets/VHL/COC.jpg" alt="certificate" /></p>
+
+<h3 id="additional-information">Additional Information</h3>
+
+<p>There is no forum yet on VHL, so you won’t be able to discuss anything related to labs, or pentesting in general. But, I considered it as a challenge given by VHL . It took me almost 7 days to compromise those 20 machines. I didn’t touch the <code class="language-plaintext highlighter-rouge">Advanced+</code> machines yet, until now but I’ll try to find time to jump back into VHL.</p>
+
+<h3 id="oscp">OSCP</h3>
+
+<p>Based on the reviews I got from one of the OSCP communities , VHL is a good place to learn if your lab time has finished, or maybe you want to find a place to start preparing for OSCP.</p>
+
+<h3 id="bye-">Bye !</h3>
+<p>If you are still wondering whether you should take VHL course or not, check out the <a href="https://www.virtualhackinglabs.com/reviews/">reviews</a> from the website itself, or you can use the one week pass to see whether you’ll like it or not.</p>
+
+<p>That’s all for today. Thank you!</p>
+:ET

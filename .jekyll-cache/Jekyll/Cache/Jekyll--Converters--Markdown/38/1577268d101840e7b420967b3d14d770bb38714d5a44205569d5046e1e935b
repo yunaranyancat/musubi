@@ -1,0 +1,96 @@
+I"� <p>Good day everyone! It has been a long time since I updated my site. I was pretty busy with work and stuff so I think I’ve been idling for a quite amount of months now. But here I am, writing a post to share to you guys some very helpful tips and tricks for <strong>AWAE</strong>. I’ll also share some good AWAE reviews that I find very helpful.</p>
+
+<p>Just for a side story, I got a technical interview for Vulnerable Machine Engineer at Offensive Security just two days before my exam and sadly, I didn’t nail it (but don’t worry, I know you guys will, keep the applications coming in), feelsbadman. Nah it’s okay, I’ll try again in the future.</p>
+
+<p>P/S : For those who are interested to try my vulnerable machines, they are available at Vulnhub, <a href="https://www.vulnhub.com/entry/nezuko-1,352/">Nezuko</a> and <a href="https://www.vulnhub.com/entry/aqua-1,419/">Aqua</a>. I keep telling my friends that there will be a third machine incoming, but I still can’t find a suitable time to do it, cause, you know, busy with life and work.</p>
+
+<p><img src="/musubi/assets/oswe/holidays.jpeg" alt="holiday" /></p>
+
+<p>Hmm, how about a whitebox approach for my next box? &gt;w&lt;</p>
+
+<h1 id="startx">startx</h1>
+
+<p>So first, what is <a href="https://www.offensive-security.com/awae-oswe/">AWAE</a> all about?</p>
+
+<p><strong>Advanced Web Application Exploitation</strong> or in short, <strong>AWAE</strong> is a course that is more focused on the whitebox approach of penetration testing. The “how the vulnerability works”  as in the code level of the application.</p>
+
+<p>For me, this is very interesting, because you will get a good understanding on “why this part of application flow is vulnerable” and you’ll eventually be able to see how to exploit that particular code / functions in an efficient way.</p>
+
+<p>Other than that, since you got all the codes to yourself , hehe , you need to take it to the next level where you need to chain multiple vulnerabilities to create an exploit that is particularly important / CVE-worthy, I guess?.</p>
+
+<p><img src="/musubi/assets/oswe/allgetcve.jpg" alt="allgetcve" /></p>
+
+<h1 id="pre-oswe">Pre OSWE</h1>
+
+<p>Before taking the course, you need to decide whether this is the right course for you or not. For me, working as a full time penetration tester, I know this is a good addition to my current skill set. I also have done source code reviews before so I wanted to know Offsec’s approach on a whitebox environment and try to improve my code review ability.</p>
+
+<p>However, this course is more focused on <strong>web application</strong> part of the <strong>code review</strong>, so bear in mind, web code review is only a small part of the overall source code review. You will need to familiarize yourself with programming languages such as PHP, JAVA, .NET, .. etc. You can check their <a href="https://www.offensive-security.com/documentation/awae-syllabus.pdf">syllabus</a> if you don’t know which languages you should familiarize with for the course.</p>
+
+<p>In addition, I would suggest on creating a simple web app using these languages so you’ll get to know what are the common libraries used, functions, implementation, how to debug, how to perform <a href="https://en.wikipedia.org/wiki/Create,_read,_update_and_delete">CRUD</a> on the application, and basically, becoming a “junior” web app programmer. Hahaha.</p>
+
+<p><img src="/musubi/assets/oswe/junior.jpg" alt="junior" /></p>
+
+<p>To know how the code works, they will give you an advantage on where to find the vulnerable parts. - cited from <strong>Top 10 Yunaranyancat Quotes (2020)</strong></p>
+
+<h1 id="oswe">OSWE</h1>
+
+<p>These are the methods on how I proceeded with the course;</p>
+<ol>
+  <li>
+    <p>Watch the videos and try to replicate what the instructor did in the provided lab. Don’t waste your time if you have only 30 days of lab time.
+<strong>Watch, Pause, Replicate, Resume.</strong>
+Keep in mind, you can replay the videos and reread the PDF multiple time, but the lab time is limited. However, if you have a lot of money, which is not in my case, you can purchase additional lab time. (free advertising there, I see)</p>
+  </li>
+  <li>
+    <p>For each chapter completed, pause the videos, open the PDF provided to see if you are missing something. As far as I know, the PDF course is more exhaustive than the videos. The videos are only for you to reach your objectives while the PDF is to explain to you how the objectives are being achieved , step by step. However, if you ever feel that for some part of the course, the explanation is still not enough, well, that is what Google for!
+<img src="/musubi/assets/oswe/crime.jpg" alt="crime" /></p>
+  </li>
+  <li>
+    <p>Once you have completed the PDF, videos, labs and the extra miles exercises, what you need now, is a good methodology to do web application code review efficiently.</p>
+  </li>
+</ol>
+
+<h3 id="tips-and-tricks">Tips and tricks</h3>
+
+<p>Here are some tips and tricks that might be useful for you guys;</p>
+
+<ol>
+  <li>Understand how web application works. For example, the routing of the web, the input validation, CRUD process, function definitions. As one of my friends said, most of the vulnerabilities come from insufficient input sanitization!</li>
+  <li>Try to familiarize yourself with common vulnerable functions, such as <strong>exec()</strong>, <strong>system()</strong>, <strong>eval()</strong>, serialization and deserialization functions, weak regex, insufficient input sanitization, until the moment when you see a code, you are pretty confident to guess whether it’s vulnerable or not, after that, it’s up to you to test it with different payloads or try to bypass any restriction.</li>
+  <li>Since it’s a whitebox approach, you’ll have an access to the debugging environment. So, for example, if you want to check if your SQL injection payload is working correctly or not, you can run the statement in the SQL environment of the target. Or, if you want to see what function is being called when you send or receive a request, you can set up the breakpoints using debugger on the running code.</li>
+  <li>
+    <p>Sometimes, it’s hard for some people to find the right portion of the code, so the key here is, try to understand what are the objectives that you are trying to achieve, and see which part of the code that is related to the objectives, well unless you say, everything is related, I don’t know what to say.
+<img src="/musubi/assets/oswe/pepe.png" alt="pepe" /> <br />
+What I mean by <strong>“something that is related”</strong>, it’s like, <strong>“when you do this, this part of the code will be executed.”</strong></p>
+  </li>
+  <li>Don’t forget to take a break. Sometimes, looking too long at the code will only give you stress and limit your thinking capabilities (like what I experienced). So, the best way is to take a short break anytime you need it.</li>
+</ol>
+
+<h1 id="post-oswe">Post OSWE</h1>
+
+<p>I might take a look on incoming Offensive Security courses, but I will read the reviews first to see whether they’re interesting/worth it or not.</p>
+
+<p><a href="https://www.offensive-security.com/offsec/retiring-ctp-intro-new-courses/">Check them out!</a></p>
+
+<h3 id="some-good-awae-reviewstipstricks">Some good AWAE reviews/tips/tricks</h3>
+
+<p>These are some OSWE reviews that I found very helpful:</p>
+
+<p>i. <a href="https://forum.hackthebox.eu/discussion/2646/oswe-exam-review-2020-notes-gifts-inside">https://forum.hackthebox.eu/discussion/2646/oswe-exam-review-2020-notes-gifts-inside</a></p>
+
+<p>ii. <a href="https://github.com/wetw0rk/AWAE-PREP">https://github.com/wetw0rk/AWAE-PREP</a></p>
+
+<p>iii. <a href="https://github.com/timip/OSWE">https://github.com/timip/OSWE</a></p>
+
+<h1 id="end">End</h1>
+
+<p>Thank you for taking your time reading this post!,and sorry for the memes too if it’s annoying. Ciao.</p>
+
+<p><img src="/musubi/assets/oswe/paimon.gif" alt="paimon" /></p>
+
+<h2 id="credits">Credits</h2>
+
+<p>Special thanks to those who have helped me throughout the journey. Without you guys, I won’t be able to reach this far… You guys rocks! And also to my lovely fiancée, thanks for being with me through thick and thin! I love you! uWu</p>
+
+<p><img src="/musubi/assets/oswe/lolihug.gif" alt="lolihug" /></p>
+:ET
