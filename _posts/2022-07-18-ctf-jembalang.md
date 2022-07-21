@@ -8,6 +8,7 @@ permalink : /others/ctfjembalang
 This is a writeup regarding a CTF challenge for the Battle of 1337 CTF hosted by Tenang Komuniti Sdn. Bhd and Yayasan Digital Malaysia.
 
 ![CTF1337](/musubi/assets/jembalang/ctf.PNG)
+![kongming](/musubi/assets/osep/kongming.gif)
 
 You can download the source code [here](https://github.com/yunaranyancat/ctf-dump/blob/main/jembalang.zip).
 
