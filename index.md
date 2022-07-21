@@ -23,7 +23,7 @@ redirect_from : /404
   - [challenges](/musubi/challenges) writeups
   - [notes](/musubi/notes)
 
-- writeup for CTF and boot2root challenges created by me
+- writeups
   - [CTF chika01](/musubi/others/chika01) writeup
   - [CTF jembalang](/musubi/others/ctfjembalang) writeup
   - [VM nezuko](/musubi/others/vm_nezuko) writeup
