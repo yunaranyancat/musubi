@@ -25,7 +25,7 @@ redirect_from : /404
 
 - writeup for CTF and boot2root challenges created by me
   - [CTF chika01](/musubi/others/chika01) writeup
-  - [CTF jembalang](/others/ctfjembalang) writeup
+  - [CTF jembalang](/musubi/others/ctfjembalang) writeup
   - [VM nezuko](/musubi/others/vm_nezuko) writeup
   - [VM aqua](/musubi/others/vm_aqua) writeup
 
