@@ -9,6 +9,7 @@ redirect_from : /404
 ### About
 - about [site](/musubi/about/site)
 - about [author](/musubi/about/author)
+- what is [Musubi](/musubi/others/whatismusubi)?
 
 ### Categories
 - reviews
@@ -22,6 +23,8 @@ redirect_from : /404
 - posts
   - [challenges](/musubi/challenges) writeups
   - [notes](/musubi/notes)
+  - Becoming a [shellcoder](/musubi/paths/shellcoder)
+  - Becoming a [web application hacker](/musubi/paths/webapphacker)
 
 - writeups
   - [CTF chika01](/musubi/others/chika01) writeup
@@ -29,13 +32,9 @@ redirect_from : /404
   - [VM nezuko](/musubi/others/vm_nezuko) writeup
   - [VM aqua](/musubi/others/vm_aqua) writeup
 
-- different paths of a hacker
-  - Path to become a [shellcoder](/musubi/paths/shellcoder)
-  - Path to become a [web application hacker](/musubi/paths/webapphacker)
-
-- others
-  - what is [Musubi](/musubi/others/whatismusubi)?
-  - Hacker's [Manifesto](/musubi/others/hackersmanifesto)
+<!-- - others -->
+<!--  - what is [Musubi](/musubi/others/whatismusubi)? -->
+<!--  - Hacker's [Manifesto](http://phrack.org/issues/7/3.html) -->
 <!--  - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server -->
 <!--  - [XSSTest](/musubi/others/XSStest) -->
 
