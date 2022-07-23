@@ -38,6 +38,4 @@ redirect_from : /404
 <!--  - [Elite Ghosts](/musubi/others/EG_Discord_MY) Discord Server -->
 <!--  - [XSSTest](/musubi/others/XSStest) -->
 
-Follow me on [github](https://github.com/yunaranyancat) or [tweet](https://twitter.com/yunaranyancat) me something interesting.
-
 <!-- If you like my content and want to know how you can support me, you can buy me a coffee! Just click the coffee button on the lower right side of the page. Thank you again for your support! -->

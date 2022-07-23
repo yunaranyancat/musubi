@@ -19,5 +19,7 @@ Even if I only know very little of the hacking world, I will try my best to shar
 
 If you want to know a little bit more about me, wanted to do some collaboration, or even a job offer, you can contact me via my email provided in my Github account.
 
+Follow me on [github](https://github.com/yunaranyancat) or [tweet](https://twitter.com/yunaranyancat) me something interesting.
+
 <br /><br /><br /><br /><br />
 [return to homepage](/musubi/index)
