@@ -11,4 +11,4 @@ This site also serves as a memento for me to see how far I have reached and to k
 
 If you have further enquiries, please do not hesitate to contact me.
 
-I hope you do enjoy during your stay here. Ciao! (✪‿✪)ノ  
+I hope you do enjoy during your stay here. Ciao! (✪‿✪)ノ  .
