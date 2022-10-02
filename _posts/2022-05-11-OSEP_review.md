@@ -5,7 +5,7 @@ categories: jekyll
 permalink : /others/osepreview
 ---
 
-Hey guys, I'm back! 
+Hey guys, I'm back!
 
 ![kongming](/musubi/assets/osep/kongming.gif)
 
@@ -17,7 +17,7 @@ Let's go!
 
 # Pre OSEP
 
-Before taking the course, you need to make sure that this course is right for you. 
+Before taking the course, you need to make sure that this course is right for you.
 
 Before I decided to enroll in this course, I already have basic knowledge about Active Directoy infrastructures, configurations, objects, forests, domains, trusts, communications and most importantly what is AD for and why organizations use it especially in larger scale ones.
 
@@ -29,9 +29,9 @@ For me personally, the [syllabus](https://www.offensive-security.com/documentati
 
 There will be lots of things you will learn and some of them are:
 
-1. How to gain initial foothold/social engineering (Through phishing, web exploitations, etc..) 
+1. How to gain initial foothold/social engineering (Through phishing, web exploitations, etc..)
 
-2. How to attack AD internal network (Misconfigurations abuse, lateral movement, common AD/system vulnerabilities, SQL servers, etc..) 
+2. How to attack AD internal network (Misconfigurations abuse, lateral movement, common AD/system vulnerabilities, SQL servers, etc..)
 
 3. While doing 1. and 2., you will also learn how to bypass standard antivirus programs and application whitelistings so that your payloads/C2 are working as intended.
 
@@ -41,14 +41,14 @@ Below are the methods (although it's rather conventional) I have used to gain th
 
 2. While watching and reading, take note of the code snippets, specific keywords, new terms, so you can perform a deeper research outside of the course.
 
-3. Whenever you're stuck, pause the video, stop scrolling the PDF and read the documentation that's available online. 
-For example, if you don't know what is **MessageBox**, you can read the official documentation [here](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messagebox) or for .NET,	[here](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-6.0) , you also will be interested to read [this](https://docs.microsoft.com/en-us/dotnet/api/system.windows.messagebox?view=windowsdesktop-6.0). Try to understand what are the differences between each **"MessageBox"**. 
+3. Whenever you're stuck, pause the video, stop scrolling the PDF and read the documentation that's available online.
+For example, if you don't know what is **MessageBox**, you can read the official documentation [here](https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messagebox) or for .NET,	[here](https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-6.0) , you also will be interested to read [this](https://docs.microsoft.com/en-us/dotnet/api/system.windows.messagebox?view=windowsdesktop-6.0). Try to understand what are the differences between each **"MessageBox"**.
 
 4. Do the exercises, extra miles exercises and also the lab exercises. You will learn a lot.
 
 # Post OSEP
 
-I am planning to take **Red Team Ops (CRTO)** from **Zero Point Security**. I've been told that it would be a great add to what PEN-300 currently offer, and based on some reviews, the exams are way harder than OSEP (they said using bloodhound is a no no). So, I hope, with these two courses, I will be able to broaden my knowledge so I can perform a better red teaming operation than before. 
+I am planning to take **Red Team Ops (CRTO)** from **Zero Point Security**. I've been told that it would be a great add to what PEN-300 currently offer, and based on some reviews, the exams are way harder than OSEP (they said using bloodhound is a no no). So, I hope, with these two courses, I will be able to broaden my knowledge so I can perform a better red teaming operation than before.
 
 ![harold](/musubi/assets/osep/harold_meme.jpeg)
 
@@ -94,7 +94,7 @@ v. [adPeas](https://github.com/61106960/adPEAS)
 p/s : I also have some interesting pocs in my Twitter [likes](https://twitter.com/yunaranyancat/likes) (but... you would need to filter some of the non related stuffs).
 
 
-# End 
+# End
 
 Thank you for taking your time reading this review.
 If you are planning or currently taking PEN-300, I wish you the best of luck and always remember, try harder!
@@ -105,5 +105,3 @@ If you are planning or currently taking PEN-300, I wish you the best of luck and
 # Credits
 
 Great thanks to mee-zuh, y4t0 and those who have direct or indirectly contributed in the success of this journey.
-
-
