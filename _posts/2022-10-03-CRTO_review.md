@@ -11,7 +11,7 @@ I have received an email confirmation that I have passed the Certified Red Team 
 
 # Intro
 
-For those who didn't know, I passed my [OSEP](https://yunaranyancat.github.io/musubi/others/osepreview) exam few months ago, and it is one of the reasons why I decided to enroll in CRTO. I won't be comparing CRTO and PEN-300 so this review will be focusing on my journey when enrolling in the CRTO course.
+For those who didn't know, I have passed my [OSEP](https://yunaranyancat.github.io/musubi/others/osepreview) exam few months ago, and it is one of the reasons why I decided to enroll in CRTO. I won't be comparing CRTO and PEN-300 so this review will be focusing on my journey when enrolling in the CRTO course.
 
 # Course
 
