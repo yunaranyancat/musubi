@@ -1,0 +1,51 @@
+I")<p>This is a writeup regarding a CTF challenge for the Battle of 1337 CTF hosted by Tenang Komuniti Sdn. Bhd and Yayasan Digital Malaysia.</p>
+
+<p><img src="/musubi/assets/jembalang/ctf.PNG" alt="CTF1337" /></p>
+
+<p>You can download the source code <a href="https://github.com/yunaranyancat/ctf-dump/blob/main/jembalang.zip">here</a>.</p>
+
+<p>First, you will be greeted by this locked page.</p>
+
+<p><img src="/musubi/assets/jembalang/unlockpage.PNG" alt="lockedpage" /></p>
+
+<p>By inspecting the element, it shows a text and an ASCII art of the infamous Mr Trollface.</p>
+
+<p><img src="/musubi/assets/jembalang/troll.PNG" alt="trollface" /></p>
+
+<p>The password to unlock the page is obvious : <strong>DOWN HERE</strong></p>
+
+<p>When the page is unlocked, this page will be shown.</p>
+
+<p><img src="/musubi/assets/jembalang/intro.PNG" alt="intro" /></p>
+
+<p>Disable the jumpscare by unticking the events on the secret field so you will be able to submit the secret.</p>
+
+<p><img src="/musubi/assets/jembalang/nojumpscare.PNG" alt="disablejumpscare" /></p>
+
+<p>For those who are curious, this is the jumpscare;</p>
+
+<p><img src="/musubi/assets/jembalang/jumpscare.PNG" alt="jumpscare" /></p>
+
+<p>By going to the debugger, there’s an interesting js file, filled with Mr Trollface ASCII art, again.</p>
+
+<p><img src="/musubi/assets/jembalang/debugger.PNG" alt="dbugger" /></p>
+
+<p>On line 88, you will find a long string of obfuscated javascript code.</p>
+
+<p><img src="/musubi/assets/jembalang/line88.PNG" alt="line88" /></p>
+
+<p>Decode it using <a href="https://lelinhtinh.github.io/de4js/">de4js</a> with paramater set to eval.
+Here you will see that to unlock the page, you will need to concatenate all of the character taken from the string c.</p>
+
+<p><img src="/musubi/assets/jembalang/de4js.PNG" alt="de4jseval" /></p>
+
+<p>I’ll let you sort it by yourself. ;)</p>
+
+<p><img src="/musubi/assets/jembalang/free.PNG" alt="free" /></p>
+
+<p>And the end.</p>
+
+<p><img src="/musubi/assets/jembalang/end.PNG" alt="end" /></p>
+
+<p>it’s not that troll-ish , isn’t it? (&gt;‿◠)✌</p>
+:ET

