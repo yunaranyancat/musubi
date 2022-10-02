@@ -21,7 +21,7 @@ By inspecting the element, it shows a text and an ASCII art of the infamous Mr T
 
 The password to unlock the page is obvious : **DOWN HERE**
 
-When the page is unlocked, this page will be shown.
+When the page is unlocked, this page will be shown,
 
 ![intro](/musubi/assets/jembalang/intro.PNG)
 
