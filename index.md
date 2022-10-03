@@ -19,7 +19,7 @@ redirect_from : /404
   - [OSCE](/musubi/others/oscereview) review
   - [OSWE](/musubi/others/oswereview) review
   - [OSEP](/musubi/others/osepreview) review
-  - [CRTO](/musubi/others/crtoreview) review
+  - [CRTO](/musubi/others/rtoreview) review
 
 - posts
   - [challenges](/musubi/challenges) writeups
