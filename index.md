@@ -22,6 +22,7 @@ redirect_from : /404
   - [CRTO](/musubi/others/rtoreview) review
 
 - posts
+  - Red Team 101 : Running from [debugger](/musubi/notes/runfromdebugger)
   - [challenges](/musubi/challenges) writeups
   - [notes](/musubi/notes)
   - Becoming a [shellcoder](/musubi/paths/shellcoder)
