@@ -2,7 +2,7 @@
 layout: post
 title: ""
 categories: jekyll
-permalink : /others/crtoreview
+permalink : /others/rtoreview
 ---
 
 I have received an email confirmation that I have passed the Certified Red Team Operator exam so I would like to share my review about the [course](https://training.zeropointsecurity.co.uk/courses/red-team-ops).
