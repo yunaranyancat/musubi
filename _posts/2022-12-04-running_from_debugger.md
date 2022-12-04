@@ -36,7 +36,8 @@ Another way is by using *AdfCloseHandleOnInvalidAddress* function introduced by 
 
 [source code](https://github.com/vxunderground/VX-API/blob/main/VX-API/AdfCloseHandleOnInvalidAddress.cpp)
 
-`#include "Win32Helper.h"
+```
+#include "Win32Helper.h"
 
 BOOL AdfCloseHandleOnInvalidAddress(VOID)
 {
@@ -54,7 +55,8 @@ BOOL AdfCloseHandleOnInvalidAddress(VOID)
 	}
 
 	return FALSE;
-}`
+}
+```
 
 Basically, this function triggers an error by closing an invalid handle. Since this exception is likely to be caught by the debugger, the application or binary will detect the debugger's presence and continue its appropriate next course of action.
 
