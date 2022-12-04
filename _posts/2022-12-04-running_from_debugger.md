@@ -5,6 +5,8 @@ categories: jekyll
 permalink : /notes/runfromdebugger
 ---
 
+#Red Team 101 : Anti debugging
+
 One of the ways to understand how an application works is to perform debugging on it.
 
 This allows us to start and stop the execution of code, step through the code instruction by instruction, inspect the values of registers, memory locations, and others.
@@ -21,12 +23,12 @@ This can easily be achieved by using IsDebuggerPresent() function from kernel32.
 
 This is an example proof of concept that uses above function.
 
-**Without debugger**
+##Without debugger
 
 ![wod](/musubi/assets/debugmenot/isdbgpresent1.PNG)
 
 
-**With debugger**
+##With debugger
 
 ![wd](/musubi/assets/debugmenot/isdbgpresent2.PNG)
 
@@ -60,12 +62,13 @@ BOOL AdfCloseHandleOnInvalidAddress(VOID)
 
 Basically, this function triggers an error by closing an invalid handle. Since this exception is likely to be caught by the debugger, the application or binary will detect the debugger's presence and continue its appropriate next course of action.
 
-Let's try it out.
+##Let's try it out.
 
 ![adf](/musubi/assets/debugmenot/final.gif)
 
-This is just a basic anti debugging technique and there are ways to bypass this technique.
-However, this can be a good start to learn about anti debugging!
+This may be just a basic technique, and there are ways to bypass this technique.
+However, this can be a good start to learning about anti-debugging!
+
 
 Ciao!
 
