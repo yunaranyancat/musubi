@@ -34,7 +34,7 @@ This is an example proof of concept that uses above function.
 
 This is one of the well known anti debugging technique used. So, there are possibilities that this function will be targeted , modified or bypassed.
 
-Another way is by using *AdfCloseHandleOnInvalidAddress* function introduced by vxunderground and authored by Checkpoint Research.
+Another way is by using *AdfCloseHandleOnInvalidAddress* function documented by vxunderground and authored by Checkpoint Research.
 
 [source code](https://github.com/vxunderground/VX-API/blob/main/VX-API/AdfCloseHandleOnInvalidAddress.cpp)
 
