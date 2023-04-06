@@ -67,7 +67,7 @@ Basically, this function triggers an error by closing an invalid handle. Since t
 ![adf](/musubi/assets/debugmenot/final.gif)
 
 This may be just a basic technique, and there are ways to bypass this technique.
-However, this can be a good start to learning about anti-debugging!
+However, this can be a good start to learn more about anti-debugging!
 
 
 Ciao!
