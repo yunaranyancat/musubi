@@ -33,6 +33,7 @@ redirect_from : /404
   - [CTF jembalang](/musubi/others/ctfjembalang) writeup
   - [VM nezuko](/musubi/others/vm_nezuko) writeup
   - [VM aqua](/musubi/others/vm_aqua) writeup
+  - [Malicious APK : Kad Kahwin](/musubi/notes/kadkahwinapk) writeup
 
 <!-- - others -->
 <!--  - what is [Musubi](/musubi/others/whatismusubi)? -->
