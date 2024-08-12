@@ -20,6 +20,7 @@ redirect_from : /404
   - [OSWE](/musubi/others/oswereview) review
   - [OSEP](/musubi/others/osepreview) review
   - [CRTO](/musubi/others/rtoreview) review
+  - [GRTP](/musubi/others/grtpreview) review
 
 - posts
   - Red Team 101 : Running from [debugger](/musubi/notes/runfromdebugger)

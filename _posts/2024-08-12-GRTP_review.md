@@ -12,7 +12,7 @@ It has been a year since my last update on the blog.
 
 Been caught up with work and other things.
 
-Last month, I went to SANS Pen Test Hackfest Europe Summit & Training 2024 located in Amsterdam.
+Last month, I went to SANS Pen Test Hackfest Europe Summit & Training located in Amsterdam.
 
 There are multitudes of courses offered and one of them is the GIAC Red Team Professional, [GRTP](https://www.giac.org/certifications/red-team-professional-grtp/).
 
